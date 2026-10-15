@@ -2,7 +2,7 @@
 
 Is capital leaving the euro?
 
-A static dark-theme dashboard. Real series are fetched by GitHub Actions (no API keys, no paid data) and committed as JSON under `data/`. The site only reads those files. Version **1.0**.
+A static dark-theme dashboard. Real series are fetched by GitHub Actions (no API keys, no paid data) and committed as JSON under `data/`. The site only reads those files. Version **1.1**.
 
 The three tiles that were in the original additional-indicators mock and are **not** built: EUR/USD cross-currency basis, EUR/USD implied volatility and risk reversal, and equity fund flows (US vs Europe).
 
@@ -11,10 +11,14 @@ The three tiles that were in the original additional-indicators mock and are **n
 ```bash
 npm ci
 npm run fetch
-python3 -m http.server 4173
+mkdir -p /tmp/pages-root
+ln -sfn "$(pwd)" /tmp/pages-root/financial-dashboard
+python3 -m http.server 4173 --directory /tmp/pages-root
 ```
 
-Open `http://127.0.0.1:4173`. Health JSON is at `data/health.json`. On Vercel, `/api/health` and `/health.json` rewrite to that file.
+Open `http://127.0.0.1:4173/financial-dashboard/` (trailing slash). That matches the GitHub Pages project URL, `https://mikemclaughlin.github.io/financial-dashboard/`. Styles, scripts, and `data/*.json` are relative, so the same files also work if you serve the repository root and open `/`.
+
+Health is a static file at the site root, `health.json` (same JSON as `data/health.json`). There is no `/api/health` route.
 
 `npm run fetch` runs the non-Yahoo sources, then the Yahoo step, then `scripts/verify.mjs`. Either step keeps the previous JSON for a series that fails its range check.
 
@@ -25,7 +29,8 @@ Open `http://127.0.0.1:4173`. Health JSON is at `data/health.json`. On Vercel, `
 - `scripts/fetch-yahoo.mjs` — DXY, fed-funds futures, gold, oil, and the G10 Yahoo cross-check. This step is allowed to fail alone (`continue-on-error` in Actions).
 - `scripts/verify.mjs` — recomputes changes, spreads, the 200-day average, and the CFTC net identity. It writes `data/verification.json` and exits non-zero only when a required series has no points or the stored math does not match.
 - `scripts/scrape-calendars.mjs` — re-reads the official central-bank pages and **fails if they differ** from `data/meetings.json`. It does not rewrite that file. `--write` is a local bootstrap only.
-- `.github/workflows/refresh-data.yml` — commits updated JSON.
+- `.github/workflows/refresh-data.yml` — commits updated JSON, then publishes GitHub Pages.
+- `.github/workflows/pages.yml` — deploys `index.html`, `health.json`, `css/`, `js/`, and `data/` to GitHub Pages.
 - `.github/workflows/check-calendars.yml` — monthly calendar diff.
 
 The page never clears a card just because a refresh is in progress. Placeholders (`—` / “Unavailable”) appear only when a series has never been loaded. A stale file keeps its previous points and is labeled with `status: "stale"`.
@@ -111,11 +116,11 @@ A failed check keeps the previous file and sets `status: "stale"`.
 
 Every series file has `id`, `status` (`ok`, `stale`, `error`, `partial`), `asOf` (`YYYY-MM-DD` of the last observation), `fetchedAt`, `source`, and `error` (null when healthy). `fallback: true` means a backup source is what the file contains. `proxy: true` means the series is not the market instrument named in the title.
 
-`data/health.json` (also served as `/api/health`):
+`health.json` at the site root (same document as `data/health.json`, which the page reads):
 
 ```json
 {
-  "version": "1.0",
+  "version": "1.1",
   "generatedAt": "ISO-8601",
   "status": "ok",
   "series": {
@@ -149,6 +154,17 @@ Dates are ISO `YYYY-MM-DD`. Yields are percent, not decimals. Spreads and the 2s
 
 ## Deploy
 
-Vercel serves this directory as a static site. `vercel.json` rewrites `/api/health` and `/health.json` to `data/health.json`. Connect the GitHub repository so the default branch and pull requests get a deployment when data JSON changes. No environment variables and no API keys.
+GitHub Pages serves the static site at `https://mikemclaughlin.github.io/financial-dashboard/`. No build step, no environment variables, and no API keys.
 
-The Actions cron does not run until the workflow files are on the default branch.
+`.github/workflows/pages.yml` publishes on every push to `master`, and on `workflow_dispatch`. The data refresh calls that same workflow after it commits, because a push made with `GITHUB_TOKEN` does not start another workflow. The refresh deploy job runs only for `master`, and it checks out the commit it just pushed so the new JSON is what Pages receives. Pull requests do not get a Pages preview.
+
+The artifact is `index.html`, root `health.json`, `css/`, `js/`, and `data/`. `health.json` is the health endpoint. Pages cannot rewrite `/api/health`.
+
+`actions/configure-pages` is called with `enablement: true`. That can create the Pages site (source: GitHub Actions) only when the token is allowed to administer the repository. The default `GITHUB_TOKEN` is not. If a repository secret named `PAGES_TOKEN` is set, the workflow uses it; otherwise it uses `GITHUB_TOKEN`.
+
+If the first deploy fails with “Create Pages site failed” or a 403 from the Pages API, Pages is still off. One of these remains:
+
+1. Add a repository secret `PAGES_TOKEN` whose token can administer this repo and write Pages (a classic PAT with the `repo` scope, or a GitHub App token with `administration:write` and `pages:write`), then re-run **Deploy GitHub Pages**.
+2. Or, once, as a repo admin: **Settings → Pages → Build and deployment → Source → GitHub Actions**. After that, `GITHUB_TOKEN` can deploy and no secret is required.
+
+The Actions cron does not run until the workflow files are on the default branch. Pages stays empty until a `master` run of **Deploy GitHub Pages** succeeds.

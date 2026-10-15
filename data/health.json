@@ -1,7 +1,7 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "service": "financial-dashboard",
-  "generatedAt": "2026-10-15T02:46:39.820Z",
+  "generatedAt": "2026-10-15T04:08:33.624Z",
   "status": "degraded",
   "series": {
     "eurusd": {

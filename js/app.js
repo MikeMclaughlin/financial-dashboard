@@ -1,4 +1,4 @@
-const APP_VERSION = "1.0";
+const APP_VERSION = "1.1";
 const FILES = [
   "health", "eurusd", "dxy", "broad-usd", "treasury", "fx", "cftc", "bunds",
   "bonds", "ecb-path", "fed-path", "real-yield", "commodities", "auctions", "meetings",

@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import iconv from "iconv-lite";
 
-export const APP_VERSION = "1.0";
+export const APP_VERSION = "1.1";
 export const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 export const DATA = path.join(ROOT, "data");
 
@@ -344,5 +344,6 @@ export function rebuildHealth(extra = {}) {
     ...extra,
   };
   writeJson("health.json", health);
+  fs.writeFileSync(path.join(ROOT, "health.json"), JSON.stringify(health, null, 2) + "\n");
   return health;
 }
