@@ -1,0 +1,423 @@
+{
+  "generatedAt": "2026-10-15T02:47:38.326Z",
+  "issueCount": 15,
+  "issues": [
+    {
+      "item": 3,
+      "level": "issue",
+      "detail": "FRED DGS10 cross-check unavailable: FRED DGS10: The operation was aborted due to timeout"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "EUR FRED DEXUSEU unavailable: FRED DEXUSEU: The operation was aborted due to timeout"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 11,
+      "level": "outlier",
+      "detail": "Italy cross-check flag {\"country\":\"Italy\",\"source\":\"ECB IRS long-term rate vs OECD IRLT\",\"month\":\"2026-09\",\"ecb\":4.362,\"oecdLatestMonth\":\"2026-08\",\"oecdLatest\":3.986,\"diffBp\":null,\"flag\":true,\"note\":\"OECD has no observation for the ECB month, so the months were not compared.\"}"
+    },
+    {
+      "item": 2,
+      "level": "issue",
+      "detail": "FRED DTWEXBGS unavailable: FRED DTWEXBGS: The operation was aborted due to timeout. ICE DXY is shown from Yahoo."
+    },
+    {
+      "item": 13,
+      "level": "fallback",
+      "detail": "Real yield fallback: US Treasury daily real yield curve, 10 YR (FRED DFII10 unavailable)"
+    },
+    {
+      "item": 12,
+      "level": "fallback",
+      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). The operation was aborted due to timeout"
+    },
+    {
+      "item": 12,
+      "level": "proxy",
+      "detail": "ECB path is a proxy by design (AAA curve + €STR, not OIS)"
+    }
+  ],
+  "checks": [
+    {
+      "item": "1 EUR/USD",
+      "level": "info",
+      "detail": "1 EUR/USD status=ok asOf=2026-10-14 fallback=false proxy=false"
+    },
+    {
+      "item": "2 DXY",
+      "level": "info",
+      "detail": "2 DXY status=ok asOf=2026-10-15 fallback=false proxy=false"
+    },
+    {
+      "item": "3 Treasury",
+      "level": "info",
+      "detail": "3 Treasury status=ok asOf=2026-10-14 fallback=false proxy=false"
+    },
+    {
+      "item": "6 FX",
+      "level": "info",
+      "detail": "6 FX status=ok asOf=2026-10-14 fallback=false proxy=false"
+    },
+    {
+      "item": "7 CFTC",
+      "level": "info",
+      "detail": "7 CFTC status=ok asOf=2026-10-06 fallback=false proxy=false"
+    },
+    {
+      "item": "8/9 Bunds",
+      "level": "info",
+      "detail": "8/9 Bunds status=ok asOf=2026-10-14 fallback=false proxy=false"
+    },
+    {
+      "item": "11 Bonds",
+      "level": "info",
+      "detail": "11 Bonds status=ok asOf=2026-10-14 fallback=false proxy=false"
+    },
+    {
+      "item": "12 ECB path",
+      "level": "info",
+      "detail": "12 ECB path status=ok asOf=2026-10-13 fallback=false proxy=true"
+    },
+    {
+      "item": "12 Fed path",
+      "level": "info",
+      "detail": "12 Fed path status=ok asOf=2026-10-15 fallback=true proxy=false"
+    },
+    {
+      "item": "13 Real yield",
+      "level": "info",
+      "detail": "13 Real yield status=ok asOf=2026-10-14 fallback=true proxy=false"
+    },
+    {
+      "item": "14 Gold",
+      "level": "info",
+      "detail": "14 Gold status=ok asOf=2026-10-15 fallback=false proxy=false"
+    },
+    {
+      "item": "14 Oil",
+      "level": "info",
+      "detail": "14 Oil status=ok asOf=2026-10-15 fallback=false proxy=false"
+    },
+    {
+      "item": "15 Auctions",
+      "level": "info",
+      "detail": "15 Auctions status=ok asOf=2026-10-08 fallback=false proxy=false"
+    },
+    {
+      "item": "16 Meetings",
+      "level": "info",
+      "detail": "16 Meetings status=ok asOf=2026-10-15 fallback=false proxy=false"
+    },
+    {
+      "item": 5,
+      "level": "info",
+      "detail": "200-day average 1.159004 on 2026-10-14; history 1999-01-04 count 7114"
+    },
+    {
+      "item": 4,
+      "level": "info",
+      "detail": "2s10s 37 bp on 2026-10-14; change -5 bp"
+    },
+    {
+      "item": 10,
+      "level": "info",
+      "detail": "curve today 2026-10-14, 45d 2026-08-28, 90d 2026-07-16"
+    },
+    {
+      "item": 3,
+      "level": "issue",
+      "detail": "FRED DGS10 cross-check unavailable: FRED DGS10: The operation was aborted due to timeout"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "EUR 1D 0.06 / 1W 0.16 / 1M -3.08 / 90D -2.37"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "JPY 1D -0.21 / 1W -0.14 / 1M -2.46 / 90D 2.36"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "GBP 1D 0.15 / 1W 0.47 / 1M -1.69 / 90D -1.81"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "CHF 1D -0.13 / 1W -0.06 / 1M -2.03 / 90D -3.21"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "CAD 1D 0.16 / 1W 0.24 / 1M -2.33 / 90D -1.37"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "AUD 1D 0.45 / 1W 0.84 / 1M -1.68 / 90D 0.02"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "NZD 1D 0.01 / 1W 0.34 / 1M -2.74 / 90D -4.12"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "SEK 1D 0.17 / 1W 0.75 / 1M -2.01 / 90D -3.51"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "NOK 1D 0.68 / 1W 1.19 / 1M -1.59 / 90D 1.87"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "EUR FRED DEXUSEU unavailable: FRED DEXUSEU: The operation was aborted due to timeout"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "issue",
+      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "EUR vs Yahoo diff -0.31%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "JPY vs Yahoo diff -0.47%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "GBP vs Yahoo diff 0.13%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "CHF vs Yahoo diff -0.59%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "CAD vs Yahoo diff -0.07%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "AUD vs Yahoo diff 0.75%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "NZD vs Yahoo diff -0.22%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "SEK vs Yahoo diff -0.08%"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "NOK vs Yahoo diff 0.14%"
+    },
+    {
+      "item": 7,
+      "level": "info",
+      "detail": "latest net -99332 = 243020 long − 342352 short, open interest 870291 on 2026-10-06"
+    },
+    {
+      "item": 8,
+      "level": "info",
+      "detail": "US and German 2Y share 438 exact dates; German as of 2026-10-14"
+    },
+    {
+      "item": 9,
+      "level": "info",
+      "detail": "German 10Y 3.51 on 2026-10-14; US 10Y 5.19 on 2026-10-14"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Switzerland -470 bp, yield 0.59 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Japan -218 bp, yield 3.015 as of 2026-10-14 vs US 5.19 on 2026-10-14 [daily]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Germany -168 bp, yield 3.51 as of 2026-10-14 vs US 5.19 on 2026-10-14 [daily]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "France -81 bp, yield 4.4771 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Italy -76 bp, yield 3.986 as of 2026-08-31 vs US 4.75 on 2026-08-31 [monthly, delayed]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Canada -134 bp, yield 3.87 as of 2026-10-13 vs US 5.21 on 2026-10-13 [daily]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Australia 12 bp, yield 5.404 as of 2026-10-07 vs US 5.28 on 2026-10-07 [delayed]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Germany cross-check diff 6 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Japan cross-check diff -6 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Canada cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Australia cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "United States cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "France cross-check diff 4 bp"
+    },
+    {
+      "item": 11,
+      "level": "outlier",
+      "detail": "Italy cross-check flag {\"country\":\"Italy\",\"source\":\"ECB IRS long-term rate vs OECD IRLT\",\"month\":\"2026-09\",\"ecb\":4.362,\"oecdLatestMonth\":\"2026-08\",\"oecdLatest\":3.986,\"diffBp\":null,\"flag\":true,\"note\":\"OECD has no observation for the ECB month, so the months were not compared.\"}"
+    },
+    {
+      "item": 6,
+      "level": "info",
+      "detail": "Switzerland has no second free daily yield. SNB cube rendoblid (checked this run's source review) last published 2025-09-01; its 2025-07-31 10-year 10J0 print of 0.378 matches OECD July 2025 IRLT 0.378. The September 2026 OECD print is the series used on the bar."
+    },
+    {
+      "item": 2,
+      "level": "issue",
+      "detail": "FRED DTWEXBGS unavailable: FRED DTWEXBGS: The operation was aborted due to timeout. ICE DXY is shown from Yahoo."
+    },
+    {
+      "item": 13,
+      "level": "fallback",
+      "detail": "Real yield fallback: US Treasury daily real yield curve, 10 YR (FRED DFII10 unavailable)"
+    },
+    {
+      "item": 12,
+      "level": "fallback",
+      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). The operation was aborted due to timeout"
+    },
+    {
+      "item": 12,
+      "level": "proxy",
+      "detail": "ECB path is a proxy by design (AAA curve + €STR, not OIS)"
+    },
+    {
+      "item": 16,
+      "level": "info",
+      "detail": "decision dates inside the next 90 days: BoE 2026-11-05, BoE 2026-12-17, BoJ 2026-10-30, BoJ 2026-12-18, ECB 2026-10-29, ECB 2026-12-17, Fed 2026-10-28, Fed 2026-12-09"
+    }
+  ]
+}

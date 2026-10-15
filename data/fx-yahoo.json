@@ -1,0 +1,110 @@
+{
+  "id": "fx-yahoo",
+  "name": "G10 Yahoo cross-check",
+  "status": "ok",
+  "asOf": "2026-10-15",
+  "source": "Yahoo FX spot quotes",
+  "flagged": 0,
+  "checks": [
+    {
+      "currency": "EUR",
+      "source": "Yahoo EURUSD=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 1.122965,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 1.1195,
+      "diffPct": -0.31,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "JPY",
+      "source": "Yahoo JPY=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.006341,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.006311,
+      "diffPct": -0.47,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "GBP",
+      "source": "Yahoo GBPUSD=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 1.32496,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 1.326658,
+      "diffPct": 0.13,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "CHF",
+      "source": "Yahoo CHF=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 1.206986,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 1.199893,
+      "diffPct": -0.59,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "CAD",
+      "source": "Yahoo CAD=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.70375,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.703292,
+      "diffPct": -0.07,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "AUD",
+      "source": "Yahoo AUDUSD=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.695749,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.700958,
+      "diffPct": 0.75,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "NZD",
+      "source": "Yahoo NZDUSD=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.56262,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.561406,
+      "diffPct": -0.22,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "SEK",
+      "source": "Yahoo SEK=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.10041,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.100332,
+      "diffPct": -0.08,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    },
+    {
+      "currency": "NOK",
+      "source": "Yahoo NOK=X",
+      "yahooDate": "2026-10-15",
+      "yahooUsdPerUnit": 0.105431,
+      "ecbDate": "2026-10-14",
+      "ecbUsdPerUnit": 0.105578,
+      "diffPct": 0.14,
+      "flag": false,
+      "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
+    }
+  ],
+  "fetchedAt": "2026-10-15T02:44:52.566Z"
+}

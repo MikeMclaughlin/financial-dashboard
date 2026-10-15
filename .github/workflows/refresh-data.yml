@@ -1,0 +1,66 @@
+name: Refresh market data
+
+on:
+  schedule:
+    # Weekdays 22:30 UTC — daily rates, FX, Treasury, auctions.
+    - cron: "30 22 * * 1-5"
+    # Weekdays 13:30 UTC — Bundesbank yields publish the next morning, Europe time.
+    - cron: "30 13 * * 1-5"
+    # CFTC commitments are released Friday evening US time, with a Saturday retry.
+    - cron: "0 21 * * 5"
+    - cron: "0 21 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh-market-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Fetch non-Yahoo sources
+        run: node scripts/fetch-core.mjs
+      - name: Fetch Yahoo-dependent series
+        id: yahoo
+        continue-on-error: true
+        run: node scripts/fetch-yahoo.mjs
+      - name: Verify stored series
+        run: node scripts/verify.mjs
+      - name: Commit JSON
+        id: commit
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data health.json
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Update market data"
+            git push
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  # GITHUB_TOKEN pushes do not start the push trigger on pages.yml.
+  # Call the deploy workflow from this run so the new JSON is published.
+  deploy:
+    needs: refresh
+    if: success() && github.ref == 'refs/heads/master'
+    uses: ./.github/workflows/pages.yml
+    with:
+      ref: ${{ needs.refresh.outputs.sha }}
+    secrets: inherit

@@ -1,0 +1,64 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to publish. Empty publishes the branch tip.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # After a data commit, github.sha is still the pre-push commit.
+          # A workflow_call passes the new SHA. Push and dispatch publish the branch tip.
+          # inputs is only defined for workflow_call, so the push path must not read it.
+          ref: ${{ github.event_name == 'workflow_call' && inputs.ref || github.ref_name }}
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Creates the Pages site (build type workflow) when it does not exist.
+          # GITHUB_TOKEN cannot do that: it has no administration scope.
+          # A repo secret PAGES_TOKEN (classic PAT with repo scope, or a GitHub
+          # App token with administration:write and pages:write) is used when set.
+          enablement: true
+          token: ${{ secrets.PAGES_TOKEN || github.token }}
+
+      - name: Assemble static site
+        run: |
+          mkdir -p _site
+          cp index.html health.json _site/
+          cp -r css js data _site/
+          test -f _site/index.html
+          test -f _site/health.json
+          test -f _site/data/health.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

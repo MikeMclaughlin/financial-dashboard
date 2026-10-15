@@ -1,0 +1,17 @@
+{
+  "name": "financial-dashboard",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Global Macro: Dollar, Rates & G10. Static site plus a free GitHub Actions data refresh.",
+  "scripts": {
+    "fetch": "node scripts/fetch-core.mjs && node scripts/fetch-yahoo.mjs && node scripts/verify.mjs",
+    "fetch:core": "node scripts/fetch-core.mjs",
+    "fetch:yahoo": "node scripts/fetch-yahoo.mjs",
+    "verify": "node scripts/verify.mjs",
+    "calendars": "node scripts/scrape-calendars.mjs"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.7.3"
+  }
+}

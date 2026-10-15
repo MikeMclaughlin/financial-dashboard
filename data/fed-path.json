@@ -1,0 +1,141 @@
+{
+  "id": "fed-path",
+  "name": "Fed rate-path expectations",
+  "proxy": false,
+  "fallback": true,
+  "label": "Fed funds futures, implied rate = 100 − price",
+  "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
+  "asOf": "2026-10-15",
+  "anchor": {
+    "date": "2026-10-13",
+    "value": 3.88,
+    "source": "NY Fed EFFR (FRED DFF unavailable)",
+    "fallback": true,
+    "fredError": "The operation was aborted due to timeout"
+  },
+  "points": [
+    {
+      "symbol": "ZQV26.CBT",
+      "months": 0,
+      "label": "Oct",
+      "year": 2026,
+      "month": 10,
+      "price": 96.115,
+      "value": 3.885,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQX26.CBT",
+      "months": 1,
+      "label": "Nov",
+      "year": 2026,
+      "month": 11,
+      "price": 96.05,
+      "value": 3.95,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQZ26.CBT",
+      "months": 2,
+      "label": "Dec",
+      "year": 2026,
+      "month": 12,
+      "price": 95.905,
+      "value": 4.095,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQF27.CBT",
+      "months": 3,
+      "label": "Jan",
+      "year": 2027,
+      "month": 1,
+      "price": 95.84,
+      "value": 4.16,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQG27.CBT",
+      "months": 4,
+      "label": "Feb",
+      "year": 2027,
+      "month": 2,
+      "price": 95.755,
+      "value": 4.245,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQH27.CBT",
+      "months": 5,
+      "label": "Mar",
+      "year": 2027,
+      "month": 3,
+      "price": 95.685,
+      "value": 4.315,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQJ27.CBT",
+      "months": 6,
+      "label": "Apr",
+      "year": 2027,
+      "month": 4,
+      "price": 95.59,
+      "value": 4.41,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQK27.CBT",
+      "months": 7,
+      "label": "May",
+      "year": 2027,
+      "month": 5,
+      "price": 95.52,
+      "value": 4.48,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQM27.CBT",
+      "months": 8,
+      "label": "Jun",
+      "year": 2027,
+      "month": 6,
+      "price": 95.455,
+      "value": 4.545,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQN27.CBT",
+      "months": 9,
+      "label": "Jul",
+      "year": 2027,
+      "month": 7,
+      "price": 95.43,
+      "value": 4.57,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQQ27.CBT",
+      "months": 10,
+      "label": "Aug",
+      "year": 2027,
+      "month": 8,
+      "price": 95.415,
+      "value": 4.585,
+      "asOf": "2026-10-15"
+    },
+    {
+      "symbol": "ZQU27.CBT",
+      "months": 11,
+      "label": "Sep",
+      "year": 2027,
+      "month": 9,
+      "price": 95.405,
+      "value": 4.595,
+      "asOf": "2026-10-15"
+    }
+  ],
+  "errors": [],
+  "fetchedAt": "2026-10-15T02:44:51.973Z",
+  "status": "ok"
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Macro: Dollar, Rates &amp; G10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@450;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b1020'/%3E%3Cpath d='M2 11 L6 7 L9 9 L14 4' fill='none' stroke='%234aa3ff' stroke-width='1.6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <h1>Global Macro: Dollar, Rates &amp; G10</h1>
+        <p class="subtitle">Is capital leaving the euro? · <span id="updated">Updated …</span></p>
+      </div>
+      <label class="period">Chart period
+        <select id="period" aria-label="Chart period">
+          <option value="30">30 days</option>
+          <option value="90" selected>90 days</option>
+          <option value="180">180 days</option>
+          <option value="365">365 days</option>
+        </select>
+      </label>
+    </header>
+    <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+      <button class="tab" id="tab-main" role="tab" aria-selected="true" aria-controls="view-main">Main dashboard</button>
+      <button class="tab" id="tab-extra" role="tab" aria-selected="false" aria-controls="view-extra">Additional indicators</button>
+    </nav>
+
+    <div id="view-main" role="tabpanel">
+      <div class="stack">
+        <section class="grid-3" id="kpis"></section>
+        <article class="card kpi-wide" id="curve-card"></article>
+        <article class="card">
+          <h2>EUR/USD, with 200-day average</h2>
+          <p class="sub" id="eur-sub">falling price = euro weakening vs dollar</p>
+          <div class="chart tall" id="eur-chart"></div>
+        </article>
+        <article class="card">
+          <h2>G10 vs USD, % change</h2>
+          <p class="sub">Orange = weaker vs dollar · Blue = stronger</p>
+          <div class="heat-wrap" id="heat"></div>
+        </article>
+        <section class="grid-2">
+          <article class="card">
+            <h2>EUR net speculative positioning</h2>
+            <p class="sub" id="cftc-sub">CFTC legacy futures-only EURO FX (099741). Net = noncommercial long − short. Below zero = net short euro.</p>
+            <div class="chart mid" id="cftc-chart"></div>
+          </article>
+          <article class="card">
+            <h2>US–Germany 2Y yield gap</h2>
+            <p class="sub" id="gap-sub">Wider gap = rates pull toward the dollar</p>
+            <div class="chart mid" id="gap-chart"></div>
+          </article>
+        </section>
+        <article class="card">
+          <h2>Bund–Treasury 10Y spread</h2>
+          <p class="sub" id="bund-sub">More negative = Europe offers less yield vs US</p>
+          <div class="chart" id="bund-chart"></div>
+        </article>
+        <article class="card">
+          <h2>US Treasury yield curve</h2>
+          <p class="sub" id="curve-sub">Today vs 45d ago vs 90d ago</p>
+          <div class="chart" id="ust-chart"></div>
+          <div class="legend-row" id="ust-legend"></div>
+        </article>
+        <article class="card">
+          <h2>10Y government bond spread vs US Treasuries</h2>
+          <p class="sub">Basis points, latest. Bars left of the line yield less than the US. Each bar uses the US 10Y on or before its own date.</p>
+          <div class="chart tall" id="bond-chart"></div>
+        </article>
+      </div>
+    </div>
+
+    <div id="view-extra" role="tabpanel" hidden>
+      <div class="stack">
+        <article class="card">
+          <h2>Fed and ECB rate-path expectations</h2>
+          <p class="sub" id="path-sub">Next 12 months, market-implied policy rate. This chart does not follow the period selector.</p>
+          <div class="chart" id="path-chart"></div>
+          <div class="legend-row" id="path-legend"></div>
+        </article>
+        <section class="grid-2">
+          <article class="card">
+            <h2>US 10Y real yield (TIPS)</h2>
+            <p class="sub" id="real-sub">Higher real yields tend to support the dollar</p>
+            <div class="chart mid" id="real-chart"></div>
+          </article>
+          <article class="card">
+            <h2>Gold and oil in USD</h2>
+            <p class="sub" id="cmd-sub">Rebased to 100 · blue = gold · orange = oil</p>
+            <div class="chart mid" id="cmd-chart"></div>
+          </article>
+        </section>
+        <article class="card">
+          <h2>Treasury auction demand</h2>
+          <p class="sub" id="auc-sub">Bid-to-cover per auction. Notes and Bonds. Dashed line = average.</p>
+          <div class="chart mid" id="auc-chart"></div>
+        </article>
+        <article class="card">
+          <h2>Central bank calendar</h2>
+          <p class="sub">Next 90 days. Decision dates from the official Fed, ECB, BoJ and BoE schedules. Fed is blue.</p>
+          <div class="chart" id="cal-chart"></div>
+        </article>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div>Version <span id="version">1.1</span> · <a href="health.json">health.json</a></div>
+      <div id="foot-fresh"></div>
+    </footer>
+  </div>
+  <div id="tip" class="tip"></div>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

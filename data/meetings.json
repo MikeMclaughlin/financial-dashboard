@@ -1,0 +1,661 @@
+{
+  "id": "meetings",
+  "description": "Hardcoded official central-bank decision dates. The monthly checker fails if a fresh scrape differs.",
+  "status": "ok",
+  "asOf": "2026-10-15",
+  "source": {
+    "fed": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "ecbCalendar": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+    "ecbDecisions": "https://www.ecb.europa.eu/press/govcdec/mopo",
+    "boe": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+    "boj": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+  },
+  "counts": {
+    "BoE": 16,
+    "BoJ": 16,
+    "ECB": 32,
+    "Fed": 16
+  },
+  "meetings": [
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-02-05",
+      "startDate": "2026-02-05",
+      "endDate": "2026-02-05",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-03-19",
+      "startDate": "2026-03-19",
+      "endDate": "2026-03-19",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-04-30",
+      "startDate": "2026-04-30",
+      "endDate": "2026-04-30",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-06-18",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-07-30",
+      "startDate": "2026-07-30",
+      "endDate": "2026-07-30",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-09-17",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-17",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-11-05",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-05",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2026-12-17",
+      "startDate": "2026-12-17",
+      "endDate": "2026-12-17",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-02-04",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-04",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-03-18",
+      "startDate": "2027-03-18",
+      "endDate": "2027-03-18",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-04-29",
+      "startDate": "2027-04-29",
+      "endDate": "2027-04-29",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-06-17",
+      "startDate": "2027-06-17",
+      "endDate": "2027-06-17",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-07-29",
+      "startDate": "2027-07-29",
+      "endDate": "2027-07-29",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-09-16",
+      "startDate": "2027-09-16",
+      "endDate": "2027-09-16",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-11-04",
+      "startDate": "2027-11-04",
+      "endDate": "2027-11-04",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoE",
+      "decisionDate": "2027-12-16",
+      "startDate": "2027-12-16",
+      "endDate": "2027-12-16",
+      "source": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "note": "MPC announcement / decision date"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-01-23",
+      "startDate": "2026-01-22",
+      "endDate": "2026-01-23",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-03-19",
+      "startDate": "2026-03-18",
+      "endDate": "2026-03-19",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-04-28",
+      "startDate": "2026-04-27",
+      "endDate": "2026-04-28",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-06-16",
+      "startDate": "2026-06-15",
+      "endDate": "2026-06-16",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-07-31",
+      "startDate": "2026-07-30",
+      "endDate": "2026-07-31",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-09-18",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-18",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-10-30",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-30",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2026-12-18",
+      "startDate": "2026-12-17",
+      "endDate": "2026-12-18",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-01-22",
+      "startDate": "2027-01-21",
+      "endDate": "2027-01-22",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-03-18",
+      "startDate": "2027-03-17",
+      "endDate": "2027-03-18",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-04-28",
+      "startDate": "2027-04-27",
+      "endDate": "2027-04-28",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-06-11",
+      "startDate": "2027-06-10",
+      "endDate": "2027-06-11",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-07-22",
+      "startDate": "2027-07-21",
+      "endDate": "2027-07-22",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-09-22",
+      "startDate": "2027-09-21",
+      "endDate": "2027-09-22",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-10-29",
+      "startDate": "2027-10-28",
+      "endDate": "2027-10-29",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "BoJ",
+      "decisionDate": "2027-12-17",
+      "startDate": "2027-12-16",
+      "endDate": "2027-12-17",
+      "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "note": "Decision date is day 2 of the Monetary Policy Meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-01-30",
+      "startDate": "2025-01-30",
+      "endDate": "2025-01-30",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-03-06",
+      "startDate": "2025-03-06",
+      "endDate": "2025-03-06",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-04-17",
+      "startDate": "2025-04-17",
+      "endDate": "2025-04-17",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-06-05",
+      "startDate": "2025-06-05",
+      "endDate": "2025-06-05",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-07-24",
+      "startDate": "2025-07-24",
+      "endDate": "2025-07-24",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-09-11",
+      "startDate": "2025-09-11",
+      "endDate": "2025-09-11",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-10-30",
+      "startDate": "2025-10-30",
+      "endDate": "2025-10-30",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2025-12-18",
+      "startDate": "2025-12-18",
+      "endDate": "2025-12-18",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2025/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-02-05",
+      "startDate": "2026-02-05",
+      "endDate": "2026-02-05",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-03-19",
+      "startDate": "2026-03-19",
+      "endDate": "2026-03-19",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-04-30",
+      "startDate": "2026-04-30",
+      "endDate": "2026-04-30",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-06-11",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-11",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-07-23",
+      "startDate": "2026-07-23",
+      "endDate": "2026-07-23",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-09-10",
+      "startDate": "2026-09-10",
+      "endDate": "2026-09-10",
+      "source": "https://www.ecb.europa.eu/press/govcdec/mopo/2026/html/index_include.en.html",
+      "note": "Press release date of the monetary policy decision"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-10-29",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-29",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2026-12-17",
+      "startDate": "2026-12-17",
+      "endDate": "2026-12-17",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-02-04",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-04",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-03-18",
+      "startDate": "2027-03-18",
+      "endDate": "2027-03-18",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-04-29",
+      "startDate": "2027-04-29",
+      "endDate": "2027-04-29",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-06-10",
+      "startDate": "2027-06-10",
+      "endDate": "2027-06-10",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-07-22",
+      "startDate": "2027-07-22",
+      "endDate": "2027-07-22",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-09-09",
+      "startDate": "2027-09-09",
+      "endDate": "2027-09-09",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-10-28",
+      "startDate": "2027-10-28",
+      "endDate": "2027-10-28",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2027-12-16",
+      "startDate": "2027-12-16",
+      "endDate": "2027-12-16",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-02-03",
+      "startDate": "2028-02-03",
+      "endDate": "2028-02-03",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-03-23",
+      "startDate": "2028-03-23",
+      "endDate": "2028-03-23",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-05-04",
+      "startDate": "2028-05-04",
+      "endDate": "2028-05-04",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-06-08",
+      "startDate": "2028-06-08",
+      "endDate": "2028-06-08",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-07-20",
+      "startDate": "2028-07-20",
+      "endDate": "2028-07-20",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-09-07",
+      "startDate": "2028-09-07",
+      "endDate": "2028-09-07",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-10-12",
+      "startDate": "2028-10-12",
+      "endDate": "2028-10-12",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "ECB",
+      "decisionDate": "2028-12-07",
+      "startDate": "2028-12-07",
+      "endDate": "2028-12-07",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "note": "Decision date is day 2 of the Governing Council monetary policy meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-01-28",
+      "startDate": "2026-01-27",
+      "endDate": "2026-01-28",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-03-18",
+      "startDate": "2026-03-17",
+      "endDate": "2026-03-18",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-04-29",
+      "startDate": "2026-04-28",
+      "endDate": "2026-04-29",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-06-17",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-17",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-07-29",
+      "startDate": "2026-07-28",
+      "endDate": "2026-07-29",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-09-16",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-16",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-10-28",
+      "startDate": "2026-10-27",
+      "endDate": "2026-10-28",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2026-12-09",
+      "startDate": "2026-12-08",
+      "endDate": "2026-12-09",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-01-27",
+      "startDate": "2027-01-26",
+      "endDate": "2027-01-27",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-03-17",
+      "startDate": "2027-03-16",
+      "endDate": "2027-03-17",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-04-28",
+      "startDate": "2027-04-27",
+      "endDate": "2027-04-28",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-06-09",
+      "startDate": "2027-06-08",
+      "endDate": "2027-06-09",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-07-28",
+      "startDate": "2027-07-27",
+      "endDate": "2027-07-28",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-09-15",
+      "startDate": "2027-09-14",
+      "endDate": "2027-09-15",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-10-27",
+      "startDate": "2027-10-26",
+      "endDate": "2027-10-27",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    },
+    {
+      "bank": "Fed",
+      "decisionDate": "2027-12-08",
+      "startDate": "2027-12-07",
+      "endDate": "2027-12-08",
+      "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "note": "Decision date is day 2 of the FOMC meeting"
+    }
+  ]
+}
