@@ -6,7 +6,7 @@
   "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
   "fallback": true,
   "delayed": false,
-  "fredError": "FRED DFII10: The operation was aborted due to timeout",
+  "fredError": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2024-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2024-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2024-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10 attempt 3: The operation was aborted due to timeout)",
   "crosscheck": null,
   "asOf": "2026-10-14",
   "points": [
@@ -1795,6 +1795,6 @@
       "value": 2.84
     }
   ],
-  "fetchedAt": "2026-10-15T02:41:52.286Z",
+  "fetchedAt": "2026-10-15T04:56:32.627Z",
   "status": "ok"
 }

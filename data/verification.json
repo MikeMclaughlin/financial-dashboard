@@ -1,56 +1,56 @@
 {
-  "generatedAt": "2026-10-15T02:47:38.326Z",
+  "generatedAt": "2026-10-15T05:03:11.643Z",
   "issueCount": 15,
   "issues": [
     {
       "item": 3,
       "level": "issue",
-      "detail": "FRED DGS10 cross-check unavailable: FRED DGS10: The operation was aborted due to timeout"
+      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "EUR FRED DEXUSEU unavailable: FRED DEXUSEU: The operation was aborted due to timeout"
+      "detail": "EUR FRED DEXUSEU unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 11,
@@ -60,7 +60,7 @@
     {
       "item": 2,
       "level": "issue",
-      "detail": "FRED DTWEXBGS unavailable: FRED DTWEXBGS: The operation was aborted due to timeout. ICE DXY is shown from Yahoo."
+      "detail": "FRED DTWEXBGS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 3: The operation was aborted due to timeout). ICE DXY is shown from Yahoo."
     },
     {
       "item": 13,
@@ -70,7 +70,7 @@
     {
       "item": 12,
       "level": "fallback",
-      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). The operation was aborted due to timeout"
+      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 12,
@@ -112,7 +112,7 @@
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=ok asOf=2026-10-14 fallback=false proxy=false"
+      "detail": "11 Bonds status=stale asOf=2026-10-14 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
@@ -167,7 +167,7 @@
     {
       "item": 3,
       "level": "issue",
-      "detail": "FRED DGS10 cross-check unavailable: FRED DGS10: The operation was aborted due to timeout"
+      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
@@ -217,67 +217,67 @@
     {
       "item": 6,
       "level": "issue",
-      "detail": "EUR FRED DEXUSEU unavailable: FRED DEXUSEU: The operation was aborted due to timeout"
+      "detail": "EUR FRED DEXUSEU unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "JPY FRED DEXJPUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "GBP FRED DEXUSUK unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "CHF FRED DEXSZUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "CAD FRED DEXCAUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "AUD FRED DEXUSAL unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "NZD FRED DEXUSNZ unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "SEK FRED DEXSDUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "issue",
-      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (The operation was aborted due to timeout)"
+      "detail": "NOK FRED DEXNOUS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=2025-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff -0.31%"
+      "detail": "EUR vs Yahoo diff -0.21%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY vs Yahoo diff -0.47%"
+      "detail": "JPY vs Yahoo diff -0.32%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff 0.13%"
+      "detail": "GBP vs Yahoo diff 0.16%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff -0.59%"
+      "detail": "CHF vs Yahoo diff -0.42%"
     },
     {
       "item": 6,
@@ -287,22 +287,22 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff 0.75%"
+      "detail": "AUD vs Yahoo diff 0.76%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff -0.22%"
+      "detail": "NZD vs Yahoo diff -0.1%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff -0.08%"
+      "detail": "SEK vs Yahoo diff -0.02%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK vs Yahoo diff 0.14%"
+      "detail": "NOK vs Yahoo diff 0.18%"
     },
     {
       "item": 7,
@@ -397,7 +397,7 @@
     {
       "item": 2,
       "level": "issue",
-      "detail": "FRED DTWEXBGS unavailable: FRED DTWEXBGS: The operation was aborted due to timeout. ICE DXY is shown from Yahoo."
+      "detail": "FRED DTWEXBGS unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 3: The operation was aborted due to timeout). ICE DXY is shown from Yahoo."
     },
     {
       "item": 13,
@@ -407,7 +407,7 @@
     {
       "item": 12,
       "level": "fallback",
-      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). The operation was aborted due to timeout"
+      "detail": "Fed funds futures are live. The anchor is a fallback: NY Fed EFFR (FRED DFF unavailable). FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 12,

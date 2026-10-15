@@ -11,7 +11,7 @@
     "value": 3.88,
     "source": "NY Fed EFFR (FRED DFF unavailable)",
     "fallback": true,
-    "fredError": "The operation was aborted due to timeout"
+    "fredError": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 3: The operation was aborted due to timeout)"
   },
   "points": [
     {
@@ -22,7 +22,7 @@
       "month": 10,
       "price": 96.115,
       "value": 3.885,
-      "asOf": "2026-10-15"
+      "asOf": "2026-10-14"
     },
     {
       "symbol": "ZQX26.CBT",
@@ -50,8 +50,8 @@
       "label": "Jan",
       "year": 2027,
       "month": 1,
-      "price": 95.84,
-      "value": 4.16,
+      "price": 95.835,
+      "value": 4.165,
       "asOf": "2026-10-15"
     },
     {
@@ -100,8 +100,8 @@
       "label": "Jun",
       "year": 2027,
       "month": 6,
-      "price": 95.455,
-      "value": 4.545,
+      "price": 95.46,
+      "value": 4.54,
       "asOf": "2026-10-15"
     },
     {
@@ -120,8 +120,8 @@
       "label": "Aug",
       "year": 2027,
       "month": 8,
-      "price": 95.415,
-      "value": 4.585,
+      "price": 95.425,
+      "value": 4.575,
       "asOf": "2026-10-15"
     },
     {
@@ -130,12 +130,12 @@
       "label": "Sep",
       "year": 2027,
       "month": 9,
-      "price": 95.405,
-      "value": 4.595,
+      "price": 95.415,
+      "value": 4.585,
       "asOf": "2026-10-15"
     }
   ],
   "errors": [],
-  "fetchedAt": "2026-10-15T02:44:51.973Z",
+  "fetchedAt": "2026-10-15T05:03:10.707Z",
   "status": "ok"
 }

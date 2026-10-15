@@ -173,6 +173,7 @@
       "note": "OECD has no observation for the ECB month, so the months were not compared."
     }
   ],
-  "fetchedAt": "2026-10-15T02:46:39.776Z",
-  "status": "ok"
+  "fetchedAt": "2026-10-15T04:56:39.187Z",
+  "status": "stale",
+  "error": "fredBlocked is not defined"
 }
