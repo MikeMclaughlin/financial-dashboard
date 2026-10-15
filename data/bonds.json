@@ -1,0 +1,178 @@
+{
+  "id": "bonds",
+  "name": "10Y government bond spread vs US Treasuries",
+  "unit": "basis points (country yield minus US 10Y)",
+  "asOf": "2026-10-14",
+  "us10ySource": "US Treasury daily yield curve, 10 Yr",
+  "note": "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date.",
+  "oecdDirect": true,
+  "fredGraph": "not used for these monthly series; OECD SDMX is the dataset behind the FRED IDs",
+  "bars": [
+    {
+      "country": "Switzerland",
+      "yield": 0.59,
+      "asOf": "2026-09-30",
+      "frequency": "monthly",
+      "badges": [
+        "monthly",
+        "delayed"
+      ],
+      "source": "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01CHM156N)",
+      "fredId": "IRLTLT01CHM156N",
+      "us10y": 5.29,
+      "us10yDate": "2026-09-30",
+      "spreadBp": -470,
+      "status": "ok"
+    },
+    {
+      "country": "Japan",
+      "yield": 3.015,
+      "asOf": "2026-10-14",
+      "frequency": "daily",
+      "badges": [],
+      "source": "Japan MOF JGB yield curve, 10Y (English history + current-month Shift-JIS file)",
+      "fredId": null,
+      "us10y": 5.19,
+      "us10yDate": "2026-10-14",
+      "spreadBp": -218,
+      "status": "ok"
+    },
+    {
+      "country": "Germany",
+      "yield": 3.51,
+      "asOf": "2026-10-14",
+      "frequency": "daily",
+      "badges": [],
+      "source": "Bundesbank BBSIS 10-year",
+      "fredId": null,
+      "us10y": 5.19,
+      "us10yDate": "2026-10-14",
+      "spreadBp": -168,
+      "status": "ok"
+    },
+    {
+      "country": "France",
+      "yield": 4.4771,
+      "asOf": "2026-09-30",
+      "frequency": "monthly",
+      "badges": [
+        "monthly",
+        "delayed"
+      ],
+      "source": "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01FRM156N)",
+      "fredId": "IRLTLT01FRM156N",
+      "us10y": 5.29,
+      "us10yDate": "2026-09-30",
+      "spreadBp": -81,
+      "status": "ok"
+    },
+    {
+      "country": "Italy",
+      "yield": 3.986,
+      "asOf": "2026-08-31",
+      "frequency": "monthly",
+      "badges": [
+        "monthly",
+        "delayed"
+      ],
+      "source": "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01ITM156N)",
+      "fredId": "IRLTLT01ITM156N",
+      "us10y": 4.75,
+      "us10yDate": "2026-08-31",
+      "spreadBp": -76,
+      "status": "ok"
+    },
+    {
+      "country": "Canada",
+      "yield": 3.87,
+      "asOf": "2026-10-13",
+      "frequency": "daily",
+      "badges": [],
+      "source": "Bank of Canada Valet BD.CDN.10YR.DQ.YLD",
+      "fredId": null,
+      "us10y": 5.21,
+      "us10yDate": "2026-10-13",
+      "spreadBp": -134,
+      "status": "ok"
+    },
+    {
+      "country": "Australia",
+      "yield": 5.404,
+      "asOf": "2026-10-07",
+      "frequency": "daily",
+      "badges": [
+        "delayed"
+      ],
+      "source": "RBA statistical table F2, Australian Government 10 year bond",
+      "fredId": null,
+      "us10y": 5.28,
+      "us10yDate": "2026-10-07",
+      "spreadBp": 12,
+      "status": "ok"
+    }
+  ],
+  "crosschecks": [
+    {
+      "country": "Germany",
+      "oecdMonth": "2026-09",
+      "oecd": 3.469524,
+      "localMonthlyAverage": 3.532,
+      "diffBp": 6,
+      "flag": false
+    },
+    {
+      "country": "Japan",
+      "oecdMonth": "2026-09",
+      "oecd": 3.05,
+      "localMonthlyAverage": 2.992,
+      "diffBp": -6,
+      "flag": false
+    },
+    {
+      "country": "Canada",
+      "oecdMonth": "2026-09",
+      "oecd": 3.8825,
+      "localMonthlyAverage": 3.882,
+      "diffBp": 0,
+      "flag": false
+    },
+    {
+      "country": "Australia",
+      "oecdMonth": "2026-09",
+      "oecd": 5.283,
+      "localMonthlyAverage": 5.283,
+      "diffBp": 0,
+      "flag": false
+    },
+    {
+      "country": "United States",
+      "oecdMonth": "2026-09",
+      "oecd": 4.99,
+      "localMonthlyAverage": 4.989,
+      "diffBp": 0,
+      "flag": false
+    },
+    {
+      "country": "France",
+      "source": "ECB IRS long-term rate vs OECD IRLT",
+      "month": "2026-09",
+      "ecb": 4.44,
+      "oecd": 4.4771,
+      "diffBp": 4,
+      "flag": false
+    },
+    {
+      "country": "Italy",
+      "source": "ECB IRS long-term rate vs OECD IRLT",
+      "month": "2026-09",
+      "ecb": 4.362,
+      "oecdLatestMonth": "2026-08",
+      "oecdLatest": 3.986,
+      "diffBp": null,
+      "flag": true,
+      "note": "OECD has no observation for the ECB month, so the months were not compared."
+    }
+  ],
+  "fetchedAt": "2026-10-15T02:46:39.776Z",
+  "status": "ok"
+}

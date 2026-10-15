@@ -1,0 +1,761 @@
+{
+  "id": "auctions",
+  "name": "Treasury auction demand",
+  "unit": "bid-to-cover ratio",
+  "definition": "TreasuryDirect auctioned securities. Includes Notes and Bonds only (bills excluded). TIPS are included when TreasuryDirect classifies them as a Note or Bond.",
+  "source": "TreasuryDirect TA_WS securities/auctioned",
+  "sourceUrl": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?format=json&days=420",
+  "asOf": "2026-10-08",
+  "average": 2.566,
+  "auctions": [
+    {
+      "cusip": "912810UH9",
+      "date": "2025-08-21",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 6-Month",
+      "tips": true,
+      "bidToCover": 2.78,
+      "highYield": 2.65
+    },
+    {
+      "cusip": "91282CNV9",
+      "date": "2025-08-26",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.69,
+      "highYield": 3.641
+    },
+    {
+      "cusip": "91282CNX5",
+      "date": "2025-08-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.36,
+      "highYield": 3.724
+    },
+    {
+      "cusip": "91282CNW7",
+      "date": "2025-08-28",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.49,
+      "highYield": 3.925
+    },
+    {
+      "cusip": "91282CNY3",
+      "date": "2025-09-09",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.73,
+      "highYield": 3.485
+    },
+    {
+      "cusip": "91282CPB1",
+      "date": "2025-09-23",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.51,
+      "highYield": 3.571
+    },
+    {
+      "cusip": "91282CNQ0",
+      "date": "2025-09-24",
+      "securityType": "Note",
+      "securityTerm": "1-Year 10-Month",
+      "tips": false,
+      "bidToCover": 3.15,
+      "highYield": null
+    },
+    {
+      "cusip": "91282CPA3",
+      "date": "2025-09-24",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.34,
+      "highYield": 3.71
+    },
+    {
+      "cusip": "91282CNZ0",
+      "date": "2025-09-25",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.4,
+      "highYield": 3.953
+    },
+    {
+      "cusip": "91282CPC9",
+      "date": "2025-10-07",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.66,
+      "highYield": 3.576
+    },
+    {
+      "cusip": "91282CNT4",
+      "date": "2025-10-08",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.48,
+      "highYield": 4.117
+    },
+    {
+      "cusip": "912810UM8",
+      "date": "2025-10-09",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.38,
+      "highYield": 4.734
+    },
+    {
+      "cusip": "912810UN6",
+      "date": "2025-10-22",
+      "securityType": "Bond",
+      "securityTerm": "19-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.73,
+      "highYield": 4.506
+    },
+    {
+      "cusip": "91282CPD7",
+      "date": "2025-10-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.38,
+      "highYield": 3.625
+    },
+    {
+      "cusip": "91282CPE5",
+      "date": "2025-10-27",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.59,
+      "highYield": 3.504
+    },
+    {
+      "cusip": "91282CPF2",
+      "date": "2025-10-28",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.46,
+      "highYield": 3.79
+    },
+    {
+      "cusip": "91282CPK1",
+      "date": "2025-11-10",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.85,
+      "highYield": 3.579
+    },
+    {
+      "cusip": "91282CNS6",
+      "date": "2025-11-20",
+      "securityType": "Note",
+      "securityTerm": "9-Year 8-Month",
+      "tips": true,
+      "bidToCover": 2.41,
+      "highYield": 1.843
+    },
+    {
+      "cusip": "91282CPL9",
+      "date": "2025-11-24",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.68,
+      "highYield": 3.489
+    },
+    {
+      "cusip": "91282CPN5",
+      "date": "2025-11-25",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.41,
+      "highYield": 3.562
+    },
+    {
+      "cusip": "91282CPM7",
+      "date": "2025-11-26",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.46,
+      "highYield": 3.781
+    },
+    {
+      "cusip": "91282CPP0",
+      "date": "2025-12-08",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.64,
+      "highYield": 3.614
+    },
+    {
+      "cusip": "91282CPH8",
+      "date": "2025-12-18",
+      "securityType": "Note",
+      "securityTerm": "4-Year 10-Month",
+      "tips": true,
+      "bidToCover": 2.62,
+      "highYield": 1.433
+    },
+    {
+      "cusip": "91282CPS4",
+      "date": "2025-12-22",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.54,
+      "highYield": 3.499
+    },
+    {
+      "cusip": "91282CPG0",
+      "date": "2025-12-23",
+      "securityType": "Note",
+      "securityTerm": "1-Year 10-Month",
+      "tips": false,
+      "bidToCover": 3.75,
+      "highYield": null
+    },
+    {
+      "cusip": "91282CPR6",
+      "date": "2025-12-23",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.35,
+      "highYield": 3.747
+    },
+    {
+      "cusip": "91282CPQ8",
+      "date": "2025-12-24",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.51,
+      "highYield": 3.93
+    },
+    {
+      "cusip": "91282CPJ4",
+      "date": "2026-01-12",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.55,
+      "highYield": 4.173
+    },
+    {
+      "cusip": "91282CPT2",
+      "date": "2026-01-12",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.65,
+      "highYield": 3.609
+    },
+    {
+      "cusip": "912810UP1",
+      "date": "2026-01-13",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.42,
+      "highYield": 4.825
+    },
+    {
+      "cusip": "912810UQ9",
+      "date": "2026-01-21",
+      "securityType": "Bond",
+      "securityTerm": "19-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.86,
+      "highYield": 4.846
+    },
+    {
+      "cusip": "91282CGH8",
+      "date": "2026-01-26",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.75,
+      "highYield": 3.58
+    },
+    {
+      "cusip": "91282CPW5",
+      "date": "2026-01-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.34,
+      "highYield": 3.823
+    },
+    {
+      "cusip": "91282CPY1",
+      "date": "2026-01-29",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.45,
+      "highYield": 4.018
+    },
+    {
+      "cusip": "91282CQA2",
+      "date": "2026-02-10",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.62,
+      "highYield": 3.518
+    },
+    {
+      "cusip": "91282CQB0",
+      "date": "2026-02-24",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.63,
+      "highYield": 3.455
+    },
+    {
+      "cusip": "91282CQD6",
+      "date": "2026-02-25",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.32,
+      "highYield": 3.615
+    },
+    {
+      "cusip": "91282CQC8",
+      "date": "2026-02-26",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.5,
+      "highYield": 3.79
+    },
+    {
+      "cusip": "91282CQE4",
+      "date": "2026-03-10",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.55,
+      "highYield": 3.579
+    },
+    {
+      "cusip": "91282CQH7",
+      "date": "2026-03-24",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.44,
+      "highYield": 3.936
+    },
+    {
+      "cusip": "91282CPX3",
+      "date": "2026-03-25",
+      "securityType": "Note",
+      "securityTerm": "1-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.78,
+      "highYield": null
+    },
+    {
+      "cusip": "91282CQG9",
+      "date": "2026-03-25",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.29,
+      "highYield": 3.98
+    },
+    {
+      "cusip": "91282CQF1",
+      "date": "2026-03-26",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.43,
+      "highYield": 4.255
+    },
+    {
+      "cusip": "91282CQJ3",
+      "date": "2026-04-07",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.68,
+      "highYield": 3.897
+    },
+    {
+      "cusip": "91282CPZ8",
+      "date": "2026-04-08",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.43,
+      "highYield": 4.282
+    },
+    {
+      "cusip": "912810UR7",
+      "date": "2026-04-09",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.39,
+      "highYield": 4.876
+    },
+    {
+      "cusip": "912810UT3",
+      "date": "2026-04-22",
+      "securityType": "Bond",
+      "securityTerm": "19-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.68,
+      "highYield": 4.883
+    },
+    {
+      "cusip": "91282CQK0",
+      "date": "2026-04-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.33,
+      "highYield": 3.955
+    },
+    {
+      "cusip": "91282CQL8",
+      "date": "2026-04-27",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.65,
+      "highYield": 3.812
+    },
+    {
+      "cusip": "91282CQN4",
+      "date": "2026-04-28",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.51,
+      "highYield": 4.175
+    },
+    {
+      "cusip": "91282CQR5",
+      "date": "2026-05-11",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.54,
+      "highYield": 3.965
+    },
+    {
+      "cusip": "91282CPU9",
+      "date": "2026-05-21",
+      "securityType": "Note",
+      "securityTerm": "9-Year 8-Month",
+      "tips": true,
+      "bidToCover": 2.52,
+      "highYield": 2.169
+    },
+    {
+      "cusip": "91282CQS3",
+      "date": "2026-05-26",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.64,
+      "highYield": 4.071
+    },
+    {
+      "cusip": "91282CQU8",
+      "date": "2026-05-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.34,
+      "highYield": 4.182
+    },
+    {
+      "cusip": "91282CQT1",
+      "date": "2026-05-28",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.52,
+      "highYield": 4.29
+    },
+    {
+      "cusip": "91282CQV6",
+      "date": "2026-06-09",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.64,
+      "highYield": 4.192
+    },
+    {
+      "cusip": "91282CQP9",
+      "date": "2026-06-18",
+      "securityType": "Note",
+      "securityTerm": "4-Year 10-Month",
+      "tips": true,
+      "bidToCover": 2.61,
+      "highYield": 1.955
+    },
+    {
+      "cusip": "91282CQY0",
+      "date": "2026-06-23",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.64,
+      "highYield": 4.189
+    },
+    {
+      "cusip": "91282CQM6",
+      "date": "2026-06-24",
+      "securityType": "Note",
+      "securityTerm": "1-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.99,
+      "highYield": null
+    },
+    {
+      "cusip": "91282CQX2",
+      "date": "2026-06-24",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.35,
+      "highYield": 4.2
+    },
+    {
+      "cusip": "91282CQW4",
+      "date": "2026-06-25",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.5,
+      "highYield": 4.26
+    },
+    {
+      "cusip": "91282CQZ7",
+      "date": "2026-07-07",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.6,
+      "highYield": 4.179
+    },
+    {
+      "cusip": "91282CQQ7",
+      "date": "2026-07-08",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.59,
+      "highYield": 4.58
+    },
+    {
+      "cusip": "912810UU0",
+      "date": "2026-07-09",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.44,
+      "highYield": 5.058
+    },
+    {
+      "cusip": "912810UV8",
+      "date": "2026-07-22",
+      "securityType": "Bond",
+      "securityTerm": "19-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.64,
+      "highYield": 5.163
+    },
+    {
+      "cusip": "91282CRA1",
+      "date": "2026-07-27",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.28,
+      "highYield": 4.408
+    },
+    {
+      "cusip": "91282CRB9",
+      "date": "2026-07-27",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.66,
+      "highYield": 4.315
+    },
+    {
+      "cusip": "91282CRC7",
+      "date": "2026-07-28",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.49,
+      "highYield": 4.473
+    },
+    {
+      "cusip": "91282CRG8",
+      "date": "2026-08-11",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.71,
+      "highYield": 4.291
+    },
+    {
+      "cusip": "912810US5",
+      "date": "2026-08-20",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 6-Month",
+      "tips": true,
+      "bidToCover": 2.82,
+      "highYield": 2.973
+    },
+    {
+      "cusip": "91282CRH6",
+      "date": "2026-08-25",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.6,
+      "highYield": 4.204
+    },
+    {
+      "cusip": "91282CRK9",
+      "date": "2026-08-26",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.37,
+      "highYield": 4.393
+    },
+    {
+      "cusip": "91282CRJ2",
+      "date": "2026-08-27",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.5,
+      "highYield": 4.512
+    },
+    {
+      "cusip": "91282CRL7",
+      "date": "2026-09-08",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.72,
+      "highYield": 4.474
+    },
+    {
+      "cusip": "912810UX4",
+      "date": "2026-09-15",
+      "securityType": "Bond",
+      "securityTerm": "19-Year 11-Month",
+      "tips": false,
+      "bidToCover": 2.57,
+      "highYield": 5.42
+    },
+    {
+      "cusip": "91282CRE3",
+      "date": "2026-09-17",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": true,
+      "bidToCover": 2.24,
+      "highYield": 2.653
+    },
+    {
+      "cusip": "91282CRP8",
+      "date": "2026-09-22",
+      "securityType": "Note",
+      "securityTerm": "2-Year",
+      "tips": false,
+      "bidToCover": 2.63,
+      "highYield": 4.787
+    },
+    {
+      "cusip": "91282CRD5",
+      "date": "2026-09-23",
+      "securityType": "Note",
+      "securityTerm": "1-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.63,
+      "highYield": null
+    },
+    {
+      "cusip": "91282CRN3",
+      "date": "2026-09-23",
+      "securityType": "Note",
+      "securityTerm": "5-Year",
+      "tips": false,
+      "bidToCover": 2.21,
+      "highYield": 5.033
+    },
+    {
+      "cusip": "91282CRM5",
+      "date": "2026-09-24",
+      "securityType": "Note",
+      "securityTerm": "7-Year",
+      "tips": false,
+      "bidToCover": 2.42,
+      "highYield": 5.085
+    },
+    {
+      "cusip": "91282CRQ6",
+      "date": "2026-10-06",
+      "securityType": "Note",
+      "securityTerm": "3-Year",
+      "tips": false,
+      "bidToCover": 2.62,
+      "highYield": 4.932
+    },
+    {
+      "cusip": "91282CRF0",
+      "date": "2026-10-07",
+      "securityType": "Note",
+      "securityTerm": "9-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.77,
+      "highYield": 5.3
+    },
+    {
+      "cusip": "912810UW6",
+      "date": "2026-10-08",
+      "securityType": "Bond",
+      "securityTerm": "29-Year 10-Month",
+      "tips": false,
+      "bidToCover": 2.54,
+      "highYield": 5.618
+    }
+  ],
+  "fetchedAt": "2026-10-15T02:41:34.481Z",
+  "status": "ok"
+}

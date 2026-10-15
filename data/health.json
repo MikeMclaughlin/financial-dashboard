@@ -1,0 +1,164 @@
+{
+  "version": "1.0",
+  "service": "financial-dashboard",
+  "generatedAt": "2026-10-15T02:46:39.820Z",
+  "status": "degraded",
+  "series": {
+    "eurusd": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "ECB EXR D.USD.EUR.SP00.A",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:35.866Z"
+    },
+    "dxy": {
+      "status": "ok",
+      "asOf": "2026-10-15",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:44:36.297Z"
+    },
+    "broad-usd": {
+      "status": "error",
+      "asOf": null,
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": null,
+      "error": "FRED DTWEXBGS: The operation was aborted due to timeout",
+      "fetchedAt": "2026-10-15T02:41:51.757Z"
+    },
+    "treasury": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "US Treasury daily yield curve CSV 2025-2026",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:52.151Z"
+    },
+    "fx": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "ECB EXR daily, D.USD+JPY+GBP+CHF+CAD+AUD+NZD+SEK+NOK.EUR.SP00.A",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:53.816Z"
+    },
+    "cftc": {
+      "status": "ok",
+      "asOf": "2026-10-06",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "CFTC Socrata 6dca-aqww",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:38.373Z"
+    },
+    "bunds": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "Bundesbank BBSIS Svensson daily, 2-year R02XX and 10-year R10XX",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:34.615Z"
+    },
+    "bonds": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": null,
+      "error": null,
+      "fetchedAt": "2026-10-15T02:46:39.776Z"
+    },
+    "ecb-path": {
+      "status": "ok",
+      "asOf": "2026-10-13",
+      "fallback": false,
+      "proxy": true,
+      "delayed": false,
+      "source": "€STR plus ECB yield curve SV_C_YM spot rates SR_3M, SR_6M, SR_1Y, SR_2Y and instantaneous forward IF_1Y",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:35.088Z"
+    },
+    "fed-path": {
+      "status": "ok",
+      "asOf": "2026-10-15",
+      "fallback": true,
+      "proxy": false,
+      "delayed": false,
+      "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:44:51.973Z"
+    },
+    "real-yield": {
+      "status": "ok",
+      "asOf": "2026-10-14",
+      "fallback": true,
+      "proxy": false,
+      "delayed": false,
+      "source": "US Treasury daily real yield curve, 10 YR (FRED DFII10 unavailable)",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:52.286Z"
+    },
+    "commodities": {
+      "status": "ok",
+      "asOf": "2026-10-15",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": null,
+      "error": null,
+      "fetchedAt": "2026-10-15T02:44:52.077Z"
+    },
+    "auctions": {
+      "status": "ok",
+      "asOf": "2026-10-08",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "TreasuryDirect TA_WS securities/auctioned",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:41:34.481Z"
+    },
+    "fx-yahoo": {
+      "status": "ok",
+      "asOf": "2026-10-15",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": "Yahoo FX spot quotes",
+      "error": null,
+      "fetchedAt": "2026-10-15T02:44:52.566Z"
+    },
+    "meetings": {
+      "status": "ok",
+      "asOf": "2026-10-15",
+      "fallback": false,
+      "proxy": false,
+      "delayed": false,
+      "source": {
+        "fed": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "ecbCalendar": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+        "ecbDecisions": "https://www.ecb.europa.eu/press/govcdec/mopo",
+        "boe": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+        "boj": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+      },
+      "error": null,
+      "fetchedAt": null
+    }
+  }
+}

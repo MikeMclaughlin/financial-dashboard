@@ -1,0 +1,23 @@
+name: Check central-bank calendars
+
+on:
+  schedule:
+    # Monthly, 08:15 UTC on the 1st. Fails when official pages differ from data/meetings.json.
+    - cron: "15 8 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Scrape official calendars and fail on any diff
+        run: node scripts/scrape-calendars.mjs

@@ -1,0 +1,853 @@
+{
+  "id": "cftc",
+  "name": "EUR net speculative positioning",
+  "unit": "contracts",
+  "definition": "CFTC legacy futures-only, EURO FX (099741). Net = noncommercial long minus noncommercial short. Positive is net long euro; negative is net short euro.",
+  "source": "CFTC Socrata 6dca-aqww",
+  "sourceUrl": "https://publicreporting.cftc.gov/resource/6dca-aqww.csv",
+  "asOf": "2026-10-06",
+  "points": [
+    {
+      "date": "2024-06-25",
+      "long": 167370,
+      "short": 175801,
+      "openInterest": 650087,
+      "net": -8431
+    },
+    {
+      "date": "2024-07-02",
+      "long": 164369,
+      "short": 173888,
+      "openInterest": 636895,
+      "net": -9519
+    },
+    {
+      "date": "2024-07-09",
+      "long": 165829,
+      "short": 162206,
+      "openInterest": 637266,
+      "net": 3623
+    },
+    {
+      "date": "2024-07-16",
+      "long": 179937,
+      "short": 155188,
+      "openInterest": 649251,
+      "net": 24749
+    },
+    {
+      "date": "2024-07-23",
+      "long": 188929,
+      "short": 153023,
+      "openInterest": 672022,
+      "net": 35906
+    },
+    {
+      "date": "2024-07-30",
+      "long": 183006,
+      "short": 165207,
+      "openInterest": 667299,
+      "net": 17799
+    },
+    {
+      "date": "2024-08-06",
+      "long": 185799,
+      "short": 152219,
+      "openInterest": 671104,
+      "net": 33580
+    },
+    {
+      "date": "2024-08-13",
+      "long": 182212,
+      "short": 155229,
+      "openInterest": 667350,
+      "net": 26983
+    },
+    {
+      "date": "2024-08-20",
+      "long": 194350,
+      "short": 138333,
+      "openInterest": 692017,
+      "net": 56017
+    },
+    {
+      "date": "2024-08-27",
+      "long": 218381,
+      "short": 125543,
+      "openInterest": 726519,
+      "net": 92838
+    },
+    {
+      "date": "2024-09-03",
+      "long": 215969,
+      "short": 115951,
+      "openInterest": 740311,
+      "net": 100018
+    },
+    {
+      "date": "2024-09-10",
+      "long": 192821,
+      "short": 111388,
+      "openInterest": 741888,
+      "net": 81433
+    },
+    {
+      "date": "2024-09-17",
+      "long": 182281,
+      "short": 112635,
+      "openInterest": 678001,
+      "net": 69646
+    },
+    {
+      "date": "2024-09-24",
+      "long": 187795,
+      "short": 116097,
+      "openInterest": 679514,
+      "net": 71698
+    },
+    {
+      "date": "2024-10-01",
+      "long": 178273,
+      "short": 122946,
+      "openInterest": 674734,
+      "net": 55327
+    },
+    {
+      "date": "2024-10-08",
+      "long": 173866,
+      "short": 134768,
+      "openInterest": 669131,
+      "net": 39098
+    },
+    {
+      "date": "2024-10-15",
+      "long": 169319,
+      "short": 152169,
+      "openInterest": 658481,
+      "net": 17150
+    },
+    {
+      "date": "2024-10-22",
+      "long": 153159,
+      "short": 181683,
+      "openInterest": 650759,
+      "net": -28524
+    },
+    {
+      "date": "2024-10-29",
+      "long": 159313,
+      "short": 209617,
+      "openInterest": 661675,
+      "net": -50304
+    },
+    {
+      "date": "2024-11-05",
+      "long": 159900,
+      "short": 181553,
+      "openInterest": 645597,
+      "net": -21653
+    },
+    {
+      "date": "2024-11-12",
+      "long": 160003,
+      "short": 167440,
+      "openInterest": 637105,
+      "net": -7437
+    },
+    {
+      "date": "2024-11-19",
+      "long": 154305,
+      "short": 196862,
+      "openInterest": 658774,
+      "net": -42557
+    },
+    {
+      "date": "2024-11-26",
+      "long": 156334,
+      "short": 212343,
+      "openInterest": 665553,
+      "net": -56009
+    },
+    {
+      "date": "2024-12-03",
+      "long": 167693,
+      "short": 225182,
+      "openInterest": 675059,
+      "net": -57489
+    },
+    {
+      "date": "2024-12-10",
+      "long": 157375,
+      "short": 232948,
+      "openInterest": 727276,
+      "net": -75573
+    },
+    {
+      "date": "2024-12-17",
+      "long": 152671,
+      "short": 218566,
+      "openInterest": 584000,
+      "net": -65895
+    },
+    {
+      "date": "2024-12-24",
+      "long": 159471,
+      "short": 227978,
+      "openInterest": 597583,
+      "net": -68507
+    },
+    {
+      "date": "2024-12-31",
+      "long": 168806,
+      "short": 238370,
+      "openInterest": 609159,
+      "net": -69564
+    },
+    {
+      "date": "2025-01-07",
+      "long": 166503,
+      "short": 230627,
+      "openInterest": 603187,
+      "net": -64124
+    },
+    {
+      "date": "2025-01-14",
+      "long": 162760,
+      "short": 223157,
+      "openInterest": 604225,
+      "net": -60397
+    },
+    {
+      "date": "2025-01-21",
+      "long": 167665,
+      "short": 230151,
+      "openInterest": 609492,
+      "net": -62486
+    },
+    {
+      "date": "2025-01-28",
+      "long": 153660,
+      "short": 220264,
+      "openInterest": 618908,
+      "net": -66604
+    },
+    {
+      "date": "2025-02-04",
+      "long": 162554,
+      "short": 221168,
+      "openInterest": 616623,
+      "net": -58614
+    },
+    {
+      "date": "2025-02-11",
+      "long": 165594,
+      "short": 230019,
+      "openInterest": 622873,
+      "net": -64425
+    },
+    {
+      "date": "2025-02-18",
+      "long": 170320,
+      "short": 221740,
+      "openInterest": 638024,
+      "net": -51420
+    },
+    {
+      "date": "2025-02-25",
+      "long": 182699,
+      "short": 208124,
+      "openInterest": 658684,
+      "net": -25425
+    },
+    {
+      "date": "2025-03-04",
+      "long": 185223,
+      "short": 195329,
+      "openInterest": 683819,
+      "net": -10106
+    },
+    {
+      "date": "2025-03-11",
+      "long": 188647,
+      "short": 175557,
+      "openInterest": 729760,
+      "net": 13090
+    },
+    {
+      "date": "2025-03-18",
+      "long": 188952,
+      "short": 129527,
+      "openInterest": 652620,
+      "net": 59425
+    },
+    {
+      "date": "2025-03-25",
+      "long": 189796,
+      "short": 124271,
+      "openInterest": 672875,
+      "net": 65525
+    },
+    {
+      "date": "2025-04-01",
+      "long": 183247,
+      "short": 131412,
+      "openInterest": 670827,
+      "net": 51835
+    },
+    {
+      "date": "2025-04-08",
+      "long": 190296,
+      "short": 130316,
+      "openInterest": 697776,
+      "net": 59980
+    },
+    {
+      "date": "2025-04-15",
+      "long": 197103,
+      "short": 127823,
+      "openInterest": 708122,
+      "net": 69280
+    },
+    {
+      "date": "2025-04-22",
+      "long": 196205,
+      "short": 131177,
+      "openInterest": 719232,
+      "net": 65028
+    },
+    {
+      "date": "2025-04-29",
+      "long": 196388,
+      "short": 120591,
+      "openInterest": 730212,
+      "net": 75797
+    },
+    {
+      "date": "2025-05-06",
+      "long": 194192,
+      "short": 118473,
+      "openInterest": 737013,
+      "net": 75719
+    },
+    {
+      "date": "2025-05-13",
+      "long": 209549,
+      "short": 124775,
+      "openInterest": 750906,
+      "net": 84774
+    },
+    {
+      "date": "2025-05-20",
+      "long": 206042,
+      "short": 131589,
+      "openInterest": 759249,
+      "net": 74453
+    },
+    {
+      "date": "2025-05-27",
+      "long": 204326,
+      "short": 124852,
+      "openInterest": 760471,
+      "net": 79474
+    },
+    {
+      "date": "2025-06-03",
+      "long": 202786,
+      "short": 120022,
+      "openInterest": 781284,
+      "net": 82764
+    },
+    {
+      "date": "2025-06-10",
+      "long": 208754,
+      "short": 115729,
+      "openInterest": 810517,
+      "net": 93025
+    },
+    {
+      "date": "2025-06-17",
+      "long": 220811,
+      "short": 119258,
+      "openInterest": 755861,
+      "net": 101553
+    },
+    {
+      "date": "2025-06-24",
+      "long": 223791,
+      "short": 112656,
+      "openInterest": 762607,
+      "net": 111135
+    },
+    {
+      "date": "2025-07-01",
+      "long": 224979,
+      "short": 117442,
+      "openInterest": 779031,
+      "net": 107537
+    },
+    {
+      "date": "2025-07-08",
+      "long": 241125,
+      "short": 120529,
+      "openInterest": 805847,
+      "net": 120596
+    },
+    {
+      "date": "2025-07-15",
+      "long": 242096,
+      "short": 113875,
+      "openInterest": 820440,
+      "net": 128221
+    },
+    {
+      "date": "2025-07-22",
+      "long": 248380,
+      "short": 122865,
+      "openInterest": 843447,
+      "net": 125515
+    },
+    {
+      "date": "2025-07-29",
+      "long": 248841,
+      "short": 125482,
+      "openInterest": 828577,
+      "net": 123359
+    },
+    {
+      "date": "2025-08-05",
+      "long": 247357,
+      "short": 131398,
+      "openInterest": 818360,
+      "net": 115959
+    },
+    {
+      "date": "2025-08-12",
+      "long": 246299,
+      "short": 130868,
+      "openInterest": 824972,
+      "net": 115431
+    },
+    {
+      "date": "2025-08-19",
+      "long": 252719,
+      "short": 133974,
+      "openInterest": 825219,
+      "net": 118745
+    },
+    {
+      "date": "2025-08-26",
+      "long": 258386,
+      "short": 135347,
+      "openInterest": 842215,
+      "net": 123039
+    },
+    {
+      "date": "2025-09-02",
+      "long": 255660,
+      "short": 136068,
+      "openInterest": 845820,
+      "net": 119592
+    },
+    {
+      "date": "2025-09-09",
+      "long": 258049,
+      "short": 132372,
+      "openInterest": 878104,
+      "net": 125677
+    },
+    {
+      "date": "2025-09-16",
+      "long": 253261,
+      "short": 135502,
+      "openInterest": 855448,
+      "net": 117759
+    },
+    {
+      "date": "2025-09-23",
+      "long": 252472,
+      "short": 138127,
+      "openInterest": 859215,
+      "net": 114345
+    },
+    {
+      "date": "2025-09-30",
+      "long": 252530,
+      "short": 135161,
+      "openInterest": 845775,
+      "net": 117369
+    },
+    {
+      "date": "2025-10-07",
+      "long": 255907,
+      "short": 137542,
+      "openInterest": 855286,
+      "net": 118365
+    },
+    {
+      "date": "2025-10-14",
+      "long": 243010,
+      "short": 134685,
+      "openInterest": 841079,
+      "net": 108325
+    },
+    {
+      "date": "2025-10-21",
+      "long": 244507,
+      "short": 132755,
+      "openInterest": 835887,
+      "net": 111752
+    },
+    {
+      "date": "2025-10-28",
+      "long": 250400,
+      "short": 143067,
+      "openInterest": 843717,
+      "net": 107333
+    },
+    {
+      "date": "2025-11-04",
+      "long": 252542,
+      "short": 160747,
+      "openInterest": 835176,
+      "net": 91795
+    },
+    {
+      "date": "2025-11-10",
+      "long": 235920,
+      "short": 162331,
+      "openInterest": 831275,
+      "net": 73589
+    },
+    {
+      "date": "2025-11-18",
+      "long": 243961,
+      "short": 144954,
+      "openInterest": 827015,
+      "net": 99007
+    },
+    {
+      "date": "2025-11-25",
+      "long": 244392,
+      "short": 150321,
+      "openInterest": 830589,
+      "net": 94071
+    },
+    {
+      "date": "2025-12-02",
+      "long": 249672,
+      "short": 141219,
+      "openInterest": 851184,
+      "net": 108453
+    },
+    {
+      "date": "2025-12-09",
+      "long": 268118,
+      "short": 129330,
+      "openInterest": 942794,
+      "net": 138788
+    },
+    {
+      "date": "2025-12-16",
+      "long": 277002,
+      "short": 132099,
+      "openInterest": 986986,
+      "net": 144903
+    },
+    {
+      "date": "2025-12-23",
+      "long": 293179,
+      "short": 133288,
+      "openInterest": 866951,
+      "net": 159891
+    },
+    {
+      "date": "2025-12-30",
+      "long": 294738,
+      "short": 137273,
+      "openInterest": 869169,
+      "net": 157465
+    },
+    {
+      "date": "2026-01-06",
+      "long": 298253,
+      "short": 135441,
+      "openInterest": 881815,
+      "net": 162812
+    },
+    {
+      "date": "2026-01-13",
+      "long": 283592,
+      "short": 150936,
+      "openInterest": 883672,
+      "net": 132656
+    },
+    {
+      "date": "2026-01-20",
+      "long": 275235,
+      "short": 163540,
+      "openInterest": 880948,
+      "net": 111695
+    },
+    {
+      "date": "2026-01-27",
+      "long": 290336,
+      "short": 158202,
+      "openInterest": 919284,
+      "net": 132134
+    },
+    {
+      "date": "2026-02-03",
+      "long": 302301,
+      "short": 138940,
+      "openInterest": 910464,
+      "net": 163361
+    },
+    {
+      "date": "2026-02-10",
+      "long": 318704,
+      "short": 138399,
+      "openInterest": 926273,
+      "net": 180305
+    },
+    {
+      "date": "2026-02-17",
+      "long": 311549,
+      "short": 137069,
+      "openInterest": 916813,
+      "net": 174480
+    },
+    {
+      "date": "2026-02-24",
+      "long": 294873,
+      "short": 138017,
+      "openInterest": 911287,
+      "net": 156856
+    },
+    {
+      "date": "2026-03-03",
+      "long": 294586,
+      "short": 158088,
+      "openInterest": 913289,
+      "net": 136498
+    },
+    {
+      "date": "2026-03-10",
+      "long": 265686,
+      "short": 160542,
+      "openInterest": 969374,
+      "net": 105144
+    },
+    {
+      "date": "2026-03-17",
+      "long": 212886,
+      "short": 191754,
+      "openInterest": 755789,
+      "net": 21132
+    },
+    {
+      "date": "2026-03-24",
+      "long": 200025,
+      "short": 190746,
+      "openInterest": 764691,
+      "net": 9279
+    },
+    {
+      "date": "2026-03-31",
+      "long": 200168,
+      "short": 199661,
+      "openInterest": 774237,
+      "net": 507
+    },
+    {
+      "date": "2026-04-07",
+      "long": 200946,
+      "short": 208487,
+      "openInterest": 775043,
+      "net": -7541
+    },
+    {
+      "date": "2026-04-14",
+      "long": 214639,
+      "short": 188621,
+      "openInterest": 788828,
+      "net": 26018
+    },
+    {
+      "date": "2026-04-21",
+      "long": 217407,
+      "short": 176083,
+      "openInterest": 790622,
+      "net": 41324
+    },
+    {
+      "date": "2026-04-28",
+      "long": 217091,
+      "short": 181379,
+      "openInterest": 801430,
+      "net": 35712
+    },
+    {
+      "date": "2026-05-05",
+      "long": 217474,
+      "short": 185272,
+      "openInterest": 815942,
+      "net": 32202
+    },
+    {
+      "date": "2026-05-12",
+      "long": 224002,
+      "short": 183802,
+      "openInterest": 829377,
+      "net": 40200
+    },
+    {
+      "date": "2026-05-19",
+      "long": 233251,
+      "short": 199738,
+      "openInterest": 826019,
+      "net": 33513
+    },
+    {
+      "date": "2026-05-26",
+      "long": 223055,
+      "short": 193629,
+      "openInterest": 824224,
+      "net": 29426
+    },
+    {
+      "date": "2026-06-02",
+      "long": 235442,
+      "short": 186576,
+      "openInterest": 842424,
+      "net": 48866
+    },
+    {
+      "date": "2026-06-09",
+      "long": 219564,
+      "short": 205632,
+      "openInterest": 871507,
+      "net": 13932
+    },
+    {
+      "date": "2026-06-16",
+      "long": 228005,
+      "short": 193652,
+      "openInterest": 894671,
+      "net": 34353
+    },
+    {
+      "date": "2026-06-23",
+      "long": 247332,
+      "short": 217174,
+      "openInterest": 785477,
+      "net": 30158
+    },
+    {
+      "date": "2026-06-30",
+      "long": 235658,
+      "short": 234559,
+      "openInterest": 790076,
+      "net": 1099
+    },
+    {
+      "date": "2026-07-07",
+      "long": 223430,
+      "short": 239657,
+      "openInterest": 794833,
+      "net": -16227
+    },
+    {
+      "date": "2026-07-14",
+      "long": 230307,
+      "short": 242912,
+      "openInterest": 799495,
+      "net": -12605
+    },
+    {
+      "date": "2026-07-21",
+      "long": 220465,
+      "short": 261803,
+      "openInterest": 800061,
+      "net": -41338
+    },
+    {
+      "date": "2026-07-28",
+      "long": 204975,
+      "short": 277422,
+      "openInterest": 819806,
+      "net": -72447
+    },
+    {
+      "date": "2026-08-04",
+      "long": 201847,
+      "short": 259938,
+      "openInterest": 799909,
+      "net": -58091
+    },
+    {
+      "date": "2026-08-11",
+      "long": 197186,
+      "short": 257196,
+      "openInterest": 801884,
+      "net": -60010
+    },
+    {
+      "date": "2026-08-18",
+      "long": 196241,
+      "short": 255329,
+      "openInterest": 804940,
+      "net": -59088
+    },
+    {
+      "date": "2026-08-25",
+      "long": 198919,
+      "short": 235271,
+      "openInterest": 818524,
+      "net": -36352
+    },
+    {
+      "date": "2026-09-01",
+      "long": 203477,
+      "short": 228402,
+      "openInterest": 865412,
+      "net": -24925
+    },
+    {
+      "date": "2026-09-08",
+      "long": 198509,
+      "short": 241125,
+      "openInterest": 942464,
+      "net": -42616
+    },
+    {
+      "date": "2026-09-15",
+      "long": 209000,
+      "short": 235993,
+      "openInterest": 920035,
+      "net": -26993
+    },
+    {
+      "date": "2026-09-22",
+      "long": 220708,
+      "short": 273042,
+      "openInterest": 821689,
+      "net": -52334
+    },
+    {
+      "date": "2026-09-29",
+      "long": 238183,
+      "short": 301439,
+      "openInterest": 853959,
+      "net": -63256
+    },
+    {
+      "date": "2026-10-06",
+      "long": 243020,
+      "short": 342352,
+      "openInterest": 870291,
+      "net": -99332
+    }
+  ],
+  "fetchedAt": "2026-10-15T02:41:38.373Z",
+  "status": "ok"
+}

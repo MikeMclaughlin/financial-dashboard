@@ -1,0 +1,7 @@
+{
+  "id": "broad-usd",
+  "status": "error",
+  "error": "FRED DTWEXBGS: The operation was aborted due to timeout",
+  "fetchedAt": "2026-10-15T02:41:51.757Z",
+  "points": []
+}
