@@ -6,7 +6,9 @@ import {
   addDays,
   assertDates,
   daysBetween,
+  fetchFred,
   fetchText,
+  fredHostError,
   inRange,
   isoToday,
   latestOnOrBefore,
@@ -29,31 +31,6 @@ function normHeader(h) {
 
 function treasuryUrl(year, type) {
   return `https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/${year}/all?type=${type}&field_tdr_date_value=${year}&page&_format=csv`;
-}
-
-let fredBlocked = null;
-
-async function fetchFred(id, start = "2024-01-01") {
-  if (fredBlocked) throw new Error(fredBlocked);
-  const url = `https://fred.stlouisfed.org/graph/fredgraph.csv?id=${id}&cosd=${start}`;
-  try {
-    const text = await fetchText(url, { timeout: 18000 });
-    const rows = parseCsv(text);
-    const points = [];
-    for (const row of rows.slice(1)) {
-      const date = row[0];
-      const value = num(row[1]);
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || value == null) continue;
-      points.push({ date, value });
-    }
-    return sortUnique(points);
-  } catch (err) {
-    const message = err.message || String(err);
-    if (/timeout|aborted|network|fetch failed|ECONN|ENOTFOUND|socket/i.test(message)) {
-      fredBlocked = `FRED unreachable (${message})`;
-    }
-    throw new Error(`FRED ${id}: ${message}`);
-  }
 }
 
 async function fetchEurusd() {
@@ -957,7 +934,7 @@ async function main() {
     meetings.fetchedAt = meetings.fetchedAt || new Date().toISOString();
     meetings.status = meetings.status || "ok";
   }
-  rebuildHealth({ fredBlocked });
+  rebuildHealth({ fredHost: fredHostError() });
   console.log("core fetch complete");
 }
 

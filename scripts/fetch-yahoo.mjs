@@ -6,6 +6,7 @@
 import {
   addDays,
   assertDates,
+  fetchFred,
   fetchText,
   inRange,
   latestOnOrBefore,
@@ -101,12 +102,10 @@ function contractSymbols(count = 12) {
 
 async function anchorRate() {
   try {
-    const text = await fetchText("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01", { timeout: 15000 });
-    const rows = text.trim().split(/\r?\n/).slice(1).map((line) => line.split(",")).filter((r) => r[1] && r[1] !== ".");
-    const last = rows.at(-1);
-    const value = Number(last[1]);
-    if (!Number.isFinite(value)) throw new Error("DFF missing");
-    return { date: last[0], value, source: "FRED DFF" };
+    const points = await fetchFred("DFF", "2026-01-01");
+    const last = points.at(-1);
+    if (!last) throw new Error("DFF missing");
+    return { date: last.date, value: last.value, source: "FRED DFF" };
   } catch (err) {
     const text = await fetchText("https://markets.newyorkfed.org/api/rates/unsecured/effr/last/1.json");
     const row = JSON.parse(text).refRates?.[0];
@@ -253,11 +252,7 @@ async function fetchCommodities() {
     };
   } catch (err) {
     try {
-      const text = await fetchText("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2024-01-01", { timeout: 18000 });
-      const points = sortUnique(text.trim().split(/\r?\n/).slice(1).map((line) => {
-        const [date, value] = line.split(",");
-        return { date, value: Number(value) };
-      }).filter((p) => Number.isFinite(p.value)));
+      const points = await fetchFred("DCOILWTICO", "2024-01-01");
       if (!points.length) throw new Error("DCOILWTICO empty");
       inRange(points.at(-1).value, 20, 250, "WTI");
       out.oil = {

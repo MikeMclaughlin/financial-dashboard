@@ -44,6 +44,8 @@ All times are UTC. Schedules run from the default branch after this PR is merged
 
 CFTC paging uses `$order=report_date_as_yyyy_mm_dd,cftc_contract_market_code`, a stable unique key, and dedupes on that key. Auction rows are deduped on CUSIP.
 
+FRED graph CSV is requested with a 60-second timeout and three attempts per URL (backoff 5s, then 15s). The first URL is `https://fred.stlouisfed.org/graph/fredgraph.csv?id=SERIES&cosd=YYYY-MM-DD`. The alternate is the same path with only `id=SERIES`, filtered to the start date after download. If every attempt fails on the network, later FRED calls in that process keep their existing fallbacks and record the same host error. A bad series id does not mark the host down.
+
 ## Chart period
 
 The header selector is 30 / 90 / 180 / 365 days and defaults to 90. It drives the EUR/USD chart, the 2s10s and price sparklines, CFTC bars, the US–Germany 2Y gap, the Bund–Treasury spread, real yields, gold and oil, and auction bars.
