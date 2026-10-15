@@ -96,6 +96,7 @@ const Chart = (() => {
 
   function sparkline(el, values, color) {
     const nums = values.filter((v) => Number.isFinite(v));
+    el.textContent = "";
     const box = size(el);
     if (!box || nums.length < 2) return;
     const root = svg(el, box.w, box.h);
