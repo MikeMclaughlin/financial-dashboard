@@ -96,13 +96,35 @@ async function load() {
   render();
 }
 
-function setTab(next) {
+function setTab(next, redraw) {
   tab = next;
   localStorage.setItem("macro-tab", tab);
   document.getElementById("view-main").hidden = tab !== "main";
   document.getElementById("view-extra").hidden = tab !== "extra";
   document.getElementById("tab-main").setAttribute("aria-selected", String(tab === "main"));
   document.getElementById("tab-extra").setAttribute("aria-selected", String(tab === "extra"));
+  if (redraw) render();
+}
+
+function lockDates(root) {
+  root.querySelectorAll(".sub, .k-asof, #foot-fresh").forEach((el) => {
+    const text = el.textContent;
+    if (!/as of \d{1,2} [A-Za-z]{3} \d{4}/.test(text)) return;
+    const frag = document.createDocumentFragment();
+    const re = /as of \d{1,2} [A-Za-z]{3} \d{4}/g;
+    let last = 0;
+    let match;
+    while ((match = re.exec(text))) {
+      frag.append(text.slice(last, match.index));
+      const span = document.createElement("span");
+      span.className = "nowrap";
+      span.textContent = match[0];
+      frag.append(span);
+      last = match.index + match[0].length;
+    }
+    frag.append(text.slice(last));
+    el.replaceChildren(frag);
+  });
 }
 
 function kpi(label, value, change, changeText, sparkValues, sparkColor, dateLine) {
@@ -187,8 +209,6 @@ function renderEur() {
     marker = { x: at, label: "ECB decision", color: Chart.BLUE };
   }
   Chart.lineChart(el, {
-    height: 300,
-    yFormat: (v) => v.toFixed(3),
     xLabels: xLabels(period),
     marker,
     series: [
@@ -241,9 +261,10 @@ function renderHeat() {
     th.addEventListener("click", () => {
       const col = th.dataset.sort;
       heatSort = { key: col, dir: heatSort.key === col ? -heatSort.dir : (col === "ccy" ? 1 : -1) };
-      renderHeat();
-    });
+    renderHeat();
   });
+  lockDates(host);
+});
 }
 
 function renderCftc() {
@@ -282,7 +303,6 @@ function renderGap() {
   document.getElementById("gap-sub").textContent = `Last ${period} days · wider gap = rates pull toward the dollar · US 2Y minus German 2Y, percentage points. ${asof(points.at(-1)?.date || data.bunds?.asOf)}`;
   if (points.length < 2) return empty(el, "No overlapping US and German 2Y dates in this period");
   Chart.lineChart(el, {
-    yFormat: (v) => v.toFixed(2),
     xLabels: xLabels(period),
     series: [{
       name: "US−DE 2Y",
@@ -299,7 +319,6 @@ function renderBund() {
   document.getElementById("bund-sub").textContent = `Last ${period} days · more negative = Europe offers less yield vs US · German 10Y minus US 10Y. ${asof(points.at(-1)?.date || data.bunds?.asOf)}`;
   if (points.length < 2) return empty(el, "No overlapping Bund and Treasury 10Y dates in this period");
   Chart.lineChart(el, {
-    yFormat: (v) => `${v.toFixed(2)}`,
     xLabels: xLabels(period),
     series: [{
       name: "Bund−UST",
@@ -323,7 +342,8 @@ function renderCurve() {
   ];
   document.getElementById("curve-sub").textContent = `Today (${pretty(last.date)}) vs 45d ago (${pretty(snaps[1].row?.date)}) vs 90d ago (${pretty(snaps[2].row?.date)})`;
   Chart.lineChart(el, {
-    yFormat: (v) => v.toFixed(2),
+    tickMode: "half",
+    suffix: "%",
     xLabels: tenors.map(([, label], i) => ({ at: i / (tenors.length - 1), text: label })),
     series: snaps.filter((s) => s.row).map((s) => ({
       name: s.name,
@@ -347,12 +367,20 @@ function renderBonds() {
   const rows = [...bars].sort((a, b) => a.spreadBp - b.spreadBp);
   Chart.horizontalBars(el, rows.map((bar) => ({
     label: bar.country,
-    sub: `${bar.badges.join(" · ") || "daily"} · ${pretty(bar.asOf)}`,
+    sub: `${bar.badges.length ? `${bar.badges.join(" · ")} · ` : ""}as of ${pretty(bar.asOf)}`,
     value: bar.spreadBp,
     color: bar.spreadBp < 0 ? Chart.ORANGE : Chart.BLUE,
     display: signed(bar.spreadBp, 0),
     title: `${bar.country} 10Y ${fmt(bar.yield, 2)}% on ${pretty(bar.asOf)} minus US 10Y ${fmt(bar.us10y, 2)}% on ${pretty(bar.us10yDate)} = ${bar.spreadBp} bp. ${bar.source}`,
   })));
+}
+
+function ecbKnots(ecb) {
+  if (!ecb?.anchor) return [];
+  const knots = [{ months: 0, tenor: "€STR", value: ecb.anchor.value }];
+  for (const p of ecb.points || []) knots.push({ months: p.months, tenor: p.tenor, value: p.value });
+  if (ecb.spot2Y) knots.push({ months: ecb.spot2Y.months, tenor: "SR_2Y", value: ecb.spot2Y.value });
+  return knots.filter((p) => Number.isFinite(p.value) && Number.isFinite(p.months)).sort((a, b) => a.months - b.months);
 }
 
 function renderPath() {
@@ -361,31 +389,42 @@ function renderPath() {
   const ecb = data["ecb-path"];
   const legend = document.getElementById("path-legend");
   if (!fed?.points?.length && !ecb?.points?.length) return empty(el, "Rate paths are not available yet");
+  const horizon = 24;
   const fedPoints = [{ x: 0, y: fed?.anchor?.value, title: `Now · ${fed?.anchor?.source || "anchor"} ${fmt(fed?.anchor?.value, 2)}%` }];
   for (const p of fed?.points || []) {
-    const x = p.tenor ? p.months : (p.months ?? 0) + 1;
-    if (x > 12) continue;
-    fedPoints.push({ x, y: p.value, title: `${p.label || p.tenor || p.symbol} · ${fmt(p.value, 2)}%` });
+    const months = p.tenor ? p.months : (p.months ?? 0) + 1;
+    if (months > 12) continue;
+    fedPoints.push({ x: months / horizon, y: p.value, title: `${p.label || p.tenor || p.symbol} · ${fmt(p.value, 3)}%` });
   }
-  const ecbPoints = [{ x: 0, y: ecb?.anchor?.value, title: `Now · €STR ${fmt(ecb?.anchor?.value, 2)}%` }];
-  for (const p of ecb?.points || []) {
-    ecbPoints.push({ x: p.months, y: p.value, title: `${p.tenor} · ${fmt(p.value, 2)}% · ${pretty(p.asOf)}` });
-  }
-  const maxX = Math.max(12, ...fedPoints.map((p) => p.x), ...ecbPoints.map((p) => p.x));
-  const scale = (pts) => pts.filter((p) => Number.isFinite(p.y)).map((p) => ({ ...p, x: p.x / maxX }));
+  const knots = ecbKnots(ecb);
+  const ecbLine = knots.map((p) => ({
+    x: p.months / horizon,
+    y: p.value,
+    title: `${p.tenor} · ${fmt(p.value, 2)}% at ${p.months}m`,
+  }));
+  const forward = ecb?.forward1Y;
+  const forwardPoint = forward && Number.isFinite(forward.value) ? [{
+    x: (forward.months || 12) / horizon,
+    y: forward.value,
+    title: `IF_1Y instantaneous forward · ${fmt(forward.value, 2)}% at ${forward.months || 12}m`,
+  }] : [];
   Chart.lineChart(el, {
-    yFormat: (v) => v.toFixed(2),
-    xLabels: [{ at: 0, text: "Now" }, { at: 1, text: maxX > 12 ? `+${maxX}M` : "+12M" }],
+    tickMode: "half",
+    suffix: "%",
+    ticks: 5,
+    xLabels: [{ at: 0, text: "Now" }, { at: 12 / horizon, text: "+12M" }, { at: 1, text: "+24M" }],
     series: [
-      { name: "Fed", color: Chart.BLUE, dot: false, points: scale(fedPoints) },
-      { name: "ECB", color: Chart.ORANGE, dot: false, points: scale(ecbPoints) },
+      { name: "Fed", color: Chart.BLUE, points: fedPoints.filter((p) => Number.isFinite(p.y)) },
+      { name: "ECB spots", color: Chart.ORANGE, points: ecbLine },
+      { name: "ECB 1Y forward", color: Chart.ORANGE, callout: forward ? `IF ${fmt(forward.value, 2)}%` : "", points: forwardPoint },
     ],
   });
   const fedNote = fed?.proxy ? "Fed proxy" : "Fed futures";
-  const extra = ecb ? ` · ECB IF_1Y ${fmt(ecb.forward1Y?.value, 2)}% · 2Y spot ${fmt(ecb.spot2Y?.value, 2)}%` : "";
-  const anchorNote = fed?.anchor?.source ? `Anchored to ${fed.anchor.source}.` : "";
-  document.getElementById("path-sub").textContent = `Next 12 months. Does not follow the period. ${fed?.label || ""} ${anchorNote} ${ecb?.label || ""}${extra} ${asof(fed?.asOf || ecb?.asOf)}`;
-  legend.innerHTML = `<span><i style="background:${Chart.BLUE}"></i>${fedNote}</span><span><i style="background:${Chart.ORANGE}"></i>ECB proxy</span>`;
+  const knotText = knots.map((p) => `${p.tenor} ${fmt(p.value, 2)}% at ${p.months}m`).join(", ");
+  const fwdText = forward ? `Dot at ${forward.months || 12}m is the 1Y instantaneous forward IF_1Y ${fmt(forward.value, 2)}%.` : "";
+  const anchorNote = fed?.anchor?.source ? `Fed anchor: ${fed.anchor.source}.` : "";
+  document.getElementById("path-sub").textContent = `Does not follow the period. Fed line is the next 12 monthly futures (implied rate = 100 − price). ${anchorNote} ECB line is the linear interpolation of €STR and the AAA spot curve: ${knotText}. ${fwdText} Proxy, not an OIS curve. ${asof(ecb?.asOf || fed?.asOf)}`;
+  legend.innerHTML = `<span><i style="background:${Chart.BLUE}"></i>${fedNote} to +12M</span><span><i style="background:${Chart.ORANGE}"></i>ECB spots to 2Y</span><span><i style="background:${Chart.ORANGE}"></i>ECB 1Y forward</span>`;
 }
 
 function renderReal() {
@@ -397,7 +436,8 @@ function renderReal() {
   document.getElementById("real-sub").textContent = `Last ${period} days · higher real yields tend to support the dollar${doc.fallback ? " · FRED DFII10 unavailable, Treasury real yield curve" : ""} · ${asof(doc.asOf)}`;
   if (points.length < 2) return empty(el, doc.error || "Real yield is not available yet");
   Chart.lineChart(el, {
-    yFormat: (v) => v.toFixed(2),
+    tickMode: "half",
+    suffix: "%",
     xLabels: xLabels(period),
     series: [{
       name: "US 10Y real",
@@ -424,7 +464,6 @@ function renderCmd() {
     };
   };
   Chart.lineChart(el, {
-    yFormat: (v) => v.toFixed(0),
     xLabels: xLabels(period),
     series: [rebase(gold, "Gold", Chart.BLUE), rebase(oil, "Oil", Chart.ORANGE)].filter(Boolean),
   });
@@ -438,6 +477,8 @@ function renderAuctions() {
   const avg = rows.reduce((s, r) => s + r.bidToCover, 0) / rows.length;
   Chart.columnBars(el, {
     average: avg,
+    tickMode: "half",
+    ticks: 3,
     bars: rows.map((r) => ({
       value: r.bidToCover,
       color: Chart.BLUE,
@@ -475,15 +516,50 @@ function renderCalendar() {
   Chart.timeline(el, { rows, maxDays: 90 });
 }
 
+function displayedNotes() {
+  const notes = [];
+  const stale = (doc, label) => {
+    if (!doc) return;
+    if (doc.status === "stale") notes.push(`${label}: showing the last good print`);
+    else if (doc.status === "error" && !(doc.points?.length || doc.bars?.length || doc.auctions?.length)) notes.push(`${label}: unavailable`);
+  };
+  stale(data.eurusd, "EUR/USD");
+  if (data.dxy?.points?.length) {
+    if (data.dxy.fallback) notes.push("Dollar index: showing Broad USD index (Fed)");
+    else if (data.dxy.status === "stale") notes.push("Dollar index: showing the last good print");
+  } else if (data["broad-usd"]?.points?.length) {
+    notes.push("Dollar index: showing Broad USD index (Fed) because ICE DXY did not load");
+  } else {
+    stale(data.dxy, "Dollar index");
+  }
+  stale(data.treasury, "US Treasury");
+  stale(data.fx, "G10 heatmap");
+  stale(data.cftc, "EUR positioning");
+  stale(data.bunds, "German yields");
+  stale(data.bonds, "10Y spreads");
+  const real = data["real-yield"];
+  if (real?.fallback) notes.push("US 10Y real yield: using Treasury source");
+  else stale(real, "US 10Y real yield");
+  const fed = data["fed-path"];
+  if (fed?.proxy) notes.push("Fed path: using the Treasury yield proxy");
+  else if (fed?.fallback) notes.push(`Fed path: anchored to ${fed.anchor?.source || "a fallback rate"}`);
+  else stale(fed, "Fed path");
+  stale(data["ecb-path"], "ECB path");
+  const cmd = data.commodities || {};
+  if (cmd.gold?.fallback) notes.push("Gold: using the GLD fallback");
+  if (cmd.oil?.fallback) notes.push("Oil: using the delayed WTI series");
+  if (cmd.status === "stale") notes.push("Gold and oil: showing the last good print");
+  stale(data.auctions, "Treasury auctions");
+  stale(data.meetings, "Central bank calendar");
+  return notes;
+}
+
 function renderChrome() {
   const health = data.health || {};
   document.getElementById("version").textContent = health.version || APP_VERSION;
   document.getElementById("updated").textContent = `Updated ${stamp(health.generatedAt)}`;
-  const labels = { "broad-usd": "FRED broad dollar index", "fx-yahoo": "Yahoo FX cross-check" };
-  const fresh = Object.entries(health.series || [])
-    .filter(([, s]) => s.status && s.status !== "ok")
-    .map(([name, s]) => `${labels[name] || name} ${s.status}`);
-  document.getElementById("foot-fresh").textContent = fresh.length ? `Needs attention: ${fresh.join(", ")}` : "Series status is in the health endpoint.";
+  const notes = displayedNotes();
+  document.getElementById("foot-fresh").textContent = notes.join(" · ");
   document.getElementById("period").value = String(period);
 }
 
@@ -502,6 +578,7 @@ function render() {
   renderCmd();
   renderAuctions();
   renderCalendar();
+  lockDates(document);
 }
 
 document.getElementById("period").addEventListener("change", (event) => {
@@ -509,7 +586,12 @@ document.getElementById("period").addEventListener("change", (event) => {
   localStorage.setItem("macro-period", String(period));
   render();
 });
-document.getElementById("tab-main").addEventListener("click", () => setTab("main"));
-document.getElementById("tab-extra").addEventListener("click", () => setTab("extra"));
-setTab(tab);
+document.getElementById("tab-main").addEventListener("click", () => setTab("main", true));
+document.getElementById("tab-extra").addEventListener("click", () => setTab("extra", true));
+setTab(tab, false);
+let resizeTimer = 0;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(render, 60);
+});
 load();
