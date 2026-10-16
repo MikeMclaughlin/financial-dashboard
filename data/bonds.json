@@ -2,11 +2,11 @@
   "id": "bonds",
   "name": "10Y government bond spread vs US Treasuries",
   "unit": "basis points (country yield minus US 10Y)",
-  "asOf": "2026-10-15",
+  "asOf": "2026-10-16",
   "us10ySource": "US Treasury daily yield curve, 10 Yr",
   "note": "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date. A country whose source fails keeps its previous yield and as-of date.",
-  "status": "ok",
-  "error": null,
+  "status": "stale",
+  "error": "Switzerland: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30",
   "bars": [
     {
       "country": "Switzerland",
@@ -15,13 +15,15 @@
       "frequency": "monthly",
       "badges": [
         "monthly",
-        "delayed"
+        "delayed",
+        "stale"
       ],
       "source": "OECD SDMX DF_FINMARK IRLT monthly, Switzerland",
       "us10y": 5.29,
       "us10yDate": "2026-09-30",
       "spreadBp": -470,
-      "status": "ok"
+      "status": "stale",
+      "error": "OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30"
     },
     {
       "country": "Japan",
@@ -42,9 +44,9 @@
       "frequency": "daily",
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
-      "us10y": 5.1,
-      "us10yDate": "2026-10-15",
-      "spreadBp": -162,
+      "us10y": 5.09,
+      "us10yDate": "2026-10-16",
+      "spreadBp": -161,
       "status": "ok"
     },
     {
@@ -102,39 +104,6 @@
       "status": "ok"
     }
   ],
-  "crosschecks": [
-    {
-      "country": "Germany",
-      "oecdMonth": "2026-09",
-      "oecd": 3.469524,
-      "localMonthlyAverage": 3.532,
-      "diffBp": 6,
-      "flag": false
-    },
-    {
-      "country": "Japan",
-      "oecdMonth": "2026-09",
-      "oecd": 3.05,
-      "localMonthlyAverage": 2.992,
-      "diffBp": -6,
-      "flag": false
-    },
-    {
-      "country": "Australia",
-      "oecdMonth": "2026-09",
-      "oecd": 5.283,
-      "localMonthlyAverage": 5.283,
-      "diffBp": 0,
-      "flag": false
-    },
-    {
-      "country": "United States",
-      "oecdMonth": "2026-09",
-      "oecd": 4.99,
-      "localMonthlyAverage": 4.989,
-      "diffBp": 0,
-      "flag": false
-    }
-  ],
-  "fetchedAt": "2026-10-16T17:38:03.411Z"
+  "crosschecks": [],
+  "fetchedAt": "2026-10-16T23:16:22.355Z"
 }

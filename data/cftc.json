@@ -5,15 +5,8 @@
   "definition": "CFTC legacy futures-only, EURO FX (099741). Net = noncommercial long minus noncommercial short. Positive is net long euro; negative is net short euro.",
   "source": "CFTC Socrata 6dca-aqww",
   "sourceUrl": "https://publicreporting.cftc.gov/resource/6dca-aqww.csv",
-  "asOf": "2026-10-06",
+  "asOf": "2026-10-13",
   "points": [
-    {
-      "date": "2024-06-25",
-      "long": 167370,
-      "short": 175801,
-      "openInterest": 650087,
-      "net": -8431
-    },
     {
       "date": "2024-07-02",
       "long": 164369,
@@ -846,8 +839,15 @@
       "short": 342352,
       "openInterest": 870291,
       "net": -99332
+    },
+    {
+      "date": "2026-10-13",
+      "long": 222929,
+      "short": 360502,
+      "openInterest": 874541,
+      "net": -137573
     }
   ],
-  "fetchedAt": "2026-10-16T17:37:57.390Z",
+  "fetchedAt": "2026-10-16T23:16:15.300Z",
   "status": "ok"
 }

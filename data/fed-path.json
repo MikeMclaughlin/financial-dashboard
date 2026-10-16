@@ -19,8 +19,8 @@
       "label": "Oct",
       "year": 2026,
       "month": 10,
-      "price": 96.115,
-      "value": 3.885,
+      "price": 96.1175,
+      "value": 3.882,
       "asOf": "2026-10-16"
     },
     {
@@ -39,8 +39,8 @@
       "label": "Dec",
       "year": 2026,
       "month": 12,
-      "price": 95.92,
-      "value": 4.08,
+      "price": 95.93,
+      "value": 4.07,
       "asOf": "2026-10-16"
     },
     {
@@ -49,8 +49,8 @@
       "label": "Jan",
       "year": 2027,
       "month": 1,
-      "price": 95.845,
-      "value": 4.155,
+      "price": 95.86,
+      "value": 4.14,
       "asOf": "2026-10-16"
     },
     {
@@ -59,8 +59,8 @@
       "label": "Feb",
       "year": 2027,
       "month": 2,
-      "price": 95.755,
-      "value": 4.245,
+      "price": 95.78,
+      "value": 4.22,
       "asOf": "2026-10-16"
     },
     {
@@ -69,8 +69,8 @@
       "label": "Mar",
       "year": 2027,
       "month": 3,
-      "price": 95.68,
-      "value": 4.32,
+      "price": 95.705,
+      "value": 4.295,
       "asOf": "2026-10-16"
     },
     {
@@ -79,8 +79,8 @@
       "label": "Apr",
       "year": 2027,
       "month": 4,
-      "price": 95.58,
-      "value": 4.42,
+      "price": 95.61,
+      "value": 4.39,
       "asOf": "2026-10-16"
     },
     {
@@ -89,8 +89,8 @@
       "label": "May",
       "year": 2027,
       "month": 5,
-      "price": 95.5,
-      "value": 4.5,
+      "price": 95.54,
+      "value": 4.46,
       "asOf": "2026-10-16"
     },
     {
@@ -99,8 +99,8 @@
       "label": "Jun",
       "year": 2027,
       "month": 6,
-      "price": 95.435,
-      "value": 4.565,
+      "price": 95.48,
+      "value": 4.52,
       "asOf": "2026-10-16"
     },
     {
@@ -109,8 +109,8 @@
       "label": "Jul",
       "year": 2027,
       "month": 7,
-      "price": 95.4,
-      "value": 4.6,
+      "price": 95.45,
+      "value": 4.55,
       "asOf": "2026-10-16"
     },
     {
@@ -119,8 +119,8 @@
       "label": "Aug",
       "year": 2027,
       "month": 8,
-      "price": 95.38,
-      "value": 4.62,
+      "price": 95.43,
+      "value": 4.57,
       "asOf": "2026-10-16"
     },
     {
@@ -129,12 +129,12 @@
       "label": "Sep",
       "year": 2027,
       "month": 9,
-      "price": 95.365,
-      "value": 4.635,
+      "price": 95.41,
+      "value": 4.59,
       "asOf": "2026-10-16"
     }
   ],
   "errors": [],
-  "fetchedAt": "2026-10-16T17:38:05.565Z",
+  "fetchedAt": "2026-10-16T23:16:23.703Z",
   "status": "ok"
 }
