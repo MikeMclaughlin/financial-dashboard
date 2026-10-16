@@ -1,6 +1,6 @@
-const APP_VERSION = "1.1";
+const APP_VERSION = "1.2";
 const FILES = [
-  "health", "eurusd", "dxy", "broad-usd", "treasury", "fx", "cftc", "bunds",
+  "health", "eurusd", "dxy", "treasury", "fx", "cftc", "bunds",
   "bonds", "ecb-path", "fed-path", "real-yield", "commodities", "auctions", "meetings",
 ];
 const HEAT_ORDER = ["EUR", "JPY", "GBP", "CHF", "CAD", "AUD", "NZD", "SEK", "NOK"];
@@ -433,7 +433,7 @@ function renderReal() {
   const doc = data["real-yield"] || {};
   const realTitle = el.closest("article")?.querySelector("h2");
   if (realTitle) realTitle.textContent = doc.fallback ? "US 10Y real yield (Treasury)" : "US 10Y real yield (TIPS)";
-  document.getElementById("real-sub").textContent = `Last ${period} days · higher real yields tend to support the dollar${doc.fallback ? " · FRED DFII10 unavailable, Treasury real yield curve" : ""} · ${asof(doc.asOf)}`;
+  document.getElementById("real-sub").textContent = `Last ${period} days · higher real yields tend to support the dollar${doc.fallback ? " · Treasury real yield curve" : ""} · ${asof(doc.asOf)}`;
   if (points.length < 2) return empty(el, doc.error || "Real yield is not available yet");
   Chart.lineChart(el, {
     tickMode: "half",

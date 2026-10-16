@@ -6,7 +6,6 @@
 import {
   addDays,
   assertDates,
-  fetchFred,
   fetchText,
   inRange,
   latestOnOrBefore,
@@ -37,38 +36,20 @@ async function yahooChart(symbol, range = "2y") {
 }
 
 async function fetchDxy() {
-  try {
-    const { points } = await yahooChart("DX-Y.NYB", "2y");
-    if (points.length < 100) throw new Error(`DXY rows ${points.length}`);
-    inRange(points.at(-1).value, 70, 140, "DXY");
-    return {
-      id: "dxy",
-      name: "Dollar Index (DXY)",
-      unit: "index",
-      source: "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
-      sourceUrl: "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2y&interval=1d",
-      fallback: false,
-      delayed: false,
-      asOf: points.at(-1).date,
-      points,
-    };
-  } catch (err) {
-    const broad = readJson("broad-usd.json");
-    if (broad?.points?.length) {
-      return {
-        ...broad,
-        id: "dxy",
-        name: "Broad USD index (Fed)",
-        fallback: true,
-        delayed: true,
-        status: "ok",
-        error: null,
-        yahooError: err.message,
-        note: "ICE DXY from Yahoo was unavailable. Showing FRED DTWEXBGS, the Fed broad dollar index, which is a different basket.",
-      };
-    }
-    throw err;
-  }
+  const { points } = await yahooChart("DX-Y.NYB", "2y");
+  if (points.length < 100) throw new Error(`DXY rows ${points.length}`);
+  inRange(points.at(-1).value, 70, 140, "DXY");
+  return {
+    id: "dxy",
+    name: "Dollar Index (DXY)",
+    unit: "index",
+    source: "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
+    sourceUrl: "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2y&interval=1d",
+    fallback: false,
+    delayed: false,
+    asOf: points.at(-1).date,
+    points,
+  };
 }
 
 function validateDxy(doc) {
@@ -101,23 +82,15 @@ function contractSymbols(count = 12) {
 }
 
 async function anchorRate() {
-  try {
-    const points = await fetchFred("DFF", "2026-01-01");
-    const last = points.at(-1);
-    if (!last) throw new Error("DFF missing");
-    return { date: last.date, value: last.value, source: "FRED DFF" };
-  } catch (err) {
-    const text = await fetchText("https://markets.newyorkfed.org/api/rates/unsecured/effr/last/1.json");
-    const row = JSON.parse(text).refRates?.[0];
-    if (!row) throw new Error(`DFF and EFFR unavailable (${err.message})`);
-    return {
-      date: row.effectiveDate,
-      value: row.percentRate,
-      source: "NY Fed EFFR (FRED DFF unavailable)",
-      fallback: true,
-      fredError: err.message,
-    };
-  }
+  const text = await fetchText("https://markets.newyorkfed.org/api/rates/unsecured/effr/last/1.json");
+  const row = JSON.parse(text).refRates?.[0];
+  if (!row) throw new Error("NY Fed EFFR missing");
+  return {
+    date: row.effectiveDate,
+    value: row.percentRate,
+    source: "NY Fed effective federal funds rate (EFFR)",
+    fallback: false,
+  };
 }
 
 function treasuryProxy(anchor) {
@@ -203,7 +176,7 @@ function validateFed(doc) {
   for (const p of doc.points) inRange(p.value, -1, 15, "fed path point");
 }
 
-async function fetchCommodities() {
+async function fetchCommodities(prev) {
   const out = {
     id: "commodities",
     name: "Gold and oil in USD",
@@ -236,7 +209,11 @@ async function fetchCommodities() {
         points,
       };
     } catch (err2) {
-      out.gold = { status: "error", error: `${err.message}; ${err2.message}`, points: [] };
+      if (prev?.gold?.points?.length) {
+        out.gold = { ...prev.gold, status: "stale", error: `${err.message}; ${err2.message}` };
+      } else {
+        out.gold = { status: "error", error: `${err.message}; ${err2.message}`, points: [] };
+      }
     }
   }
   try {
@@ -251,21 +228,10 @@ async function fetchCommodities() {
       points,
     };
   } catch (err) {
-    try {
-      const points = await fetchFred("DCOILWTICO", "2024-01-01");
-      if (!points.length) throw new Error("DCOILWTICO empty");
-      inRange(points.at(-1).value, 20, 250, "WTI");
-      out.oil = {
-        name: "Oil (WTI, delayed)",
-        source: "FRED DCOILWTICO (Yahoo CL=F unavailable)",
-        fallback: true,
-        delayed: true,
-        yahooError: err.message,
-        asOf: points.at(-1).date,
-        points,
-      };
-    } catch (err2) {
-      out.oil = { status: "error", error: `${err.message}; ${err2.message}`, points: [] };
+    if (prev?.oil?.points?.length) {
+      out.oil = { ...prev.oil, status: "stale", fallback: false, error: err.message };
+    } else {
+      out.oil = { status: "error", error: err.message, points: [] };
     }
   }
   if (!out.gold?.points?.length && !out.oil?.points?.length) {
@@ -274,7 +240,8 @@ async function fetchCommodities() {
   out.asOf = out.gold?.asOf || out.oil?.asOf;
   out.fallback = Boolean(out.gold?.fallback || out.oil?.fallback);
   out.delayed = Boolean(out.gold?.delayed || out.oil?.delayed);
-  out.status = out.gold?.points?.length && out.oil?.points?.length ? "ok" : "partial";
+  const kept = out.gold?.status === "stale" || out.oil?.status === "stale";
+  out.status = kept ? "stale" : (out.gold?.points?.length && out.oil?.points?.length ? "ok" : "partial");
   return out;
 }
 

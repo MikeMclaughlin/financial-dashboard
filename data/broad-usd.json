@@ -1,7 +1,0 @@
-{
-  "id": "broad-usd",
-  "status": "error",
-  "error": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 3: The operation was aborted due to timeout)",
-  "fetchedAt": "2026-10-16T00:44:27.376Z",
-  "points": []
-}

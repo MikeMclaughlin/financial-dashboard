@@ -1,7 +1,7 @@
 {
   "name": "financial-dashboard",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "Global Macro: Dollar, Rates & G10. Static site plus a free GitHub Actions data refresh.",
   "scripts": {

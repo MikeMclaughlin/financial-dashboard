@@ -15,10 +15,6 @@
     "10yr": "10Y",
     "30yr": "30Y"
   },
-  "fredCheck": {
-    "status": "unavailable",
-    "error": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
-  },
   "points": [
     {
       "date": "2025-01-02",
@@ -4491,6 +4487,6 @@
       "30yr": 5.43
     }
   ],
-  "fetchedAt": "2026-10-16T00:44:27.966Z",
+  "fetchedAt": "2026-10-16T04:58:55.376Z",
   "status": "ok"
 }

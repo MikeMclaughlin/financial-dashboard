@@ -88,9 +88,7 @@ function main() {
         if (row?.[key] == null) note(10, `tenor ${key} missing on ${row?.date}`, "issue");
       }
     }
-    if (treasury.fredCheck?.flag) note(3, treasury.fredCheck.flag, "outlier");
-    else if (treasury.fredCheck?.diffBp != null) note(3, `Treasury 10Y vs FRED DGS10 ${treasury.fredCheck.diffBp} bp on ${treasury.fredCheck.dgs10?.date}`);
-    else note(3, `FRED DGS10 cross-check unavailable: ${treasury.fredCheck?.error || "not run"}`, "issue");
+    note(3, `US 10Y ${last["10yr"]}% on ${last.date} from the Treasury yield curve`);
   }
 
   if (fx?.levels) {
@@ -106,11 +104,6 @@ function main() {
         near(fx.changes[ccy][label], recomputed[label], 0.02, `${ccy} ${label}`);
       }
       note(6, `${ccy} 1D ${fx.changes[ccy]["1D"]} / 1W ${fx.changes[ccy]["1W"]} / 1M ${fx.changes[ccy]["1M"]} / 90D ${fx.changes[ccy]["90D"]}`);
-    }
-    for (const check of fx.verification || []) {
-      if (check.flag) note(6, `${check.currency} ECB vs ${check.source} differs ${check.diffPct}% on ${check.fredDate}`, "outlier");
-      else if (check.status === "unavailable") note(6, `${check.currency} ${check.source} unavailable: ${check.error}`, "issue");
-      else note(6, `${check.currency} vs ${check.source} diff ${check.diffPct}% on ${check.fredDate}`);
     }
   }
   for (const check of fxYahoo?.checks || []) {
@@ -149,18 +142,16 @@ function main() {
     }
   }
 
-  note(6, "Switzerland has no second free daily yield. SNB cube rendoblid (checked this run's source review) last published 2025-09-01; its 2025-07-31 10-year 10J0 print of 0.378 matches OECD July 2025 IRLT 0.378. The September 2026 OECD print is the series used on the bar.");
-  const broad = readJson("broad-usd.json");
-  if (!broad?.points?.length) note(2, `FRED DTWEXBGS unavailable: ${broad?.error || "missing"}. ICE DXY is shown from Yahoo.`, "issue");
-  if (dxy?.fallback) note(2, `DXY is showing the fallback: ${dxy.name}. ${dxy.yahooError || dxy.note || ""}`, "fallback");
-  if (real?.fallback) note(13, `Real yield fallback: ${real.source}`, "fallback");
+  const swiss = bonds?.bars?.find((bar) => bar.country === "Switzerland");
+  if (swiss) note(11, `Switzerland ${swiss.yield}% as of ${swiss.asOf} from ${swiss.source}${swiss.status === "stale" ? ` (stale: ${swiss.error})` : ""}`);
+  if (dxy?.status === "stale") note(2, `Dollar index is the last good Yahoo print: ${dxy.error || ""}`, "fallback");
+  if (real?.points?.length) note(13, `Real yield ${real.points.at(-1).value}% on ${real.asOf} from ${real.source}`);
   if (fed?.proxy) note(12, `Fed path proxy: ${fed.label}. ${fed.yahooError || ""}`, "proxy");
-  else if (fed?.fallback) note(12, `Fed funds futures are live. The anchor is a fallback: ${fed.anchor?.source || "unknown"}. ${fed.anchor?.fredError || ""}`, "fallback");
+  else if (fed?.anchor) note(12, `Fed funds futures are live. Anchor: ${fed.anchor.source} ${fed.anchor.value}% on ${fed.anchor.date}`);
   if (ecb?.proxy) note(12, "ECB path is a proxy by design (AAA curve + €STR, not OIS)", "proxy");
   if (commodities?.gold?.fallback) note(14, `Gold fallback: ${commodities.gold.source}`, "fallback");
-  if (commodities?.oil?.fallback) note(14, `Oil fallback: ${commodities.oil.source}`, "fallback");
-  if (real?.crosscheck?.flag) note(13, `DFII10 vs Treasury real curve differs ${real.crosscheck.diffBp} bp`, "outlier");
-  else if (real?.crosscheck) note(13, `real yield cross-check diff ${real.crosscheck.diffBp} bp`);
+  if (commodities?.gold?.status === "stale") note(14, `Gold kept the last good print: ${commodities.gold.error}`, "fallback");
+  if (commodities?.oil?.status === "stale") note(14, `Oil kept the last good print: ${commodities.oil.error}`, "fallback");
 
   const today = new Date().toISOString().slice(0, 10);
   const upcoming = (meetings?.meetings || []).filter((m) => m.decisionDate >= today && m.decisionDate <= addDays(today, 90));
