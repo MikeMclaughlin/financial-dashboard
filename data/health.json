@@ -1,18 +1,18 @@
 {
   "version": "1.2",
   "service": "financial-dashboard",
-  "generatedAt": "2026-10-16T04:59:05.030Z",
+  "generatedAt": "2026-10-16T17:38:06.865Z",
   "status": "ok",
   "series": {
     "eurusd": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "ECB EXR D.USD.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:00.783Z"
+      "fetchedAt": "2026-10-16T17:37:58.132Z"
     },
     "dxy": {
       "status": "ok",
@@ -22,7 +22,7 @@
       "delayed": false,
       "source": "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:03.981Z"
+      "fetchedAt": "2026-10-16T17:38:03.730Z"
     },
     "treasury": {
       "status": "ok",
@@ -32,17 +32,17 @@
       "delayed": false,
       "source": "US Treasury daily yield curve CSV 2025-2026",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:55.376Z"
+      "fetchedAt": "2026-10-16T17:37:56.940Z"
     },
     "fx": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "ECB EXR daily, D.USD+JPY+GBP+CHF+CAD+AUD+NZD+SEK+NOK.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:57.857Z"
+      "fetchedAt": "2026-10-16T17:37:58.192Z"
     },
     "cftc": {
       "status": "ok",
@@ -52,17 +52,17 @@
       "delayed": false,
       "source": "CFTC Socrata 6dca-aqww",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:56.007Z"
+      "fetchedAt": "2026-10-16T17:37:57.390Z"
     },
     "bunds": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "Bundesbank BBSIS Svensson daily, 2-year R02XX and 10-year R10XX",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:56.253Z"
+      "fetchedAt": "2026-10-16T17:37:57.505Z"
     },
     "bonds": {
       "status": "ok",
@@ -72,17 +72,17 @@
       "delayed": false,
       "source": null,
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:03.826Z"
+      "fetchedAt": "2026-10-16T17:38:03.411Z"
     },
     "ecb-path": {
       "status": "ok",
-      "asOf": "2026-10-14",
+      "asOf": "2026-10-15",
       "fallback": false,
       "proxy": true,
       "delayed": false,
       "source": "€STR plus ECB yield curve SV_C_YM spot rates SR_3M, SR_6M, SR_1Y, SR_2Y and instantaneous forward IF_1Y",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:56.983Z"
+      "fetchedAt": "2026-10-16T17:37:59.102Z"
     },
     "fed-path": {
       "status": "ok",
@@ -92,7 +92,7 @@
       "delayed": false,
       "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:04.570Z"
+      "fetchedAt": "2026-10-16T17:38:05.565Z"
     },
     "real-yield": {
       "status": "ok",
@@ -102,7 +102,7 @@
       "delayed": false,
       "source": "US Treasury daily real yield curve, 10 YR",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:55.832Z"
+      "fetchedAt": "2026-10-16T17:37:57.532Z"
     },
     "commodities": {
       "status": "ok",
@@ -112,7 +112,7 @@
       "delayed": false,
       "source": null,
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:04.676Z"
+      "fetchedAt": "2026-10-16T17:38:05.814Z"
     },
     "auctions": {
       "status": "ok",
@@ -122,7 +122,7 @@
       "delayed": false,
       "source": "TreasuryDirect TA_WS securities/auctioned",
       "error": null,
-      "fetchedAt": "2026-10-16T04:58:55.979Z"
+      "fetchedAt": "2026-10-16T17:37:57.502Z"
     },
     "fx-yahoo": {
       "status": "ok",
@@ -132,7 +132,7 @@
       "delayed": false,
       "source": "Yahoo FX spot quotes",
       "error": null,
-      "fetchedAt": "2026-10-16T04:59:05.025Z"
+      "fetchedAt": "2026-10-16T17:38:06.861Z"
     },
     "meetings": {
       "status": "ok",

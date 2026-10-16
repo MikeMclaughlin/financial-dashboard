@@ -5,7 +5,7 @@
   "source": "Bundesbank BBSIS Svensson daily, 2-year R02XX and 10-year R10XX",
   "sourceUrl": "https://api.statistiken.bundesbank.de/rest/data/BBSIS/D.I.ZST.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A?format=csv&startPeriod=2024-01-01",
   "note": "Published the next business day. Comma decimals in the source CSV.",
-  "asOf": "2026-10-15",
+  "asOf": "2026-10-16",
   "de2y": [
     {
       "date": "2024-01-02",
@@ -2842,6 +2842,10 @@
     {
       "date": "2026-10-15",
       "value": 3.07
+    },
+    {
+      "date": "2026-10-16",
+      "value": 3.08
     }
   ],
   "de10y": [
@@ -5680,8 +5684,12 @@
     {
       "date": "2026-10-15",
       "value": 3.45
+    },
+    {
+      "date": "2026-10-16",
+      "value": 3.48
     }
   ],
-  "fetchedAt": "2026-10-16T04:58:56.253Z",
+  "fetchedAt": "2026-10-16T17:37:57.505Z",
   "status": "ok"
 }
