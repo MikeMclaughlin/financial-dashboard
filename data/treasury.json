@@ -5,7 +5,7 @@
   "source": "US Treasury daily yield curve CSV 2025-2026",
   "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
   "fallback": false,
-  "asOf": "2026-10-14",
+  "asOf": "2026-10-15",
   "tenors": {
     "3mo": "3M",
     "6mo": "6M",
@@ -17,7 +17,7 @@
   },
   "fredCheck": {
     "status": "unavailable",
-    "error": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
+    "error": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
   },
   "points": [
     {
@@ -4479,8 +4479,18 @@
       "5yr": 5,
       "10yr": 5.19,
       "30yr": 5.52
+    },
+    {
+      "date": "2026-10-15",
+      "3mo": 4.28,
+      "6mo": 4.35,
+      "1yr": 4.49,
+      "2yr": 4.77,
+      "5yr": 4.91,
+      "10yr": 5.1,
+      "30yr": 5.43
     }
   ],
-  "fetchedAt": "2026-10-15T17:57:46.886Z",
+  "fetchedAt": "2026-10-16T00:44:27.966Z",
   "status": "ok"
 }

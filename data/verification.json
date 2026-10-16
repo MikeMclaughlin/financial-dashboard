@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-15T18:04:26.724Z",
+  "generatedAt": "2026-10-16T00:51:11.695Z",
   "issueCount": 15,
   "issues": [
     {
       "item": 3,
       "level": "issue",
-      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
+      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
@@ -87,12 +87,12 @@
     {
       "item": "2 DXY",
       "level": "info",
-      "detail": "2 DXY status=ok asOf=2026-10-15 fallback=false proxy=false"
+      "detail": "2 DXY status=ok asOf=2026-10-16 fallback=false proxy=false"
     },
     {
       "item": "3 Treasury",
       "level": "info",
-      "detail": "3 Treasury status=ok asOf=2026-10-14 fallback=false proxy=false"
+      "detail": "3 Treasury status=ok asOf=2026-10-15 fallback=false proxy=false"
     },
     {
       "item": "6 FX",
@@ -122,22 +122,22 @@
     {
       "item": "12 Fed path",
       "level": "info",
-      "detail": "12 Fed path status=ok asOf=2026-10-15 fallback=true proxy=false"
+      "detail": "12 Fed path status=ok asOf=2026-10-16 fallback=true proxy=false"
     },
     {
       "item": "13 Real yield",
       "level": "info",
-      "detail": "13 Real yield status=ok asOf=2026-10-14 fallback=true proxy=false"
+      "detail": "13 Real yield status=ok asOf=2026-10-15 fallback=true proxy=false"
     },
     {
       "item": "14 Gold",
       "level": "info",
-      "detail": "14 Gold status=ok asOf=2026-10-15 fallback=false proxy=false"
+      "detail": "14 Gold status=ok asOf=2026-10-16 fallback=false proxy=false"
     },
     {
       "item": "14 Oil",
       "level": "info",
-      "detail": "14 Oil status=ok asOf=2026-10-15 fallback=false proxy=false"
+      "detail": "14 Oil status=ok asOf=2026-10-16 fallback=false proxy=false"
     },
     {
       "item": "15 Auctions",
@@ -157,17 +157,17 @@
     {
       "item": 4,
       "level": "info",
-      "detail": "2s10s 37 bp on 2026-10-14; change -5 bp"
+      "detail": "2s10s 33 bp on 2026-10-15; change -4 bp"
     },
     {
       "item": 10,
       "level": "info",
-      "detail": "curve today 2026-10-14, 45d 2026-08-28, 90d 2026-07-16"
+      "detail": "curve today 2026-10-15, 45d 2026-08-31, 90d 2026-07-17"
     },
     {
       "item": 3,
       "level": "issue",
-      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-04 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
+      "detail": "FRED DGS10 cross-check unavailable: FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-05 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10 attempt 3: The operation was aborted due to timeout)"
     },
     {
       "item": 6,
@@ -262,47 +262,47 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff -0.13%"
+      "detail": "EUR vs Yahoo diff -0.05%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY vs Yahoo diff 0.04%"
+      "detail": "JPY vs Yahoo diff 0.06%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff -0.23%"
+      "detail": "GBP vs Yahoo diff -0.18%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff -0.4%"
+      "detail": "CHF vs Yahoo diff -0.27%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD vs Yahoo diff -0.18%"
+      "detail": "CAD vs Yahoo diff -0.07%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff -0.16%"
+      "detail": "AUD vs Yahoo diff -0.17%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff -0.3%"
+      "detail": "NZD vs Yahoo diff -0.4%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff -0.25%"
+      "detail": "SEK vs Yahoo diff -0.15%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK vs Yahoo diff -0.39%"
+      "detail": "NOK vs Yahoo diff -0.29%"
     },
     {
       "item": 7,
@@ -312,12 +312,12 @@
     {
       "item": 8,
       "level": "info",
-      "detail": "US and German 2Y share 438 exact dates; German as of 2026-10-15"
+      "detail": "US and German 2Y share 439 exact dates; German as of 2026-10-15"
     },
     {
       "item": 9,
       "level": "info",
-      "detail": "German 10Y 3.45 on 2026-10-15; US 10Y 5.19 on 2026-10-14"
+      "detail": "German 10Y 3.45 on 2026-10-15; US 10Y 5.1 on 2026-10-15"
     },
     {
       "item": 11,

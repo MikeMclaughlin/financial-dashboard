@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "service": "financial-dashboard",
-  "generatedAt": "2026-10-15T18:04:26.661Z",
+  "generatedAt": "2026-10-16T00:51:11.638Z",
   "status": "degraded",
   "series": {
     "eurusd": {
@@ -12,17 +12,17 @@
       "delayed": false,
       "source": "ECB EXR D.USD.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-15T17:51:18.240Z"
+      "fetchedAt": "2026-10-16T00:37:58.958Z"
     },
     "dxy": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
       "error": null,
-      "fetchedAt": "2026-10-15T17:57:53.868Z"
+      "fetchedAt": "2026-10-16T00:44:38.693Z"
     },
     "broad-usd": {
       "status": "error",
@@ -32,17 +32,17 @@
       "delayed": false,
       "source": null,
       "error": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2024-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS attempt 3: The operation was aborted due to timeout)",
-      "fetchedAt": "2026-10-15T17:57:46.149Z"
+      "fetchedAt": "2026-10-16T00:44:27.376Z"
     },
     "treasury": {
       "status": "ok",
-      "asOf": "2026-10-14",
+      "asOf": "2026-10-15",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "US Treasury daily yield curve CSV 2025-2026",
       "error": null,
-      "fetchedAt": "2026-10-15T17:57:46.886Z"
+      "fetchedAt": "2026-10-16T00:44:27.966Z"
     },
     "fx": {
       "status": "ok",
@@ -52,7 +52,7 @@
       "delayed": false,
       "source": "ECB EXR daily, D.USD+JPY+GBP+CHF+CAD+AUD+NZD+SEK+NOK.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-15T17:57:48.429Z"
+      "fetchedAt": "2026-10-16T00:44:29.137Z"
     },
     "cftc": {
       "status": "ok",
@@ -62,7 +62,7 @@
       "delayed": false,
       "source": "CFTC Socrata 6dca-aqww",
       "error": null,
-      "fetchedAt": "2026-10-15T17:51:17.429Z"
+      "fetchedAt": "2026-10-16T00:37:58.261Z"
     },
     "bunds": {
       "status": "ok",
@@ -72,7 +72,7 @@
       "delayed": false,
       "source": "Bundesbank BBSIS Svensson daily, 2-year R02XX and 10-year R10XX",
       "error": null,
-      "fetchedAt": "2026-10-15T17:51:17.804Z"
+      "fetchedAt": "2026-10-16T00:37:58.965Z"
     },
     "bonds": {
       "status": "stale",
@@ -81,8 +81,8 @@
       "proxy": false,
       "delayed": false,
       "source": null,
-      "error": "fredBlocked is not defined",
-      "fetchedAt": "2026-10-15T17:57:53.635Z"
+      "error": "no yield for Switzerland",
+      "fetchedAt": "2026-10-16T00:44:38.423Z"
     },
     "ecb-path": {
       "status": "ok",
@@ -92,37 +92,37 @@
       "delayed": false,
       "source": "€STR plus ECB yield curve SV_C_YM spot rates SR_3M, SR_6M, SR_1Y, SR_2Y and instantaneous forward IF_1Y",
       "error": null,
-      "fetchedAt": "2026-10-15T17:51:18.773Z"
+      "fetchedAt": "2026-10-16T00:37:59.765Z"
     },
     "fed-path": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": true,
       "proxy": false,
       "delayed": false,
       "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
       "error": null,
-      "fetchedAt": "2026-10-15T18:04:25.660Z"
+      "fetchedAt": "2026-10-16T00:51:10.468Z"
     },
     "real-yield": {
       "status": "ok",
-      "asOf": "2026-10-14",
+      "asOf": "2026-10-15",
       "fallback": true,
       "proxy": false,
       "delayed": false,
       "source": "US Treasury daily real yield curve, 10 YR (FRED DFII10 unavailable)",
       "error": null,
-      "fetchedAt": "2026-10-15T17:57:47.390Z"
+      "fetchedAt": "2026-10-16T00:44:28.625Z"
     },
     "commodities": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": null,
       "error": null,
-      "fetchedAt": "2026-10-15T18:04:25.848Z"
+      "fetchedAt": "2026-10-16T00:51:10.669Z"
     },
     "auctions": {
       "status": "ok",
@@ -132,17 +132,17 @@
       "delayed": false,
       "source": "TreasuryDirect TA_WS securities/auctioned",
       "error": null,
-      "fetchedAt": "2026-10-15T17:51:17.652Z"
+      "fetchedAt": "2026-10-16T00:37:58.771Z"
     },
     "fx-yahoo": {
       "status": "ok",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "fallback": false,
       "proxy": false,
       "delayed": false,
       "source": "Yahoo FX spot quotes",
       "error": null,
-      "fetchedAt": "2026-10-15T18:04:26.656Z"
+      "fetchedAt": "2026-10-16T00:51:11.634Z"
     },
     "meetings": {
       "status": "ok",

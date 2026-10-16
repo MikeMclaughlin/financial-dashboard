@@ -173,7 +173,7 @@
       "note": "OECD has no observation for the ECB month, so the months were not compared."
     }
   ],
-  "fetchedAt": "2026-10-15T17:57:53.635Z",
+  "fetchedAt": "2026-10-16T00:44:38.423Z",
   "status": "stale",
-  "error": "fredBlocked is not defined"
+  "error": "no yield for Switzerland"
 }
