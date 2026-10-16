@@ -6,17 +6,8 @@
   "source": "TreasuryDirect TA_WS securities/auctioned",
   "sourceUrl": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?format=json&days=420",
   "asOf": "2026-10-08",
-  "average": 2.566,
+  "average": 2.563,
   "auctions": [
-    {
-      "cusip": "912810UH9",
-      "date": "2025-08-21",
-      "securityType": "Bond",
-      "securityTerm": "29-Year 6-Month",
-      "tips": true,
-      "bidToCover": 2.78,
-      "highYield": 2.65
-    },
     {
       "cusip": "91282CNV9",
       "date": "2025-08-26",
@@ -756,6 +747,6 @@
       "highYield": 5.618
     }
   ],
-  "fetchedAt": "2026-10-16T00:37:58.771Z",
+  "fetchedAt": "2026-10-16T04:58:55.979Z",
   "status": "ok"
 }

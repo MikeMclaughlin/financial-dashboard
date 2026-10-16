@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import iconv from "iconv-lite";
 
-export const APP_VERSION = "1.1";
+export const APP_VERSION = "1.2";
 export const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 export const DATA = path.join(ROOT, "data");
 
@@ -49,83 +49,6 @@ export async function fetchText(url, opts = {}) {
     return buf.toString("utf8").replace(/^\uFEFF/, "");
   }
   return iconv.decode(buf, encoding).replace(/^\uFEFF/, "");
-}
-
-const FRED_TIMEOUT_MS = 60000;
-const FRED_ATTEMPTS = 3;
-let fredHostDown = null;
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function isTransportError(err) {
-  const message = err?.message || String(err);
-  return /timeout|aborted|network|fetch failed|ECONN|ENOTFOUND|EAI_AGAIN|socket|UND_ERR/i.test(message);
-}
-
-function fredUrls(id, start) {
-  const series = encodeURIComponent(id);
-  const cosd = encodeURIComponent(start);
-  return [
-    `https://fred.stlouisfed.org/graph/fredgraph.csv?id=${series}&cosd=${cosd}`,
-    `https://fred.stlouisfed.org/graph/fredgraph.csv?id=${series}`,
-  ];
-}
-
-function parseFredCsv(text, id) {
-  const trimmed = String(text).trim();
-  if (!trimmed || /<!DOCTYPE html>|<html/i.test(trimmed.slice(0, 400))) {
-    throw new Error(`FRED ${id} returned a non-CSV page`);
-  }
-  const rows = parseCsv(trimmed);
-  const points = [];
-  for (const row of rows.slice(1)) {
-    const date = row[0];
-    const value = num(row[1]);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || value == null) continue;
-    points.push({ date, value });
-  }
-  return sortUnique(points);
-}
-
-/**
- * Download one FRED graph CSV. Each URL is tried 3 times with a 60s
- * timeout and exponential backoff. The dated URL is tried first; the
- * undated graph URL is the alternate form and is filtered to `start`.
- * After every form fails on the network, later calls in this process
- * skip straight to the caller's fallback.
- */
-export async function fetchFred(id, start = "2024-01-01") {
-  if (fredHostDown) throw new Error(fredHostDown);
-  const errors = [];
-  let transportOnly = true;
-  for (const url of fredUrls(id, start)) {
-    for (let attempt = 1; attempt <= FRED_ATTEMPTS; attempt++) {
-      try {
-        const text = await fetchText(url, { timeout: FRED_TIMEOUT_MS });
-        const points = parseFredCsv(text, id).filter((point) => point.date >= start);
-        if (!points.length) throw new Error(`FRED ${id} returned no observations from ${start}`);
-        fredHostDown = null;
-        return points;
-      } catch (err) {
-        const message = err?.message || String(err);
-        errors.push(`${url} attempt ${attempt}: ${message}`);
-        if (!isTransportError(err)) transportOnly = false;
-        if (attempt < FRED_ATTEMPTS) await sleep(5000 * 2 ** (attempt - 1));
-      }
-    }
-  }
-  const detail = errors.join(" | ");
-  if (transportOnly) {
-    fredHostDown = `FRED unreachable (${detail})`;
-    throw new Error(fredHostDown);
-  }
-  throw new Error(`FRED ${id}: ${detail}`);
-}
-
-export function fredHostError() {
-  return fredHostDown;
 }
 
 export function parseCsv(text, delimiter = ",") {
@@ -315,7 +238,6 @@ export function rebuildHealth(extra = {}) {
   const files = [
     "eurusd",
     "dxy",
-    "broad-usd",
     "treasury",
     "fx",
     "cftc",

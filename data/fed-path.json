@@ -2,16 +2,15 @@
   "id": "fed-path",
   "name": "Fed rate-path expectations",
   "proxy": false,
-  "fallback": true,
+  "fallback": false,
   "label": "Fed funds futures, implied rate = 100 − price",
   "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
   "asOf": "2026-10-16",
   "anchor": {
     "date": "2026-10-14",
     "value": 3.88,
-    "source": "NY Fed EFFR (FRED DFF unavailable)",
-    "fallback": true,
-    "fredError": "FRED unreachable (https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-01-01 attempt 3: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 1: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 2: The operation was aborted due to timeout | https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF attempt 3: The operation was aborted due to timeout)"
+    "source": "NY Fed effective federal funds rate (EFFR)",
+    "fallback": false
   },
   "points": [
     {
@@ -20,9 +19,9 @@
       "label": "Oct",
       "year": 2026,
       "month": 10,
-      "price": 96.1125,
-      "value": 3.888,
-      "asOf": "2026-10-15"
+      "price": 96.115,
+      "value": 3.885,
+      "asOf": "2026-10-16"
     },
     {
       "symbol": "ZQX26.CBT",
@@ -30,8 +29,8 @@
       "label": "Nov",
       "year": 2026,
       "month": 11,
-      "price": 96.05,
-      "value": 3.95,
+      "price": 96.08,
+      "value": 3.92,
       "asOf": "2026-10-16"
     },
     {
@@ -40,8 +39,8 @@
       "label": "Dec",
       "year": 2026,
       "month": 12,
-      "price": 95.89,
-      "value": 4.11,
+      "price": 95.925,
+      "value": 4.075,
       "asOf": "2026-10-16"
     },
     {
@@ -50,8 +49,8 @@
       "label": "Jan",
       "year": 2027,
       "month": 1,
-      "price": 95.82,
-      "value": 4.18,
+      "price": 95.85,
+      "value": 4.15,
       "asOf": "2026-10-16"
     },
     {
@@ -60,8 +59,8 @@
       "label": "Feb",
       "year": 2027,
       "month": 2,
-      "price": 95.735,
-      "value": 4.265,
+      "price": 95.765,
+      "value": 4.235,
       "asOf": "2026-10-16"
     },
     {
@@ -70,9 +69,9 @@
       "label": "Mar",
       "year": 2027,
       "month": 3,
-      "price": 95.665,
-      "value": 4.335,
-      "asOf": "2026-10-15"
+      "price": 95.69,
+      "value": 4.31,
+      "asOf": "2026-10-16"
     },
     {
       "symbol": "ZQJ27.CBT",
@@ -80,8 +79,8 @@
       "label": "Apr",
       "year": 2027,
       "month": 4,
-      "price": 95.56,
-      "value": 4.44,
+      "price": 95.59,
+      "value": 4.41,
       "asOf": "2026-10-16"
     },
     {
@@ -90,8 +89,8 @@
       "label": "May",
       "year": 2027,
       "month": 5,
-      "price": 95.475,
-      "value": 4.525,
+      "price": 95.505,
+      "value": 4.495,
       "asOf": "2026-10-16"
     },
     {
@@ -100,8 +99,8 @@
       "label": "Jun",
       "year": 2027,
       "month": 6,
-      "price": 95.41,
-      "value": 4.59,
+      "price": 95.44,
+      "value": 4.56,
       "asOf": "2026-10-16"
     },
     {
@@ -110,9 +109,9 @@
       "label": "Jul",
       "year": 2027,
       "month": 7,
-      "price": 95.39,
-      "value": 4.61,
-      "asOf": "2026-10-15"
+      "price": 95.41,
+      "value": 4.59,
+      "asOf": "2026-10-16"
     },
     {
       "symbol": "ZQQ27.CBT",
@@ -120,8 +119,8 @@
       "label": "Aug",
       "year": 2027,
       "month": 8,
-      "price": 95.355,
-      "value": 4.645,
+      "price": 95.39,
+      "value": 4.61,
       "asOf": "2026-10-16"
     },
     {
@@ -130,12 +129,12 @@
       "label": "Sep",
       "year": 2027,
       "month": 9,
-      "price": 95.35,
-      "value": 4.65,
+      "price": 95.375,
+      "value": 4.625,
       "asOf": "2026-10-16"
     }
   ],
   "errors": [],
-  "fetchedAt": "2026-10-16T00:51:10.468Z",
+  "fetchedAt": "2026-10-16T04:59:04.570Z",
   "status": "ok"
 }

@@ -6,9 +6,7 @@ import {
   addDays,
   assertDates,
   daysBetween,
-  fetchFred,
   fetchText,
-  fredHostError,
   inRange,
   isoToday,
   latestOnOrBefore,
@@ -89,30 +87,6 @@ function validateEurusd(doc) {
   inRange(lastMa.value, 0.7, 1.8, "EUR/USD MA");
 }
 
-async function fetchBroadUsd() {
-  const points = await fetchFred("DTWEXBGS", "2024-01-01");
-  if (points.length < 50) throw new Error("Broad dollar series too short");
-  inRange(points.at(-1).value, 70, 160, "DTWEXBGS");
-  return {
-    id: "broad-usd",
-    name: "Broad USD index (Fed)",
-    unit: "index",
-    source: "FRED DTWEXBGS",
-    sourceUrl: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
-    fallback: true,
-    delayed: true,
-    note: "Nominal Broad U.S. Dollar Index, daily. Used only when ICE DXY from Yahoo is unavailable. It is not the ICE Dollar Index.",
-    asOf: points.at(-1).date,
-    points: points.slice(-500),
-  };
-}
-
-function validateBroad(doc) {
-  if (doc.status === "error") return;
-  assertDates(doc.points, "broad-usd");
-  inRange(doc.points.at(-1).value, 70, 160, "DTWEXBGS");
-}
-
 function parseTreasuryCsv(text) {
   const rows = parseCsv(text);
   if (!rows.length) throw new Error("empty treasury csv");
@@ -150,26 +124,6 @@ async function fetchTreasury() {
   inRange(last["2yr"], 0, 15, "US 2Y");
   const curve = last["10yr"] - last["2yr"];
   inRange(curve, -5, 5, "2s10s percent");
-  let fredCheck = null;
-  try {
-    const dgs = await fetchFred("DGS10", addDays(last.date, -40));
-    const t102 = await fetchFred("T10Y2Y", addDays(last.date, -40));
-    const dgsLast = latestOnOrBefore(dgs, last.date);
-    const gapLast = latestOnOrBefore(t102, last.date);
-    const ours = latestOnOrBefore(points, dgsLast?.date || last.date);
-    fredCheck = {
-      dgs10: dgsLast,
-      treasury10yOnThatDate: ours ? ours["10yr"] : null,
-      diffBp: dgsLast && ours ? Math.round((ours["10yr"] - dgsLast.value) * 1000) / 10 : null,
-      t10y2y: gapLast,
-      treasury2s10sOnThatDate: gapLast ? (latestOnOrBefore(points, gapLast.date)["10yr"] - latestOnOrBefore(points, gapLast.date)["2yr"]) : null,
-    };
-    if (fredCheck.diffBp != null && Math.abs(fredCheck.diffBp) > 5) {
-      fredCheck.flag = `US 10Y disagrees with FRED DGS10 by ${fredCheck.diffBp} bp`;
-    }
-  } catch (err) {
-    fredCheck = { status: "unavailable", error: err.message };
-  }
   return {
     id: "treasury",
     name: "US Treasury yield curve",
@@ -187,7 +141,6 @@ async function fetchTreasury() {
       "10yr": "10Y",
       "30yr": "30Y",
     },
-    fredCheck,
     points,
   };
 }
@@ -263,7 +216,6 @@ async function fetchFx() {
     };
     inRange(last.value, bounds[ccy][0], bounds[ccy][1], `${ccy} USD price`);
   }
-  const verification = await verifyFxFred(levels);
   return {
     id: "fx",
     name: "G10 vs USD",
@@ -275,46 +227,7 @@ async function fetchFx() {
     order,
     changes,
     levels: Object.fromEntries(order.map((ccy) => [ccy, levels[ccy].slice(-500)])),
-    verification,
   };
-}
-
-async function verifyFxFred(levels) {
-  const spec = [
-    { ccy: "EUR", id: "DEXUSEU", invert: false },
-    { ccy: "JPY", id: "DEXJPUS", invert: true },
-    { ccy: "GBP", id: "DEXUSUK", invert: false },
-    { ccy: "CHF", id: "DEXSZUS", invert: true },
-    { ccy: "CAD", id: "DEXCAUS", invert: true },
-    { ccy: "AUD", id: "DEXUSAL", invert: false },
-    { ccy: "NZD", id: "DEXUSNZ", invert: false },
-    { ccy: "SEK", id: "DEXSDUS", invert: true },
-    { ccy: "NOK", id: "DEXNOUS", invert: true },
-  ];
-  const checks = [];
-  for (const item of spec) {
-    try {
-      const fred = await fetchFred(item.id, "2025-01-01");
-      const last = fred.at(-1);
-      const usd = item.invert ? 1 / last.value : last.value;
-      const ours = latestOnOrBefore(levels[item.ccy], last.date);
-      const diffPct = ours ? ((ours.value / usd) - 1) * 100 : null;
-      checks.push({
-        currency: item.ccy,
-        source: `FRED ${item.id}`,
-        fredDate: last.date,
-        fredUsdPerUnit: Math.round(usd * 1e6) / 1e6,
-        ecbDate: ours?.date || null,
-        ecbUsdPerUnit: ours ? Math.round(ours.value * 1e6) / 1e6 : null,
-        diffPct: diffPct == null ? null : Math.round(diffPct * 100) / 100,
-        flag: diffPct != null && Math.abs(diffPct) > 1,
-        note: "FRED H.10 rates typically lag the ECB reference by several business days. Compared on the FRED date.",
-      });
-    } catch (err) {
-      checks.push({ currency: item.ccy, source: `FRED ${item.id}`, status: "unavailable", error: err.message, flag: false });
-    }
-  }
-  return checks;
 }
 
 function validateFx(doc) {
@@ -529,15 +442,110 @@ async function fetchOecdMonthly(areas) {
   return out;
 }
 
-async function fetchBonds() {
-  const year = new Date().getUTCFullYear();
-  const [de, jgbEn, jgbCur, boc, rba, oecd] = await Promise.all([
+function parseEcbMonthly(text) {
+  const rows = parseCsv(text);
+  const header = rows[0];
+  const dateIdx = header.indexOf("TIME_PERIOD");
+  const valueIdx = header.indexOf("OBS_VALUE");
+  const points = [];
+  for (const row of rows.slice(1)) {
+    const month = row[dateIdx];
+    const value = num(row[valueIdx]);
+    if (value == null || !/^\d{4}-\d{2}$/.test(month)) continue;
+    points.push({ date: monthEnd(month), value, month });
+  }
+  return sortUnique(points);
+}
+
+async function fetchEcbIrs(area) {
+  const text = await fetchText(
+    `https://data-api.ecb.europa.eu/service/data/IRS/M.${area}.L.L40.CI.0000.EUR.N.Z?format=csvdata&startPeriod=2024-01`,
+  );
+  const points = parseEcbMonthly(text);
+  if (!points.length) throw new Error(`ECB IRS ${area} returned no observations`);
+  return points;
+}
+
+async function fetchSnb10y() {
+  const text = await fetchText("https://data.snb.ch/api/cube/rendoblid/data/csv/en?fromDate=2024-01");
+  const points = [];
+  for (const line of text.split(/\r?\n/)) {
+    const parts = line.split(";").map((cell) => cell.replace(/^"|"$/g, "").trim());
+    if (parts[1] !== "10J0") continue;
+    const value = num(parts[2]);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(parts[0]) || value == null) continue;
+    points.push({ date: parts[0], value });
+  }
+  const sorted = sortUnique(points);
+  if (!sorted.length) throw new Error("SNB rendoblid returned no 10J0 observations");
+  return sorted;
+}
+
+function previousBar(prev, country) {
+  return prev?.bars?.find((bar) => bar.country === country) || null;
+}
+
+function staleBar(prev, country, error) {
+  const old = previousBar(prev, country);
+  if (!old) return null;
+  return {
+    ...old,
+    status: "stale",
+    error,
+    badges: [...new Set([...(old.badges || []), "stale"])],
+  };
+}
+
+async function loadSwitzerland(prev) {
+  try {
+    const points = await fetchOecdOne("CHE");
+    if (!points.length) throw new Error("OECD Switzerland returned no observations");
+    return {
+      points,
+      frequency: "monthly",
+      source: "OECD SDMX DF_FINMARK IRLT monthly, Switzerland",
+    };
+  } catch (oecdErr) {
+    try {
+      const points = await fetchSnb10y();
+      const stored = previousBar(prev, "Switzerland");
+      if (stored?.asOf && points.at(-1).date < stored.asOf) {
+        throw new Error(`SNB 10-year ends ${points.at(-1).date}, older than the stored print ${stored.asOf}`);
+      }
+      return {
+        points,
+        frequency: "daily",
+        source: "SNB data portal rendoblid, Swiss Confederation 10-year yield (10J0)",
+      };
+    } catch (snbErr) {
+      return { error: `OECD: ${oecdErr.message}; SNB: ${snbErr.message}` };
+    }
+  }
+}
+
+async function loadEcbCountry(area, label) {
+  try {
+    return {
+      points: await fetchEcbIrs(area),
+      frequency: "monthly",
+      source: `ECB Data Portal IRS, long-term interest rate for convergence purposes, ${label}`,
+    };
+  } catch (err) {
+    return { error: err.message };
+  }
+}
+
+async function fetchBonds(prev) {
+  const [de, jgbEn, jgbCur, boc, rba, oecd, switzerland, france, italy] = await Promise.all([
     fetchText("https://api.statistiken.bundesbank.de/rest/data/BBSIS/D.I.ZST.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A?format=csv&startPeriod=2024-01-01"),
     fetchText("https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv"),
     fetchText("https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv", { encoding: "shift_jis" }),
     fetchText("https://www.bankofcanada.ca/valet/observations/BD.CDN.10YR.DQ.YLD/csv?recent=500"),
     fetchText("https://www.rba.gov.au/statistics/tables/csv/f2-data.csv"),
-    fetchOecdMonthly(["FRA", "ITA", "CHE", "DEU", "JPN", "CAN", "AUS", "USA"]),
+    fetchOecdMonthly(["DEU", "JPN", "CAN", "AUS", "USA"]),
+    loadSwitzerland(prev),
+    loadEcbCountry("FR", "France"),
+    loadEcbCountry("IT", "Italy"),
   ]);
   const germany = parseBundesbank(de);
   const japan = sortUnique([...parseJgb(jgbEn), ...parseJgb(jgbCur)]).filter((p) => p.date >= "2024-01-01");
@@ -548,79 +556,71 @@ async function fetchBonds() {
   const ust = treasury.points.filter((p) => p["10yr"] != null).map((p) => ({ date: p.date, value: p["10yr"] }));
   const ustAsOf = ust.at(-1).date;
 
-  let irs = {};
-  try {
-    const [fr, it] = await Promise.all([
-      fetchText("https://data-api.ecb.europa.eu/service/data/IRS/M.FR.L.L40.CI.0000.EUR.N.Z?format=csvdata&lastNObservations=6"),
-      fetchText("https://data-api.ecb.europa.eu/service/data/IRS/M.IT.L.L40.CI.0000.EUR.N.Z?format=csvdata&lastNObservations=6"),
-    ]);
-    irs = { FR: lastEcbObs(fr), IT: lastEcbObs(it) };
-  } catch (err) {
-    irs = { error: err.message };
-  }
-
   const series = [
-    {
-      country: "Switzerland",
-      points: oecd.CHE,
-      frequency: "monthly",
-      source: "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01CHM156N)",
-      fredId: "IRLTLT01CHM156N",
-    },
+    { country: "Switzerland", ...switzerland },
     {
       country: "Japan",
       points: japan,
       frequency: "daily",
       source: "Japan MOF JGB yield curve, 10Y (English history + current-month Shift-JIS file)",
-      fredId: null,
     },
     {
       country: "Germany",
       points: germany,
       frequency: "daily",
       source: "Bundesbank BBSIS 10-year",
-      fredId: null,
     },
-    {
-      country: "France",
-      points: oecd.FRA,
-      frequency: "monthly",
-      source: "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01FRM156N)",
-      fredId: "IRLTLT01FRM156N",
-    },
-    {
-      country: "Italy",
-      points: oecd.ITA,
-      frequency: "monthly",
-      source: "OECD DF_FINMARK IRLT monthly (same dataset as FRED IRLTLT01ITM156N)",
-      fredId: "IRLTLT01ITM156N",
-    },
+    { country: "France", ...france },
+    { country: "Italy", ...italy },
     {
       country: "Canada",
       points: canada,
       frequency: "daily",
       source: "Bank of Canada Valet BD.CDN.10YR.DQ.YLD",
-      fredId: null,
     },
     {
       country: "Australia",
       points: australia,
       frequency: "daily",
       source: "RBA statistical table F2, Australian Government 10 year bond",
-      fredId: null,
     },
   ];
 
   const bars = [];
   const cross = [];
   for (const item of series) {
-    if (!item.points?.length) throw new Error(`no yield for ${item.country}`);
-    const last = item.points.at(-1);
-    inRange(last.value, -2, 20, item.country);
+    if (!item.points?.length) {
+      const kept = staleBar(prev, item.country, item.error || `no yield for ${item.country}`);
+      if (!kept) throw new Error(`no yield for ${item.country}`);
+      bars.push(kept);
+      continue;
+    }
+    let last;
+    try {
+      last = item.points.at(-1);
+      inRange(last.value, -2, 20, item.country);
+    } catch (err) {
+      const kept = staleBar(prev, item.country, err.message);
+      if (!kept) throw err;
+      bars.push(kept);
+      continue;
+    }
     const us = latestOnOrBefore(ust, last.date);
-    if (!us) throw new Error(`no US 10Y on or before ${last.date} for ${item.country}`);
+    if (!us) {
+      const kept = staleBar(prev, item.country, `no US 10Y on or before ${last.date}`);
+      if (!kept) throw new Error(`no US 10Y on or before ${last.date} for ${item.country}`);
+      bars.push(kept);
+      continue;
+    }
     const spreadBp = Math.round((last.value - us.value) * 100);
-    inRange(spreadBp, -800, 400, `${item.country} spread`);
+    try {
+      inRange(spreadBp, -800, 400, `${item.country} spread`);
+    } catch (err) {
+      const kept = staleBar(prev, item.country, err.message);
+      if (!kept) throw err;
+      bars.push(kept);
+      continue;
+    }
     const badges = [];
     if (item.frequency === "monthly") badges.push("monthly");
     if (daysBetween(last.date, ustAsOf) > 4) badges.push("delayed");
@@ -631,7 +631,6 @@ async function fetchBonds() {
       frequency: item.frequency,
       badges,
       source: item.source,
-      fredId: item.fredId,
       us10y: us.value,
       us10yDate: us.date,
       spreadBp,
@@ -665,57 +664,19 @@ async function fetchBonds() {
   compareMonthly("Canada", "CAN", canada);
   compareMonthly("Australia", "AUS", australia);
   compareMonthly("United States", "USA", ust);
-  if (irs.FR && oecd.FRA) cross.push(compareIrs("France", oecd.FRA, irs.FR));
-  if (irs.IT && oecd.ITA) cross.push(compareIrs("Italy", oecd.ITA, irs.IT));
-  if (irs.error) cross.push({ country: "France/Italy ECB IRS", status: "unavailable", error: irs.error });
 
+  const stale = bars.filter((bar) => bar.status === "stale");
   return {
     id: "bonds",
     name: "10Y government bond spread vs US Treasuries",
     unit: "basis points (country yield minus US 10Y)",
     asOf: ustAsOf,
     us10ySource: "US Treasury daily yield curve, 10 Yr",
-    note: "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date.",
-    oecdDirect: true,
-    fredGraph: fredBlocked || "not used for these monthly series; OECD SDMX is the dataset behind the FRED IDs",
+    note: "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date. A country whose source fails keeps its previous yield and as-of date.",
+    status: stale.length ? "stale" : "ok",
+    error: stale.length ? stale.map((bar) => `${bar.country}: ${bar.error}`).join("; ") : null,
     bars,
     crosschecks: cross.filter(Boolean),
-  };
-}
-
-function lastEcbObs(text) {
-  const rows = parseCsv(text);
-  const header = rows[0];
-  const dateIdx = header.indexOf("TIME_PERIOD");
-  const valueIdx = header.indexOf("OBS_VALUE");
-  const points = rows.slice(1).map((r) => ({ month: r[dateIdx], value: num(r[valueIdx]) })).filter((p) => p.value != null && /^\d{4}-\d{2}$/.test(p.month));
-  return points.at(-1) || null;
-}
-
-function compareIrs(country, oecdPoints, irs) {
-  const match = oecdPoints.find((p) => p.month === irs.month);
-  const latest = oecdPoints.at(-1);
-  if (!match) {
-    return {
-      country,
-      source: "ECB IRS long-term rate vs OECD IRLT",
-      month: irs.month,
-      ecb: irs.value,
-      oecdLatestMonth: latest?.month || null,
-      oecdLatest: latest?.value ?? null,
-      diffBp: null,
-      flag: true,
-      note: "OECD has no observation for the ECB month, so the months were not compared.",
-    };
-  }
-  return {
-    country,
-    source: "ECB IRS long-term rate vs OECD IRLT",
-    month: irs.month,
-    ecb: irs.value,
-    oecd: match.value,
-    diffBp: Math.round((match.value - irs.value) * 100),
-    flag: Math.abs(match.value - irs.value) > 0.25,
   };
 }
 
@@ -786,68 +747,31 @@ function validateEcbPath(doc) {
 }
 
 async function fetchRealYield() {
-  let treasuryReal = [];
-  try {
-    const year = new Date().getUTCFullYear();
-    const chunks = await Promise.all([year - 1, year].map((y) => fetchText(treasuryUrl(y, "daily_treasury_real_yield_curve"))));
-    treasuryReal = sortUnique(chunks.flatMap((text) => {
-      const rows = parseCsv(text);
-      const header = rows[0].map(normHeader);
-      const dateIdx = header.indexOf("date");
-      const col = header.indexOf("10yr");
-      const points = [];
-      for (const row of rows.slice(1)) {
-        const date = parseMDY(row[dateIdx]);
-        const value = num(row[col]);
-        if (date && value != null) points.push({ date, value });
-      }
-      return points;
-    }));
-  } catch (err) {
-    treasuryReal = [];
-    console.error("real-yield treasury curve failed", err.message);
-  }
-  let points = null;
-  let fallback = false;
-  let source = "FRED DFII10";
-  let sourceUrl = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10";
-  let fredError = null;
-  try {
-    points = await fetchFred("DFII10", "2024-01-01");
-  } catch (err) {
-    fredError = err.message;
-  }
-  let cross = null;
-  if (points?.length && treasuryReal.length) {
-    const t = treasuryReal.at(-1);
-    const f = latestOnOrBefore(points, t.date);
-    cross = {
-      treasuryDate: t.date,
-      treasury10yReal: t.value,
-      fredDate: f?.date || null,
-      fred: f?.value ?? null,
-      diffBp: f ? Math.round((f.value - t.value) * 100) : null,
-      flag: f ? Math.abs(f.value - t.value) > 0.15 : false,
-    };
-  }
-  if (!points?.length) {
-    if (!treasuryReal.length) throw new Error(fredError || "no real yield source");
-    points = treasuryReal;
-    fallback = true;
-    source = "US Treasury daily real yield curve, 10 YR (FRED DFII10 unavailable)";
-    sourceUrl = treasuryUrl(new Date().getUTCFullYear(), "daily_treasury_real_yield_curve");
-  }
+  const year = new Date().getUTCFullYear();
+  const chunks = await Promise.all([year - 1, year].map((y) => fetchText(treasuryUrl(y, "daily_treasury_real_yield_curve"))));
+  const points = sortUnique(chunks.flatMap((text) => {
+    const rows = parseCsv(text);
+    const header = rows[0].map(normHeader);
+    const dateIdx = header.indexOf("date");
+    const col = header.indexOf("10yr");
+    const parsed = [];
+    for (const row of rows.slice(1)) {
+      const date = parseMDY(row[dateIdx]);
+      const value = num(row[col]);
+      if (date && value != null) parsed.push({ date, value });
+    }
+    return parsed;
+  }));
+  if (points.length < 50) throw new Error(`real yield rows ${points.length}`);
   inRange(points.at(-1).value, -3, 8, "US 10Y real");
   return {
     id: "real-yield",
-    name: fallback ? "US 10Y real yield (Treasury)" : "US 10Y real yield (TIPS)",
+    name: "US 10Y real yield (Treasury)",
     unit: "percent",
-    source,
-    sourceUrl,
-    fallback,
+    source: "US Treasury daily real yield curve, 10 YR",
+    sourceUrl: treasuryUrl(year, "daily_treasury_real_yield_curve"),
+    fallback: true,
     delayed: false,
-    fredError,
-    crosscheck: cross,
     asOf: points.at(-1).date,
     points: points.slice(-500),
   };
@@ -917,7 +841,6 @@ async function main() {
   const only = new Set((process.argv.find((arg) => arg.startsWith("--only=")) || "").replace("--only=", "").split(",").filter(Boolean));
   const jobs = [
     ["eurusd", "eurusd.json", fetchEurusd, validateEurusd],
-    ["broad-usd", "broad-usd.json", fetchBroadUsd, validateBroad],
     ["treasury", "treasury.json", fetchTreasury, validateTreasury],
     ["fx", "fx.json", fetchFx, validateFx],
     ["cftc", "cftc.json", fetchCftc, validateCftc],
@@ -934,7 +857,7 @@ async function main() {
     meetings.fetchedAt = meetings.fetchedAt || new Date().toISOString();
     meetings.status = meetings.status || "ok";
   }
-  rebuildHealth({ fredHost: fredHostError() });
+  rebuildHealth();
   console.log("core fetch complete");
 }
 
