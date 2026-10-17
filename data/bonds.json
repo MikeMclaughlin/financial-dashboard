@@ -5,8 +5,8 @@
   "asOf": "2026-10-16",
   "us10ySource": "US Treasury daily yield curve, 10 Yr",
   "note": "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date. A country whose source fails keeps its previous yield and as-of date.",
-  "status": "stale",
-  "error": "Switzerland: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30",
+  "status": "ok",
+  "error": null,
   "bars": [
     {
       "country": "Switzerland",
@@ -15,15 +15,13 @@
       "frequency": "monthly",
       "badges": [
         "monthly",
-        "delayed",
-        "stale"
+        "delayed"
       ],
       "source": "OECD SDMX DF_FINMARK IRLT monthly, Switzerland",
       "us10y": 5.29,
       "us10yDate": "2026-09-30",
       "spreadBp": -470,
-      "status": "stale",
-      "error": "OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30"
+      "status": "ok"
     },
     {
       "country": "Japan",
@@ -104,6 +102,39 @@
       "status": "ok"
     }
   ],
-  "crosschecks": [],
-  "fetchedAt": "2026-10-17T00:42:09.671Z"
+  "crosschecks": [
+    {
+      "country": "Germany",
+      "oecdMonth": "2026-09",
+      "oecd": 3.469524,
+      "localMonthlyAverage": 3.532,
+      "diffBp": 6,
+      "flag": false
+    },
+    {
+      "country": "Japan",
+      "oecdMonth": "2026-09",
+      "oecd": 3.05,
+      "localMonthlyAverage": 2.992,
+      "diffBp": -6,
+      "flag": false
+    },
+    {
+      "country": "Australia",
+      "oecdMonth": "2026-09",
+      "oecd": 5.283,
+      "localMonthlyAverage": 5.283,
+      "diffBp": 0,
+      "flag": false
+    },
+    {
+      "country": "United States",
+      "oecdMonth": "2026-09",
+      "oecd": 4.99,
+      "localMonthlyAverage": 4.989,
+      "diffBp": 0,
+      "flag": false
+    }
+  ],
+  "fetchedAt": "2026-10-17T22:56:04.972Z"
 }

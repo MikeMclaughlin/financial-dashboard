@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T00:42:11.530Z",
+  "generatedAt": "2026-10-17T22:56:06.963Z",
   "issueCount": 1,
   "issues": [
     {
@@ -42,7 +42,7 @@
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=stale asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "11 Bonds status=ok asOf=2026-10-16 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
@@ -72,7 +72,7 @@
     {
       "item": "15 Auctions",
       "level": "info",
-      "detail": "15 Auctions status=ok asOf=2026-10-08 fallback=false proxy=false"
+      "detail": "15 Auctions status=stale asOf=2026-10-08 fallback=false proxy=false"
     },
     {
       "item": "16 Meetings",
@@ -147,7 +147,7 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff 0.08%"
+      "detail": "EUR vs Yahoo diff 0.1%"
     },
     {
       "item": 6,
@@ -182,7 +182,7 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff -0.07%"
+      "detail": "SEK vs Yahoo diff 0.04%"
     },
     {
       "item": 6,
@@ -207,7 +207,7 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Switzerland -470 bp, yield 0.59 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed, stale]"
+      "detail": "Switzerland -470 bp, yield 0.59 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
     },
     {
       "item": 11,
@@ -242,7 +242,27 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland (stale: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30)"
+      "detail": "Germany cross-check diff 6 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Japan cross-check diff -6 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Australia cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "United States cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland"
     },
     {
       "item": 13,

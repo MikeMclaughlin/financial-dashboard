@@ -747,6 +747,7 @@
       "highYield": 5.618
     }
   ],
-  "fetchedAt": "2026-10-17T00:42:02.890Z",
-  "status": "ok"
+  "fetchedAt": "2026-10-17T22:56:00.213Z",
+  "status": "stale",
+  "error": "only 0 note/bond auctions"
 }
