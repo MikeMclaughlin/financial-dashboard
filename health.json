@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "service": "financial-dashboard",
-  "generatedAt": "2026-10-16T23:16:24.458Z",
+  "generatedAt": "2026-10-17T00:42:11.449Z",
   "status": "ok",
   "series": {
     "eurusd": {
@@ -12,7 +12,7 @@
       "delayed": false,
       "source": "ECB EXR D.USD.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:15.993Z"
+      "fetchedAt": "2026-10-17T00:42:03.537Z"
     },
     "dxy": {
       "status": "ok",
@@ -22,7 +22,7 @@
       "delayed": false,
       "source": "Yahoo DX-Y.NYB (ICE Dollar Index, unofficial)",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:22.560Z"
+      "fetchedAt": "2026-10-17T00:42:09.956Z"
     },
     "treasury": {
       "status": "ok",
@@ -32,7 +32,7 @@
       "delayed": false,
       "source": "US Treasury daily yield curve CSV 2025-2026",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:14.942Z"
+      "fetchedAt": "2026-10-17T00:42:02.085Z"
     },
     "fx": {
       "status": "ok",
@@ -42,7 +42,7 @@
       "delayed": false,
       "source": "ECB EXR daily, D.USD+JPY+GBP+CHF+CAD+AUD+NZD+SEK+NOK.EUR.SP00.A",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:16.395Z"
+      "fetchedAt": "2026-10-17T00:42:03.466Z"
     },
     "cftc": {
       "status": "ok",
@@ -52,7 +52,7 @@
       "delayed": false,
       "source": "CFTC Socrata 6dca-aqww",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:15.300Z"
+      "fetchedAt": "2026-10-17T00:42:02.986Z"
     },
     "bunds": {
       "status": "ok",
@@ -62,7 +62,7 @@
       "delayed": false,
       "source": "Bundesbank BBSIS Svensson daily, 2-year R02XX and 10-year R10XX",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:16.002Z"
+      "fetchedAt": "2026-10-17T00:42:03.155Z"
     },
     "bonds": {
       "status": "stale",
@@ -72,7 +72,7 @@
       "delayed": false,
       "source": null,
       "error": "Switzerland: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30",
-      "fetchedAt": "2026-10-16T23:16:22.355Z"
+      "fetchedAt": "2026-10-17T00:42:09.671Z"
     },
     "ecb-path": {
       "status": "ok",
@@ -82,7 +82,7 @@
       "delayed": false,
       "source": "€STR plus ECB yield curve SV_C_YM spot rates SR_3M, SR_6M, SR_1Y, SR_2Y and instantaneous forward IF_1Y",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:16.524Z"
+      "fetchedAt": "2026-10-17T00:42:04.026Z"
     },
     "fed-path": {
       "status": "ok",
@@ -92,7 +92,7 @@
       "delayed": false,
       "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:23.703Z"
+      "fetchedAt": "2026-10-17T00:42:10.864Z"
     },
     "real-yield": {
       "status": "ok",
@@ -102,7 +102,7 @@
       "delayed": false,
       "source": "US Treasury daily real yield curve, 10 YR",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:15.587Z"
+      "fetchedAt": "2026-10-17T00:42:02.822Z"
     },
     "commodities": {
       "status": "ok",
@@ -112,7 +112,7 @@
       "delayed": false,
       "source": null,
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:23.850Z"
+      "fetchedAt": "2026-10-17T00:42:10.968Z"
     },
     "auctions": {
       "status": "ok",
@@ -122,7 +122,7 @@
       "delayed": false,
       "source": "TreasuryDirect TA_WS securities/auctioned",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:15.680Z"
+      "fetchedAt": "2026-10-17T00:42:02.890Z"
     },
     "fx-yahoo": {
       "status": "ok",
@@ -132,7 +132,7 @@
       "delayed": false,
       "source": "Yahoo FX spot quotes",
       "error": null,
-      "fetchedAt": "2026-10-16T23:16:24.454Z"
+      "fetchedAt": "2026-10-17T00:42:11.443Z"
     },
     "meetings": {
       "status": "ok",
