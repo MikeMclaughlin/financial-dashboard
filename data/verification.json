@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T22:56:06.963Z",
+  "generatedAt": "2026-10-19T19:25:48.388Z",
   "issueCount": 1,
   "issues": [
     {
@@ -12,12 +12,12 @@
     {
       "item": "1 EUR/USD",
       "level": "info",
-      "detail": "1 EUR/USD status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "1 EUR/USD status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "2 DXY",
       "level": "info",
-      "detail": "2 DXY status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "2 DXY status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "3 Treasury",
@@ -27,7 +27,7 @@
     {
       "item": "6 FX",
       "level": "info",
-      "detail": "6 FX status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "6 FX status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "7 CFTC",
@@ -37,22 +37,22 @@
     {
       "item": "8/9 Bunds",
       "level": "info",
-      "detail": "8/9 Bunds status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "8/9 Bunds status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "11 Bonds status=stale asOf=2026-10-16 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
       "level": "info",
-      "detail": "12 ECB path status=ok asOf=2026-10-15 fallback=false proxy=true"
+      "detail": "12 ECB path status=ok asOf=2026-10-16 fallback=false proxy=true"
     },
     {
       "item": "12 Fed path",
       "level": "info",
-      "detail": "12 Fed path status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "12 Fed path status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "13 Real yield",
@@ -62,12 +62,12 @@
     {
       "item": "14 Gold",
       "level": "info",
-      "detail": "14 Gold status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "14 Gold status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "14 Oil",
       "level": "info",
-      "detail": "14 Oil status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "14 Oil status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "15 Auctions",
@@ -82,7 +82,7 @@
     {
       "item": 5,
       "level": "info",
-      "detail": "200-day average 1.158549 on 2026-10-16; history 1999-01-04 count 7116"
+      "detail": "200-day average 1.15832 on 2026-10-19; history 1999-01-04 count 7117"
     },
     {
       "item": 4,
@@ -102,92 +102,92 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR 1D 0.4 / 1W 0.42 / 1M -2.46 / 90D -1.59"
+      "detail": "EUR 1D -0.25 / 1W 0.39 / 1M -2.05 / 90D -1.69"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY 1D -0.03 / 1W 0.15 / 1M -1.88 / 90D 2.74"
+      "detail": "JPY 1D -0.14 / 1W 0.22 / 1M -0.23 / 90D 2.84"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP 1D 0.67 / 1W 0.87 / 1M -0.9 / 90D -0.76"
+      "detail": "GBP 1D -0.04 / 1W 0.72 / 1M -0.1 / 90D -0.52"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF 1D 0.76 / 1W 0.86 / 1M -0.6 / 90D -2.06"
+      "detail": "CHF 1D -0.13 / 1W 0.95 / 1M 0.08 / 90D -1.71"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD 1D 0.33 / 1W 0.46 / 1M -1.56 / 90D -0.97"
+      "detail": "CAD 1D 0.62 / 1W 1.33 / 1M -0.45 / 90D 0"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD 1D 0.69 / 1W -0.32 / 1M -2.43 / 90D -0.23"
+      "detail": "AUD 1D 0.39 / 1W 0.17 / 1M -1.89 / 90D -0.42"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD 1D 1.13 / 1W 0.89 / 1M -1.71 / 90D -2.87"
+      "detail": "NZD 1D 0.13 / 1W 1.29 / 1M -0.68 / 90D -2.98"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK 1D 0.69 / 1W 0.62 / 1M -1.21 / 90D -2.51"
+      "detail": "SEK 1D 0.12 / 1W 1.23 / 1M -0.4 / 90D -2.18"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK 1D 0.67 / 1W 1.28 / 1M -0.95 / 90D 2.25"
+      "detail": "NOK 1D 0.4 / 1W 1.73 / 1M 0.31 / 90D 2.33"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff 0.1%"
+      "detail": "EUR vs Yahoo diff 0.09%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY vs Yahoo diff -0.02%"
+      "detail": "JPY vs Yahoo diff 0.18%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff 0.04%"
+      "detail": "GBP vs Yahoo diff 0.19%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff -0.04%"
+      "detail": "CHF vs Yahoo diff 0.22%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD vs Yahoo diff -0.17%"
+      "detail": "CAD vs Yahoo diff 0.23%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff 0.14%"
+      "detail": "AUD vs Yahoo diff 0.04%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff 0.17%"
+      "detail": "NZD vs Yahoo diff 0.15%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff 0.04%"
+      "detail": "SEK vs Yahoo diff 0.27%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK vs Yahoo diff -0.29%"
+      "detail": "NOK vs Yahoo diff 0.14%"
     },
     {
       "item": 7,
@@ -197,27 +197,27 @@
     {
       "item": 8,
       "level": "info",
-      "detail": "US and German 2Y share 440 exact dates; German as of 2026-10-16"
+      "detail": "US and German 2Y share 440 exact dates; German as of 2026-10-19"
     },
     {
       "item": 9,
       "level": "info",
-      "detail": "German 10Y 3.48 on 2026-10-16; US 10Y 5.09 on 2026-10-16"
+      "detail": "German 10Y 3.49 on 2026-10-19; US 10Y 5.09 on 2026-10-16"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Switzerland -470 bp, yield 0.59 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
+      "detail": "Switzerland -470 bp, yield 0.59 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed, stale]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Japan -215 bp, yield 2.948 as of 2026-10-15 vs US 5.1 on 2026-10-15 [daily]"
+      "detail": "Japan -213 bp, yield 2.958 as of 2026-10-16 vs US 5.09 on 2026-10-16 [daily]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Germany -161 bp, yield 3.48 as of 2026-10-16 vs US 5.09 on 2026-10-16 [daily]"
+      "detail": "Germany -160 bp, yield 3.49 as of 2026-10-19 vs US 5.09 on 2026-10-16 [daily]"
     },
     {
       "item": 11,
@@ -232,7 +232,7 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Canada -127 bp, yield 3.83 as of 2026-10-15 vs US 5.1 on 2026-10-15 [daily]"
+      "detail": "Canada -125 bp, yield 3.84 as of 2026-10-16 vs US 5.09 on 2026-10-16 [daily]"
     },
     {
       "item": 11,
@@ -242,27 +242,7 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Germany cross-check diff 6 bp"
-    },
-    {
-      "item": 11,
-      "level": "info",
-      "detail": "Japan cross-check diff -6 bp"
-    },
-    {
-      "item": 11,
-      "level": "info",
-      "detail": "Australia cross-check diff 0 bp"
-    },
-    {
-      "item": 11,
-      "level": "info",
-      "detail": "United States cross-check diff 0 bp"
-    },
-    {
-      "item": 11,
-      "level": "info",
-      "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland"
+      "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland (stale: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30)"
     },
     {
       "item": 13,
@@ -272,7 +252,7 @@
     {
       "item": 12,
       "level": "info",
-      "detail": "Fed funds futures are live. Anchor: NY Fed effective federal funds rate (EFFR) 3.88% on 2026-10-15"
+      "detail": "Fed funds futures are live. Anchor: NY Fed effective federal funds rate (EFFR) 3.88% on 2026-10-16"
     },
     {
       "item": 12,
