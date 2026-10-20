@@ -4,9 +4,9 @@
   "proxy": true,
   "label": "ECB proxy (euro-area AAA curve, not an OIS path)",
   "source": "€STR plus ECB yield curve SV_C_YM spot rates SR_3M, SR_6M, SR_1Y, SR_2Y and instantaneous forward IF_1Y",
-  "asOf": "2026-10-16",
+  "asOf": "2026-10-19",
   "anchor": {
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "value": 2.441,
     "source": "ECB euro short-term rate (€STR)"
   },
@@ -14,35 +14,34 @@
     {
       "tenor": "SR_3M",
       "months": 3,
-      "value": 2.5708232002,
-      "asOf": "2026-10-16"
+      "value": 2.5885976194,
+      "asOf": "2026-10-19"
     },
     {
       "tenor": "SR_6M",
       "months": 6,
-      "value": 2.7136841181,
-      "asOf": "2026-10-16"
+      "value": 2.7305321292,
+      "asOf": "2026-10-19"
     },
     {
       "tenor": "SR_1Y",
       "months": 12,
-      "value": 2.8914120591,
-      "asOf": "2026-10-16"
+      "value": 2.9094727567,
+      "asOf": "2026-10-19"
     }
   ],
   "spot2Y": {
     "tenor": "SR_2Y",
     "months": 24,
-    "value": 3.0299726083,
-    "asOf": "2026-10-16"
+    "value": 3.0533254392,
+    "asOf": "2026-10-19"
   },
   "forward1Y": {
     "tenor": "IF_1Y",
     "months": 12,
-    "value": 3.1420317846,
-    "asOf": "2026-10-16"
+    "value": 3.1647286054,
+    "asOf": "2026-10-19"
   },
-  "fetchedAt": "2026-10-20T01:10:27.558Z",
-  "status": "stale",
-  "error": "HTTP 504 for https://data-api.ecb.europa.eu/service/data/EST/B.EU000A2X2A25.WT?format=csvdata&lastNObservations=5"
+  "fetchedAt": "2026-10-20T18:04:44.396Z",
+  "status": "ok"
 }
