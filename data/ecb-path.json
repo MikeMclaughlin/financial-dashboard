@@ -42,6 +42,7 @@
     "value": 3.1420317846,
     "asOf": "2026-10-16"
   },
-  "fetchedAt": "2026-10-19T19:25:41.160Z",
-  "status": "ok"
+  "fetchedAt": "2026-10-20T01:10:27.558Z",
+  "status": "stale",
+  "error": "HTTP 504 for https://data-api.ecb.europa.eu/service/data/EST/B.EU000A2X2A25.WT?format=csvdata&lastNObservations=5"
 }

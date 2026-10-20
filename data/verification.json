@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T19:25:48.388Z",
+  "generatedAt": "2026-10-20T01:10:54.116Z",
   "issueCount": 1,
   "issues": [
     {
@@ -17,12 +17,12 @@
     {
       "item": "2 DXY",
       "level": "info",
-      "detail": "2 DXY status=ok asOf=2026-10-19 fallback=false proxy=false"
+      "detail": "2 DXY status=ok asOf=2026-10-20 fallback=false proxy=false"
     },
     {
       "item": "3 Treasury",
       "level": "info",
-      "detail": "3 Treasury status=ok asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "3 Treasury status=ok asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "6 FX",
@@ -42,32 +42,32 @@
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=stale asOf=2026-10-16 fallback=false proxy=false"
+      "detail": "11 Bonds status=stale asOf=2026-10-19 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
       "level": "info",
-      "detail": "12 ECB path status=ok asOf=2026-10-16 fallback=false proxy=true"
+      "detail": "12 ECB path status=stale asOf=2026-10-16 fallback=false proxy=true"
     },
     {
       "item": "12 Fed path",
       "level": "info",
-      "detail": "12 Fed path status=ok asOf=2026-10-19 fallback=false proxy=false"
+      "detail": "12 Fed path status=ok asOf=2026-10-20 fallback=false proxy=false"
     },
     {
       "item": "13 Real yield",
       "level": "info",
-      "detail": "13 Real yield status=ok asOf=2026-10-16 fallback=true proxy=false"
+      "detail": "13 Real yield status=ok asOf=2026-10-19 fallback=true proxy=false"
     },
     {
       "item": "14 Gold",
       "level": "info",
-      "detail": "14 Gold status=ok asOf=2026-10-19 fallback=false proxy=false"
+      "detail": "14 Gold status=ok asOf=2026-10-20 fallback=false proxy=false"
     },
     {
       "item": "14 Oil",
       "level": "info",
-      "detail": "14 Oil status=ok asOf=2026-10-19 fallback=false proxy=false"
+      "detail": "14 Oil status=ok asOf=2026-10-20 fallback=false proxy=false"
     },
     {
       "item": "15 Auctions",
@@ -87,17 +87,17 @@
     {
       "item": 4,
       "level": "info",
-      "detail": "2s10s 35 bp on 2026-10-16; change 2 bp"
+      "detail": "2s10s 38 bp on 2026-10-19; change 3 bp"
     },
     {
       "item": 10,
       "level": "info",
-      "detail": "curve today 2026-10-16, 45d 2026-09-01, 90d 2026-07-17"
+      "detail": "curve today 2026-10-19, 45d 2026-09-04, 90d 2026-07-21"
     },
     {
       "item": 3,
       "level": "info",
-      "detail": "US 10Y 5.09% on 2026-10-16 from the Treasury yield curve"
+      "detail": "US 10Y 5.15% on 2026-10-19 from the Treasury yield curve"
     },
     {
       "item": 6,
@@ -147,7 +147,7 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff 0.09%"
+      "detail": "EUR vs Yahoo diff 0.05%"
     },
     {
       "item": 6,
@@ -157,37 +157,37 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff 0.19%"
+      "detail": "GBP vs Yahoo diff 0.13%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff 0.22%"
+      "detail": "CHF vs Yahoo diff 0.1%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD vs Yahoo diff 0.23%"
+      "detail": "CAD vs Yahoo diff 0.14%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff 0.04%"
+      "detail": "AUD vs Yahoo diff 0.14%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff 0.15%"
+      "detail": "NZD vs Yahoo diff 0.13%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff 0.27%"
+      "detail": "SEK vs Yahoo diff 0.21%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK vs Yahoo diff 0.14%"
+      "detail": "NOK vs Yahoo diff 0.1%"
     },
     {
       "item": 7,
@@ -197,12 +197,12 @@
     {
       "item": 8,
       "level": "info",
-      "detail": "US and German 2Y share 440 exact dates; German as of 2026-10-19"
+      "detail": "US and German 2Y share 441 exact dates; German as of 2026-10-19"
     },
     {
       "item": 9,
       "level": "info",
-      "detail": "German 10Y 3.49 on 2026-10-19; US 10Y 5.09 on 2026-10-16"
+      "detail": "German 10Y 3.49 on 2026-10-19; US 10Y 5.15 on 2026-10-19"
     },
     {
       "item": 11,
@@ -212,12 +212,12 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Japan -213 bp, yield 2.958 as of 2026-10-16 vs US 5.09 on 2026-10-16 [daily]"
+      "detail": "Japan -222 bp, yield 2.935 as of 2026-10-19 vs US 5.15 on 2026-10-19 [daily]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Germany -160 bp, yield 3.49 as of 2026-10-19 vs US 5.09 on 2026-10-16 [daily]"
+      "detail": "Germany -166 bp, yield 3.49 as of 2026-10-19 vs US 5.15 on 2026-10-19 [daily]"
     },
     {
       "item": 11,
@@ -237,7 +237,12 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Australia 12 bp, yield 5.314 as of 2026-10-14 vs US 5.19 on 2026-10-14 [daily]"
+      "detail": "Australia 12 bp, yield 5.314 as of 2026-10-14 vs US 5.19 on 2026-10-14 [delayed]"
+    },
+    {
+      "item": 11,
+      "level": "info",
+      "detail": "United States cross-check diff 0 bp"
     },
     {
       "item": 11,
@@ -247,7 +252,7 @@
     {
       "item": 13,
       "level": "info",
-      "detail": "Real yield 2.74% on 2026-10-16 from US Treasury daily real yield curve, 10 YR"
+      "detail": "Real yield 2.8% on 2026-10-19 from US Treasury daily real yield curve, 10 YR"
     },
     {
       "item": 12,
