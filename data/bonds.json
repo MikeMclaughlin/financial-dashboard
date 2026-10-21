@@ -39,14 +39,14 @@
     },
     {
       "country": "Germany",
-      "yield": 3.48,
-      "asOf": "2026-10-20",
+      "yield": 3.47,
+      "asOf": "2026-10-21",
       "frequency": "daily",
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
       "us10y": 5.12,
       "us10yDate": "2026-10-20",
-      "spreadBp": -164,
+      "spreadBp": -165,
       "status": "ok"
     },
     {
@@ -81,13 +81,13 @@
     },
     {
       "country": "Canada",
-      "yield": 3.93,
-      "asOf": "2026-10-19",
+      "yield": 3.9,
+      "asOf": "2026-10-20",
       "frequency": "daily",
       "badges": [],
       "source": "Bank of Canada Valet BD.CDN.10YR.DQ.YLD",
-      "us10y": 5.15,
-      "us10yDate": "2026-10-19",
+      "us10y": 5.12,
+      "us10yDate": "2026-10-20",
       "spreadBp": -122,
       "status": "ok"
     },
@@ -116,5 +116,5 @@
       "flag": false
     }
   ],
-  "fetchedAt": "2026-10-21T00:48:38.628Z"
+  "fetchedAt": "2026-10-21T18:10:36.630Z"
 }
