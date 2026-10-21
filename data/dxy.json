@@ -6,7 +6,7 @@
   "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2y&interval=1d",
   "fallback": false,
   "delayed": false,
-  "asOf": "2026-10-20",
+  "asOf": "2026-10-21",
   "points": [
     {
       "date": "2024-10-21",
@@ -2017,10 +2017,10 @@
       "value": 101.9800033569336
     },
     {
-      "date": "2026-10-20",
-      "value": 101.71600341796875
+      "date": "2026-10-21",
+      "value": 101.77799987792969
     }
   ],
-  "fetchedAt": "2026-10-20T18:04:52.528Z",
+  "fetchedAt": "2026-10-21T00:48:38.836Z",
   "status": "ok"
 }
