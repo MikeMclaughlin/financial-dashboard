@@ -7,7 +7,7 @@
   "source": "Yahoo ZQ monthly futures, anchored to the effective fed funds rate",
   "asOf": "2026-10-22",
   "anchor": {
-    "date": "2026-10-20",
+    "date": "2026-10-21",
     "value": 3.88,
     "source": "NY Fed effective federal funds rate (EFFR)",
     "fallback": false
@@ -19,8 +19,8 @@
       "label": "Oct",
       "year": 2026,
       "month": 10,
-      "price": 96.115,
-      "value": 3.885,
+      "price": 96.118,
+      "value": 3.882,
       "asOf": "2026-10-22"
     },
     {
@@ -29,8 +29,8 @@
       "label": "Nov",
       "year": 2026,
       "month": 11,
-      "price": 96.08,
-      "value": 3.92,
+      "price": 96.105,
+      "value": 3.895,
       "asOf": "2026-10-22"
     },
     {
@@ -39,9 +39,9 @@
       "label": "Dec",
       "year": 2026,
       "month": 12,
-      "price": 95.925,
-      "value": 4.075,
-      "asOf": "2026-10-21"
+      "price": 95.98,
+      "value": 4.02,
+      "asOf": "2026-10-22"
     },
     {
       "symbol": "ZQF27.CBT",
@@ -49,9 +49,9 @@
       "label": "Jan",
       "year": 2027,
       "month": 1,
-      "price": 95.85,
-      "value": 4.15,
-      "asOf": "2026-10-21"
+      "price": 95.92,
+      "value": 4.08,
+      "asOf": "2026-10-22"
     },
     {
       "symbol": "ZQG27.CBT",
@@ -59,8 +59,8 @@
       "label": "Feb",
       "year": 2027,
       "month": 2,
-      "price": 95.75,
-      "value": 4.25,
+      "price": 95.855,
+      "value": 4.145,
       "asOf": "2026-10-22"
     },
     {
@@ -69,8 +69,8 @@
       "label": "Mar",
       "year": 2027,
       "month": 3,
-      "price": 95.665,
-      "value": 4.335,
+      "price": 95.795,
+      "value": 4.205,
       "asOf": "2026-10-22"
     },
     {
@@ -79,8 +79,8 @@
       "label": "Apr",
       "year": 2027,
       "month": 4,
-      "price": 95.56,
-      "value": 4.44,
+      "price": 95.715,
+      "value": 4.285,
       "asOf": "2026-10-22"
     },
     {
@@ -89,8 +89,8 @@
       "label": "May",
       "year": 2027,
       "month": 5,
-      "price": 95.47,
-      "value": 4.53,
+      "price": 95.65,
+      "value": 4.35,
       "asOf": "2026-10-22"
     },
     {
@@ -99,8 +99,8 @@
       "label": "Jun",
       "year": 2027,
       "month": 6,
-      "price": 95.4,
-      "value": 4.6,
+      "price": 95.585,
+      "value": 4.415,
       "asOf": "2026-10-22"
     },
     {
@@ -109,8 +109,8 @@
       "label": "Jul",
       "year": 2027,
       "month": 7,
-      "price": 95.365,
-      "value": 4.635,
+      "price": 95.56,
+      "value": 4.44,
       "asOf": "2026-10-22"
     },
     {
@@ -119,8 +119,8 @@
       "label": "Aug",
       "year": 2027,
       "month": 8,
-      "price": 95.335,
-      "value": 4.665,
+      "price": 95.53,
+      "value": 4.47,
       "asOf": "2026-10-22"
     },
     {
@@ -129,12 +129,12 @@
       "label": "Sep",
       "year": 2027,
       "month": 9,
-      "price": 95.315,
-      "value": 4.685,
+      "price": 95.515,
+      "value": 4.485,
       "asOf": "2026-10-22"
     }
   ],
   "errors": [],
-  "fetchedAt": "2026-10-22T00:50:25.380Z",
+  "fetchedAt": "2026-10-22T18:07:36.441Z",
   "status": "ok"
 }
