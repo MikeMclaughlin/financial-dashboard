@@ -7,7 +7,7 @@
     "source": "Yahoo GC=F",
     "fallback": false,
     "delayed": false,
-    "asOf": "2026-10-21",
+    "asOf": "2026-10-22",
     "points": [
       {
         "date": "2024-10-21",
@@ -2022,8 +2022,8 @@
         "value": 4142.60009765625
       },
       {
-        "date": "2026-10-21",
-        "value": 4155.39990234375
+        "date": "2026-10-22",
+        "value": 4132
       }
     ]
   },
@@ -2032,7 +2032,7 @@
     "source": "Yahoo CL=F",
     "fallback": false,
     "delayed": false,
-    "asOf": "2026-10-21",
+    "asOf": "2026-10-22",
     "points": [
       {
         "date": "2024-10-21",
@@ -4047,14 +4047,14 @@
         "value": 101.79000091552734
       },
       {
-        "date": "2026-10-21",
-        "value": 96.81999969482422
+        "date": "2026-10-22",
+        "value": 98.04000091552734
       }
     ]
   },
-  "asOf": "2026-10-21",
+  "asOf": "2026-10-22",
   "fallback": false,
   "delayed": false,
   "status": "ok",
-  "fetchedAt": "2026-10-21T18:10:38.986Z"
+  "fetchedAt": "2026-10-22T00:50:25.505Z"
 }
