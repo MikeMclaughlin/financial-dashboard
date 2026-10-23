@@ -39,14 +39,14 @@
     },
     {
       "country": "Germany",
-      "yield": 3.44,
-      "asOf": "2026-10-22",
+      "yield": 3.39,
+      "asOf": "2026-10-23",
       "frequency": "daily",
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
       "us10y": 4.96,
       "us10yDate": "2026-10-22",
-      "spreadBp": -152,
+      "spreadBp": -157,
       "status": "ok"
     },
     {
@@ -81,31 +81,38 @@
     },
     {
       "country": "Canada",
-      "yield": 3.9,
-      "asOf": "2026-10-21",
+      "yield": 3.78,
+      "asOf": "2026-10-22",
       "frequency": "daily",
       "badges": [],
       "source": "Bank of Canada Valet BD.CDN.10YR.DQ.YLD",
-      "us10y": 5.13,
-      "us10yDate": "2026-10-21",
-      "spreadBp": -123,
+      "us10y": 4.96,
+      "us10yDate": "2026-10-22",
+      "spreadBp": -118,
       "status": "ok"
     },
     {
       "country": "Australia",
-      "yield": 5.314,
-      "asOf": "2026-10-14",
+      "yield": 5.277,
+      "asOf": "2026-10-21",
       "frequency": "daily",
-      "badges": [
-        "delayed"
-      ],
+      "badges": [],
       "source": "RBA statistical table F2, Australian Government 10 year bond",
-      "us10y": 5.19,
-      "us10yDate": "2026-10-14",
-      "spreadBp": 12,
+      "us10y": 5.13,
+      "us10yDate": "2026-10-21",
+      "spreadBp": 15,
       "status": "ok"
     }
   ],
-  "crosschecks": [],
-  "fetchedAt": "2026-10-23T00:50:59.410Z"
+  "crosschecks": [
+    {
+      "country": "United States",
+      "oecdMonth": "2026-09",
+      "oecd": 4.99,
+      "localMonthlyAverage": 4.989,
+      "diffBp": 0,
+      "flag": false
+    }
+  ],
+  "fetchedAt": "2026-10-23T17:56:08.903Z"
 }
