@@ -2,7 +2,7 @@
   "id": "bonds",
   "name": "10Y government bond spread vs US Treasuries",
   "unit": "basis points (country yield minus US 10Y)",
-  "asOf": "2026-10-22",
+  "asOf": "2026-10-23",
   "us10ySource": "US Treasury daily yield curve, 10 Yr",
   "note": "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date. A country whose source fails keeps its previous yield and as-of date.",
   "status": "stale",
@@ -44,9 +44,9 @@
       "frequency": "daily",
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
-      "us10y": 4.96,
-      "us10yDate": "2026-10-22",
-      "spreadBp": -157,
+      "us10y": 5,
+      "us10yDate": "2026-10-23",
+      "spreadBp": -161,
       "status": "ok"
     },
     {
@@ -104,15 +104,6 @@
       "status": "ok"
     }
   ],
-  "crosschecks": [
-    {
-      "country": "United States",
-      "oecdMonth": "2026-09",
-      "oecd": 4.99,
-      "localMonthlyAverage": 4.989,
-      "diffBp": 0,
-      "flag": false
-    }
-  ],
-  "fetchedAt": "2026-10-23T17:56:08.903Z"
+  "crosschecks": [],
+  "fetchedAt": "2026-10-23T23:45:54.940Z"
 }

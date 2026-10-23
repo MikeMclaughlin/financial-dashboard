@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T17:56:11.335Z",
+  "generatedAt": "2026-10-23T23:45:58.262Z",
   "issueCount": 1,
   "issues": [
     {
@@ -22,7 +22,7 @@
     {
       "item": "3 Treasury",
       "level": "info",
-      "detail": "3 Treasury status=ok asOf=2026-10-22 fallback=false proxy=false"
+      "detail": "3 Treasury status=ok asOf=2026-10-23 fallback=false proxy=false"
     },
     {
       "item": "6 FX",
@@ -32,7 +32,7 @@
     {
       "item": "7 CFTC",
       "level": "info",
-      "detail": "7 CFTC status=ok asOf=2026-10-13 fallback=false proxy=false"
+      "detail": "7 CFTC status=ok asOf=2026-10-20 fallback=false proxy=false"
     },
     {
       "item": "8/9 Bunds",
@@ -42,7 +42,7 @@
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=stale asOf=2026-10-22 fallback=false proxy=false"
+      "detail": "11 Bonds status=stale asOf=2026-10-23 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
@@ -57,7 +57,7 @@
     {
       "item": "13 Real yield",
       "level": "info",
-      "detail": "13 Real yield status=ok asOf=2026-10-22 fallback=true proxy=false"
+      "detail": "13 Real yield status=ok asOf=2026-10-23 fallback=true proxy=false"
     },
     {
       "item": "14 Gold",
@@ -87,17 +87,17 @@
     {
       "item": 4,
       "level": "info",
-      "detail": "2s10s 31 bp on 2026-10-22; change -1 bp"
+      "detail": "2s10s 31 bp on 2026-10-23; change 0 bp"
     },
     {
       "item": 10,
       "level": "info",
-      "detail": "curve today 2026-10-22, 45d 2026-09-04, 90d 2026-07-24"
+      "detail": "curve today 2026-10-23, 45d 2026-09-08, 90d 2026-07-24"
     },
     {
       "item": 3,
       "level": "info",
-      "detail": "US 10Y 4.96% on 2026-10-22 from the Treasury yield curve"
+      "detail": "US 10Y 5% on 2026-10-23 from the Treasury yield curve"
     },
     {
       "item": 6,
@@ -147,62 +147,62 @@
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff -0.02%"
+      "detail": "EUR vs Yahoo diff -0.1%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY vs Yahoo diff 0.05%"
+      "detail": "JPY vs Yahoo diff 0.01%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff 0%"
+      "detail": "GBP vs Yahoo diff -0.05%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff 0.11%"
+      "detail": "CHF vs Yahoo diff -0.03%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD vs Yahoo diff 0%"
+      "detail": "CAD vs Yahoo diff 0.05%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff -0.19%"
+      "detail": "AUD vs Yahoo diff -0.22%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff -0.23%"
+      "detail": "NZD vs Yahoo diff -0.25%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff -0.03%"
+      "detail": "SEK vs Yahoo diff -0.21%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK vs Yahoo diff -0.22%"
+      "detail": "NOK vs Yahoo diff -0.37%"
     },
     {
       "item": 7,
       "level": "info",
-      "detail": "latest net -137573 = 222929 long − 360502 short, open interest 874541 on 2026-10-13"
+      "detail": "latest net -134524 = 226421 long − 360945 short, open interest 877940 on 2026-10-20"
     },
     {
       "item": 8,
       "level": "info",
-      "detail": "US and German 2Y share 444 exact dates; German as of 2026-10-23"
+      "detail": "US and German 2Y share 445 exact dates; German as of 2026-10-23"
     },
     {
       "item": 9,
       "level": "info",
-      "detail": "German 10Y 3.39 on 2026-10-23; US 10Y 4.96 on 2026-10-22"
+      "detail": "German 10Y 3.39 on 2026-10-23; US 10Y 5 on 2026-10-23"
     },
     {
       "item": 11,
@@ -217,7 +217,7 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Germany -157 bp, yield 3.39 as of 2026-10-23 vs US 4.96 on 2026-10-22 [daily]"
+      "detail": "Germany -161 bp, yield 3.39 as of 2026-10-23 vs US 5 on 2026-10-23 [daily]"
     },
     {
       "item": 11,
@@ -242,17 +242,12 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "United States cross-check diff 0 bp"
-    },
-    {
-      "item": 11,
-      "level": "info",
       "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland (stale: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30)"
     },
     {
       "item": 13,
       "level": "info",
-      "detail": "Real yield 2.64% on 2026-10-22 from US Treasury daily real yield curve, 10 YR"
+      "detail": "Real yield 2.66% on 2026-10-23 from US Treasury daily real yield curve, 10 YR"
     },
     {
       "item": 12,
