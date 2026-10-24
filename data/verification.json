@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T23:45:58.262Z",
+  "generatedAt": "2026-10-24T00:58:33.217Z",
   "issueCount": 1,
   "issues": [
     {
@@ -242,6 +242,11 @@
     {
       "item": 11,
       "level": "info",
+      "detail": "United States cross-check diff 0 bp"
+    },
+    {
+      "item": 11,
+      "level": "info",
       "detail": "Switzerland 0.59% as of 2026-09-30 from OECD SDMX DF_FINMARK IRLT monthly, Switzerland (stale: OECD: HTTP 500 for https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,4.0/CHE.M.IRLT.PA._Z._Z._Z._Z.N?startPeriod=2024-01; SNB: SNB 10-year ends 2025-07-31, older than the stored print 2026-09-30)"
     },
     {
@@ -262,7 +267,7 @@
     {
       "item": 16,
       "level": "info",
-      "detail": "decision dates inside the next 90 days: BoE 2026-11-05, BoE 2026-12-17, BoJ 2026-10-30, BoJ 2026-12-18, ECB 2026-10-29, ECB 2026-12-17, Fed 2026-10-28, Fed 2026-12-09"
+      "detail": "decision dates inside the next 90 days: BoE 2026-11-05, BoE 2026-12-17, BoJ 2026-10-30, BoJ 2026-12-18, BoJ 2027-01-22, ECB 2026-10-29, ECB 2026-12-17, Fed 2026-10-28, Fed 2026-12-09"
     }
   ]
 }

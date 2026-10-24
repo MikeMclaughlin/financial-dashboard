@@ -104,6 +104,15 @@
       "status": "ok"
     }
   ],
-  "crosschecks": [],
-  "fetchedAt": "2026-10-23T23:45:54.940Z"
+  "crosschecks": [
+    {
+      "country": "United States",
+      "oecdMonth": "2026-09",
+      "oecd": 4.99,
+      "localMonthlyAverage": 4.989,
+      "diffBp": 0,
+      "flag": false
+    }
+  ],
+  "fetchedAt": "2026-10-24T00:58:31.951Z"
 }
