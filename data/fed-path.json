@@ -29,8 +29,8 @@
       "label": "Nov",
       "year": 2026,
       "month": 11,
-      "price": 96.1,
-      "value": 3.9,
+      "price": 96.095,
+      "value": 3.905,
       "asOf": "2026-10-23"
     },
     {
@@ -39,8 +39,8 @@
       "label": "Dec",
       "year": 2026,
       "month": 12,
-      "price": 95.965,
-      "value": 4.035,
+      "price": 95.96,
+      "value": 4.04,
       "asOf": "2026-10-23"
     },
     {
@@ -59,8 +59,8 @@
       "label": "Feb",
       "year": 2027,
       "month": 2,
-      "price": 95.82,
-      "value": 4.18,
+      "price": 95.825,
+      "value": 4.175,
       "asOf": "2026-10-23"
     },
     {
@@ -79,8 +79,8 @@
       "label": "Apr",
       "year": 2027,
       "month": 4,
-      "price": 95.67,
-      "value": 4.33,
+      "price": 95.675,
+      "value": 4.325,
       "asOf": "2026-10-23"
     },
     {
@@ -89,8 +89,8 @@
       "label": "May",
       "year": 2027,
       "month": 5,
-      "price": 95.595,
-      "value": 4.405,
+      "price": 95.6,
+      "value": 4.4,
       "asOf": "2026-10-23"
     },
     {
@@ -99,8 +99,8 @@
       "label": "Jun",
       "year": 2027,
       "month": 6,
-      "price": 95.53,
-      "value": 4.47,
+      "price": 95.535,
+      "value": 4.465,
       "asOf": "2026-10-23"
     },
     {
@@ -109,8 +109,8 @@
       "label": "Jul",
       "year": 2027,
       "month": 7,
-      "price": 95.495,
-      "value": 4.505,
+      "price": 95.5,
+      "value": 4.5,
       "asOf": "2026-10-23"
     },
     {
@@ -135,6 +135,6 @@
     }
   ],
   "errors": [],
-  "fetchedAt": "2026-10-24T00:58:32.732Z",
+  "fetchedAt": "2026-10-24T22:58:08.047Z",
   "status": "ok"
 }

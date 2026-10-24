@@ -42,7 +42,7 @@
     {
       "currency": "CHF",
       "source": "Yahoo CHF=X",
-      "yahooDate": "2026-10-23",
+      "yahooDate": "2026-10-24",
       "yahooUsdPerUnit": 1.213445,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 1.21307,
@@ -53,18 +53,18 @@
     {
       "currency": "CAD",
       "source": "Yahoo CAD=X",
-      "yahooDate": "2026-10-23",
-      "yahooUsdPerUnit": 0.714184,
+      "yahooDate": "2026-10-24",
+      "yahooUsdPerUnit": 0.714082,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 0.714523,
-      "diffPct": 0.05,
+      "diffPct": 0.06,
       "flag": false,
       "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
     },
     {
       "currency": "AUD",
       "source": "Yahoo AUDUSD=X",
-      "yahooDate": "2026-10-23",
+      "yahooDate": "2026-10-24",
       "yahooUsdPerUnit": 0.703779,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 0.70224,
@@ -75,7 +75,7 @@
     {
       "currency": "NZD",
       "source": "Yahoo NZDUSD=X",
-      "yahooDate": "2026-10-23",
+      "yahooDate": "2026-10-24",
       "yahooUsdPerUnit": 0.570125,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 0.568692,
@@ -86,7 +86,7 @@
     {
       "currency": "SEK",
       "source": "Yahoo SEK=X",
-      "yahooDate": "2026-10-23",
+      "yahooDate": "2026-10-24",
       "yahooUsdPerUnit": 0.100773,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 0.100557,
@@ -97,7 +97,7 @@
     {
       "currency": "NOK",
       "source": "Yahoo NOK=X",
-      "yahooDate": "2026-10-23",
+      "yahooDate": "2026-10-24",
       "yahooUsdPerUnit": 0.10734,
       "ecbDate": "2026-10-23",
       "ecbUsdPerUnit": 0.106941,
@@ -106,5 +106,5 @@
       "note": "Yahoo is a market quote, not the ECB fixing. A gap under 1% is treated as normal."
     }
   ],
-  "fetchedAt": "2026-10-24T00:58:33.147Z"
+  "fetchedAt": "2026-10-24T22:58:08.479Z"
 }
