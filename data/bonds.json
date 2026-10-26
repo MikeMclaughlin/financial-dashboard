@@ -27,26 +27,26 @@
     },
     {
       "country": "Japan",
-      "yield": 2.914,
-      "asOf": "2026-10-22",
+      "yield": 2.837,
+      "asOf": "2026-10-23",
       "frequency": "daily",
       "badges": [],
       "source": "Japan MOF JGB yield curve, 10Y (English history + current-month Shift-JIS file)",
-      "us10y": 4.96,
-      "us10yDate": "2026-10-22",
-      "spreadBp": -205,
+      "us10y": 5,
+      "us10yDate": "2026-10-23",
+      "spreadBp": -216,
       "status": "ok"
     },
     {
       "country": "Germany",
-      "yield": 3.39,
-      "asOf": "2026-10-23",
+      "yield": 3.43,
+      "asOf": "2026-10-26",
       "frequency": "daily",
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
       "us10y": 5,
       "us10yDate": "2026-10-23",
-      "spreadBp": -161,
+      "spreadBp": -157,
       "status": "ok"
     },
     {
@@ -81,14 +81,14 @@
     },
     {
       "country": "Canada",
-      "yield": 3.78,
-      "asOf": "2026-10-22",
+      "yield": 3.83,
+      "asOf": "2026-10-23",
       "frequency": "daily",
       "badges": [],
       "source": "Bank of Canada Valet BD.CDN.10YR.DQ.YLD",
-      "us10y": 4.96,
-      "us10yDate": "2026-10-22",
-      "spreadBp": -118,
+      "us10y": 5,
+      "us10yDate": "2026-10-23",
+      "spreadBp": -117,
       "status": "ok"
     },
     {
@@ -114,5 +114,5 @@
       "flag": false
     }
   ],
-  "fetchedAt": "2026-10-24T22:58:06.914Z"
+  "fetchedAt": "2026-10-26T19:30:08.078Z"
 }

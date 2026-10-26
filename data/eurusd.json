@@ -5,15 +5,11 @@
   "source": "ECB EXR D.USD.EUR.SP00.A",
   "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&startPeriod=1999-01-01",
   "historyStart": "1999-01-04",
-  "historyCount": 7121,
+  "historyCount": 7122,
   "maWindow": 200,
   "maNote": "200-day average is the mean of 200 daily observations, computed on the full history from 1999 before the stored window is trimmed.",
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-26",
   "points": [
-    {
-      "date": "2023-04-18",
-      "value": 1.0972
-    },
     {
       "date": "2023-04-19",
       "value": 1.0933
@@ -3609,13 +3605,13 @@
     {
       "date": "2026-10-23",
       "value": 1.1193
+    },
+    {
+      "date": "2026-10-26",
+      "value": 1.1188
     }
   ],
   "ma200": [
-    {
-      "date": "2023-04-18",
-      "value": 1.036565
-    },
     {
       "date": "2023-04-19",
       "value": 1.03695
@@ -7211,8 +7207,12 @@
     {
       "date": "2026-10-23",
       "value": 1.157412
+    },
+    {
+      "date": "2026-10-26",
+      "value": 1.15718
     }
   ],
-  "fetchedAt": "2026-10-24T22:57:56.577Z",
+  "fetchedAt": "2026-10-26T19:30:01.862Z",
   "status": "ok"
 }
