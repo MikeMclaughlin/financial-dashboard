@@ -6,7 +6,7 @@
   "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
   "fallback": true,
   "delayed": false,
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-26",
   "points": [
     {
       "date": "2025-01-02",
@@ -1819,8 +1819,12 @@
     {
       "date": "2026-10-23",
       "value": 2.66
+    },
+    {
+      "date": "2026-10-26",
+      "value": 2.66
     }
   ],
-  "fetchedAt": "2026-10-26T19:30:01.598Z",
+  "fetchedAt": "2026-10-27T01:35:21.449Z",
   "status": "ok"
 }

@@ -2,7 +2,7 @@
   "id": "bonds",
   "name": "10Y government bond spread vs US Treasuries",
   "unit": "basis points (country yield minus US 10Y)",
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-26",
   "us10ySource": "US Treasury daily yield curve, 10 Yr",
   "note": "Each spread uses the US 10Y on the closest Treasury date on or before that country's own date. A country whose source fails keeps its previous yield and as-of date.",
   "status": "stale",
@@ -27,14 +27,14 @@
     },
     {
       "country": "Japan",
-      "yield": 2.837,
-      "asOf": "2026-10-23",
+      "yield": 2.824,
+      "asOf": "2026-10-26",
       "frequency": "daily",
       "badges": [],
       "source": "Japan MOF JGB yield curve, 10Y (English history + current-month Shift-JIS file)",
       "us10y": 5,
-      "us10yDate": "2026-10-23",
-      "spreadBp": -216,
+      "us10yDate": "2026-10-26",
+      "spreadBp": -218,
       "status": "ok"
     },
     {
@@ -45,7 +45,7 @@
       "badges": [],
       "source": "Bundesbank BBSIS 10-year",
       "us10y": 5,
-      "us10yDate": "2026-10-23",
+      "us10yDate": "2026-10-26",
       "spreadBp": -157,
       "status": "ok"
     },
@@ -96,7 +96,9 @@
       "yield": 5.277,
       "asOf": "2026-10-21",
       "frequency": "daily",
-      "badges": [],
+      "badges": [
+        "delayed"
+      ],
       "source": "RBA statistical table F2, Australian Government 10 year bond",
       "us10y": 5.13,
       "us10yDate": "2026-10-21",
@@ -104,15 +106,6 @@
       "status": "ok"
     }
   ],
-  "crosschecks": [
-    {
-      "country": "United States",
-      "oecdMonth": "2026-09",
-      "oecd": 4.99,
-      "localMonthlyAverage": 4.989,
-      "diffBp": 0,
-      "flag": false
-    }
-  ],
-  "fetchedAt": "2026-10-26T19:30:08.078Z"
+  "crosschecks": [],
+  "fetchedAt": "2026-10-27T01:35:28.070Z"
 }
