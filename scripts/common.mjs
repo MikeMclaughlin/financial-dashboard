@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import iconv from "iconv-lite";
 
-export const APP_VERSION = "1.2";
+export const APP_VERSION = "1.3";
 export const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 export const DATA = path.join(ROOT, "data");
 

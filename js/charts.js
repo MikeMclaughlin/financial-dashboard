@@ -116,13 +116,24 @@ const Chart = (() => {
     }));
   }
 
+  function labelDeficit(root) {
+    let deficit = 0;
+    for (const text of root.querySelectorAll("text")) {
+      if (text.getAttribute("text-anchor") !== "end") continue;
+      const box = text.getBBox();
+      if (box.x < 1) deficit = Math.max(deficit, 1 - box.x);
+    }
+    return deficit;
+  }
+
   function lineChart(el, spec) {
     const box = size(el);
     if (!box) return;
     const w = box.w;
     const h = box.h;
-    const pad = { l: Math.min(58, Math.max(42, w * 0.08)), r: 12, t: 16, b: 28, ...(spec.pad || {}) };
-    const root = svg(el, w, h);
+    const baseLeft = Math.min(58, Math.max(42, w * 0.08));
+    let pad = { l: baseLeft, r: 12, t: 16, b: 28, ...(spec.pad || {}) };
+    let root = svg(el, w, h);
     const series = (spec.series || []).filter((s) => s.points?.some((p) => Number.isFinite(p.y)));
     const ys = series.flatMap((s) => s.points.map((p) => p.y)).filter((v) => Number.isFinite(v));
     const scale = axis(ys, spec.ticks || 4, spec.tickMode || "auto");
@@ -211,6 +222,14 @@ const Chart = (() => {
       tipAt(event, best.p.title || `${best.s.name || ""} ${formatTick(best.p.y, scale.step, suffix)}`);
     });
     root.addEventListener("mouseleave", hideTip);
+    const deficit = labelDeficit(root);
+    if (deficit > 0.5 && !spec._refit) {
+      lineChart(el, {
+        ...spec,
+        pad: { l: pad.l + Math.ceil(deficit) + 2, r: pad.r, t: pad.t, b: pad.b },
+        _refit: true,
+      });
+    }
   }
 
   function columnBars(el, spec) {
@@ -218,7 +237,7 @@ const Chart = (() => {
     if (!box) return;
     const w = box.w;
     const h = box.h;
-    const pad = { l: 46, r: 8, t: 12, b: 28 };
+    const pad = { l: spec.pad?.l || 46, r: 8, t: 12, b: 28 };
     const root = svg(el, w, h);
     const bars = spec.bars || [];
     const values = bars.map((b) => b.value).concat(spec.average != null ? [spec.average] : []);
@@ -274,16 +293,35 @@ const Chart = (() => {
       text.textContent = lab.text;
       root.appendChild(text);
     });
+    const deficit = labelDeficit(root);
+    if (deficit > 0.5 && !spec._refit) {
+      columnBars(el, { ...spec, pad: { l: pad.l + Math.ceil(deficit) + 2 }, _refit: true });
+    }
   }
 
-  function horizontalBars(el, rows) {
-    const rowH = 48;
+  function barsOverlap(root) {
+    const texts = [...root.querySelectorAll("text")];
+    const rects = [...root.querySelectorAll("rect")];
+    for (const text of texts) {
+      const tb = text.getBBox();
+      for (const rect of rects) {
+        const rb = rect.getBBox();
+        const ox = Math.min(tb.x + tb.width, rb.x + rb.width) - Math.max(tb.x, rb.x);
+        const oy = Math.min(tb.y + tb.height, rb.y + rb.height) - Math.max(tb.y, rb.y);
+        if (ox > 0.5 && oy > 0.5) return true;
+      }
+    }
+    return false;
+  }
+
+  function horizontalBars(el, rows, stacked) {
+    const rowH = stacked ? 68 : 48;
     const h = Math.max(220, rows.length * rowH + 16);
     if (el.style.height !== `${h}px`) el.style.height = `${h}px`;
     const box = size(el);
     if (!box) return;
     const w = box.w;
-    const padL = Math.min(250, Math.max(156, Math.round(w * 0.36)));
+    const padL = stacked ? 0 : Math.min(250, Math.max(156, Math.round(w * 0.36)));
     const pad = { l: padL, r: 56, t: 6, b: 8 };
     const root = svg(el, w, h);
     const vals = rows.map((r) => r.value);
@@ -293,19 +331,23 @@ const Chart = (() => {
     const plotW = w - pad.l - pad.r;
     const xOf = (v) => pad.l + ((v - min) / span) * plotW;
     const zero = xOf(0);
-    root.appendChild(node("line", { x1: zero, x2: zero, y1: 4, y2: h - 6, stroke: "rgba(226,232,240,0.45)" }));
+    const barTop = stacked ? 40 : 10;
+    root.appendChild(node("line", {
+      x1: zero, x2: zero, y1: stacked ? barTop - 2 : 4, y2: h - 6,
+      stroke: "rgba(226,232,240,0.45)",
+    }));
     rows.forEach((row, i) => {
       const y = pad.t + i * rowH;
-      const label = node("text", { x: 0, y: y + 16, fill: "#e8eef8", "font-size": "14", "font-weight": "700" });
+      const label = node("text", { x: 0, y: y + (stacked ? 14 : 16), fill: "#e8eef8", "font-size": "14", "font-weight": "700" });
       label.textContent = row.label;
       root.appendChild(label);
-      const sub = node("text", { x: 0, y: y + 32, fill: MUTED, "font-size": "11" });
+      const sub = node("text", { x: 0, y: y + (stacked ? 30 : 32), fill: MUTED, "font-size": "11" });
       sub.textContent = row.sub || "";
       root.appendChild(sub);
       const end = xOf(row.value);
       const x = Math.min(end, zero);
       const rect = node("rect", {
-        x, y: y + 10, width: Math.max(Math.abs(end - zero), 1), height: 16, rx: 3,
+        x, y: y + barTop, width: Math.max(Math.abs(end - zero), 1), height: 16, rx: 3,
         fill: row.color || (row.value < 0 ? ORANGE : BLUE),
       });
       const title = node("title", {});
@@ -315,11 +357,12 @@ const Chart = (() => {
       rect.addEventListener("mouseleave", hideTip);
       root.appendChild(rect);
       const value = node("text", {
-        x: Math.max(end, zero) + 8, y: y + 23, fill: "#f8fafc", "font-size": "14", "font-weight": "700",
+        x: Math.max(end, zero) + 8, y: y + barTop + 13, fill: "#f8fafc", "font-size": "14", "font-weight": "700",
       });
       value.textContent = row.display;
       root.appendChild(value);
     });
+    if (!stacked && barsOverlap(root)) horizontalBars(el, rows, true);
   }
 
   function timeline(el, spec) {
