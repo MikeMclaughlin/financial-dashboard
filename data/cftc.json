@@ -5,36 +5,8 @@
   "definition": "CFTC legacy futures-only, EURO FX (099741). Net = noncommercial long minus noncommercial short. Positive is net long euro; negative is net short euro.",
   "source": "CFTC Socrata 6dca-aqww",
   "sourceUrl": "https://publicreporting.cftc.gov/resource/6dca-aqww.csv",
-  "asOf": "2026-10-20",
+  "asOf": "2026-11-17",
   "points": [
-    {
-      "date": "2024-07-09",
-      "long": 165829,
-      "short": 162206,
-      "openInterest": 637266,
-      "net": 3623
-    },
-    {
-      "date": "2024-07-16",
-      "long": 179937,
-      "short": 155188,
-      "openInterest": 649251,
-      "net": 24749
-    },
-    {
-      "date": "2024-07-23",
-      "long": 188929,
-      "short": 153023,
-      "openInterest": 672022,
-      "net": 35906
-    },
-    {
-      "date": "2024-07-30",
-      "long": 183006,
-      "short": 165207,
-      "openInterest": 667299,
-      "net": 17799
-    },
     {
       "date": "2024-08-06",
       "long": 185799,
@@ -846,8 +818,36 @@
       "short": 360945,
       "openInterest": 877940,
       "net": -134524
+    },
+    {
+      "date": "2026-10-27",
+      "long": 230646,
+      "short": 374540,
+      "openInterest": 868188,
+      "net": -143894
+    },
+    {
+      "date": "2026-11-03",
+      "long": 229383,
+      "short": 387174,
+      "openInterest": 876122,
+      "net": -157791
+    },
+    {
+      "date": "2026-11-10",
+      "long": 227478,
+      "short": 363874,
+      "openInterest": 854705,
+      "net": -136396
+    },
+    {
+      "date": "2026-11-17",
+      "long": 230074,
+      "short": 372784,
+      "openInterest": 866032,
+      "net": -142710
     }
   ],
-  "fetchedAt": "2026-10-27T01:35:20.768Z",
+  "fetchedAt": "2026-11-26T02:58:19.521Z",
   "status": "ok"
 }

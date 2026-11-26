@@ -6,7 +6,7 @@
   "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
   "fallback": true,
   "delayed": false,
-  "asOf": "2026-10-26",
+  "asOf": "2026-11-25",
   "points": [
     {
       "date": "2025-01-02",
@@ -1823,8 +1823,92 @@
     {
       "date": "2026-10-26",
       "value": 2.66
+    },
+    {
+      "date": "2026-10-27",
+      "value": 2.64
+    },
+    {
+      "date": "2026-10-28",
+      "value": 2.67
+    },
+    {
+      "date": "2026-10-29",
+      "value": 2.63
+    },
+    {
+      "date": "2026-10-30",
+      "value": 2.6
+    },
+    {
+      "date": "2026-11-02",
+      "value": 2.62
+    },
+    {
+      "date": "2026-11-03",
+      "value": 2.65
+    },
+    {
+      "date": "2026-11-04",
+      "value": 2.64
+    },
+    {
+      "date": "2026-11-05",
+      "value": 2.6
+    },
+    {
+      "date": "2026-11-06",
+      "value": 2.63
+    },
+    {
+      "date": "2026-11-09",
+      "value": 2.66
+    },
+    {
+      "date": "2026-11-10",
+      "value": 2.78
+    },
+    {
+      "date": "2026-11-12",
+      "value": 2.86
+    },
+    {
+      "date": "2026-11-13",
+      "value": 2.91
+    },
+    {
+      "date": "2026-11-16",
+      "value": 2.92
+    },
+    {
+      "date": "2026-11-17",
+      "value": 2.89
+    },
+    {
+      "date": "2026-11-18",
+      "value": 2.88
+    },
+    {
+      "date": "2026-11-19",
+      "value": 2.88
+    },
+    {
+      "date": "2026-11-20",
+      "value": 2.77
+    },
+    {
+      "date": "2026-11-23",
+      "value": 2.79
+    },
+    {
+      "date": "2026-11-24",
+      "value": 2.79
+    },
+    {
+      "date": "2026-11-25",
+      "value": 2.73
     }
   ],
-  "fetchedAt": "2026-10-27T01:35:21.449Z",
+  "fetchedAt": "2026-11-26T02:58:19.387Z",
   "status": "ok"
 }

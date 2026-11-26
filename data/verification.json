@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-10-27T01:35:31.115Z",
-  "issueCount": 1,
+  "generatedAt": "2026-11-26T02:58:29.827Z",
+  "issueCount": 2,
   "issues": [
+    {
+      "item": 6,
+      "level": "outlier",
+      "detail": "AUD ECB vs Yahoo differs -1.09%"
+    },
     {
       "item": 12,
       "level": "proxy",
@@ -12,62 +17,62 @@
     {
       "item": "1 EUR/USD",
       "level": "info",
-      "detail": "1 EUR/USD status=ok asOf=2026-10-26 fallback=false proxy=false"
+      "detail": "1 EUR/USD status=ok asOf=2026-11-25 fallback=false proxy=false"
     },
     {
       "item": "2 DXY",
       "level": "info",
-      "detail": "2 DXY status=ok asOf=2026-10-27 fallback=false proxy=false"
+      "detail": "2 DXY status=ok asOf=2026-11-26 fallback=false proxy=false"
     },
     {
       "item": "3 Treasury",
       "level": "info",
-      "detail": "3 Treasury status=ok asOf=2026-10-26 fallback=false proxy=false"
+      "detail": "3 Treasury status=ok asOf=2026-11-25 fallback=false proxy=false"
     },
     {
       "item": "6 FX",
       "level": "info",
-      "detail": "6 FX status=ok asOf=2026-10-26 fallback=false proxy=false"
+      "detail": "6 FX status=ok asOf=2026-11-25 fallback=false proxy=false"
     },
     {
       "item": "7 CFTC",
       "level": "info",
-      "detail": "7 CFTC status=ok asOf=2026-10-20 fallback=false proxy=false"
+      "detail": "7 CFTC status=ok asOf=2026-11-17 fallback=false proxy=false"
     },
     {
       "item": "8/9 Bunds",
       "level": "info",
-      "detail": "8/9 Bunds status=ok asOf=2026-10-26 fallback=false proxy=false"
+      "detail": "8/9 Bunds status=ok asOf=2026-11-25 fallback=false proxy=false"
     },
     {
       "item": "11 Bonds",
       "level": "info",
-      "detail": "11 Bonds status=stale asOf=2026-10-26 fallback=false proxy=false"
+      "detail": "11 Bonds status=stale asOf=2026-11-25 fallback=false proxy=false"
     },
     {
       "item": "12 ECB path",
       "level": "info",
-      "detail": "12 ECB path status=ok asOf=2026-10-23 fallback=false proxy=true"
+      "detail": "12 ECB path status=ok asOf=2026-11-24 fallback=false proxy=true"
     },
     {
       "item": "12 Fed path",
       "level": "info",
-      "detail": "12 Fed path status=ok asOf=2026-10-27 fallback=false proxy=false"
+      "detail": "12 Fed path status=ok asOf=2026-11-26 fallback=false proxy=false"
     },
     {
       "item": "13 Real yield",
       "level": "info",
-      "detail": "13 Real yield status=ok asOf=2026-10-26 fallback=true proxy=false"
+      "detail": "13 Real yield status=ok asOf=2026-11-25 fallback=true proxy=false"
     },
     {
       "item": "14 Gold",
       "level": "info",
-      "detail": "14 Gold status=ok asOf=2026-10-27 fallback=false proxy=false"
+      "detail": "14 Gold status=ok asOf=2026-11-26 fallback=false proxy=false"
     },
     {
       "item": "14 Oil",
       "level": "info",
-      "detail": "14 Oil status=ok asOf=2026-10-27 fallback=false proxy=false"
+      "detail": "14 Oil status=ok asOf=2026-11-26 fallback=false proxy=false"
     },
     {
       "item": "15 Auctions",
@@ -82,127 +87,127 @@
     {
       "item": 5,
       "level": "info",
-      "detail": "200-day average 1.15718 on 2026-10-26; history 1999-01-04 count 7122"
+      "detail": "200-day average 1.149286 on 2026-11-25; history 1999-01-04 count 7144"
     },
     {
       "item": 4,
       "level": "info",
-      "detail": "2s10s 32 bp on 2026-10-26; change 1 bp"
+      "detail": "2s10s 24 bp on 2026-11-25; change -4 bp"
     },
     {
       "item": 10,
       "level": "info",
-      "detail": "curve today 2026-10-26, 45d 2026-09-11, 90d 2026-07-28"
+      "detail": "curve today 2026-11-25, 45d 2026-10-09, 90d 2026-08-27"
     },
     {
       "item": 3,
       "level": "info",
-      "detail": "US 10Y 5% on 2026-10-26 from the Treasury yield curve"
+      "detail": "US 10Y 4.85% on 2026-11-25 from the Treasury yield curve"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR 1D -0.04 / 1W -0.33 / 1M -1.89 / 90D -1.57"
+      "detail": "EUR 1D -0.26 / 1W -0.3 / 1M -2.26 / 90D -6.1"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY 1D -0.41 / 1W 0.51 / 1M 0.09 / 90D 4.11"
+      "detail": "JPY 1D -0.16 / 1W 0.06 / 1M -1.18 / 90D 0.04"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP 1D -0.15 / 1W 0.13 / 1M 0.72 / 90D 0.46"
+      "detail": "GBP 1D -0.29 / 1W -0.82 / 1M -2.16 / 90D -3.84"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF 1D -0.22 / 1W -0.14 / 1M 0.26 / 90D -0.77"
+      "detail": "CHF 1D 0.82 / 1W 1.43 / 1M -0.56 / 90D -3.09"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD 1D -0.24 / 1W 0.32 / 1M 0.82 / 90D 0.56"
+      "detail": "CAD 1D 0.49 / 1W 0.33 / 1M -1.61 / 90D -2.72"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD 1D 0.03 / 1W 0.55 / 1M -0.08 / 90D 0.8"
+      "detail": "AUD 1D -1.08 / 1W -2.4 / 1M -6.47 / 90D -8.62"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD 1D -0.11 / 1W 0.16 / 1M 0.17 / 90D -1.58"
+      "detail": "NZD 1D -0.3 / 1W -0.77 / 1M -3.97 / 90D -8.35"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK 1D -0.11 / 1W -0.64 / 1M -0.55 / 90D -2.25"
+      "detail": "SEK 1D -0.41 / 1W -1.15 / 1M -3.13 / 90D -7.39"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NOK 1D 0.07 / 1W 0.63 / 1M 1.73 / 90D 3.61"
+      "detail": "NOK 1D -0.65 / 1W -1.9 / 1M -5.19 / 90D -5.23"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "EUR vs Yahoo diff 0.1%"
+      "detail": "EUR vs Yahoo diff -0.31%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "JPY vs Yahoo diff 0.09%"
+      "detail": "JPY vs Yahoo diff -0.09%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "GBP vs Yahoo diff 0.04%"
+      "detail": "GBP vs Yahoo diff -0.37%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CHF vs Yahoo diff 0.19%"
+      "detail": "CHF vs Yahoo diff 0.08%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "CAD vs Yahoo diff -0.09%"
+      "detail": "CAD vs Yahoo diff -0.29%"
+    },
+    {
+      "item": 6,
+      "level": "outlier",
+      "detail": "AUD ECB vs Yahoo differs -1.09%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "AUD vs Yahoo diff -0.03%"
+      "detail": "NZD vs Yahoo diff -0.6%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "NZD vs Yahoo diff -0.34%"
+      "detail": "SEK vs Yahoo diff -0.38%"
     },
     {
       "item": 6,
       "level": "info",
-      "detail": "SEK vs Yahoo diff -0.06%"
-    },
-    {
-      "item": 6,
-      "level": "info",
-      "detail": "NOK vs Yahoo diff -0.32%"
+      "detail": "NOK vs Yahoo diff -0.54%"
     },
     {
       "item": 7,
       "level": "info",
-      "detail": "latest net -134524 = 226421 long − 360945 short, open interest 877940 on 2026-10-20"
+      "detail": "latest net -142710 = 230074 long − 372784 short, open interest 866032 on 2026-11-17"
     },
     {
       "item": 8,
       "level": "info",
-      "detail": "US and German 2Y share 446 exact dates; German as of 2026-10-26"
+      "detail": "US and German 2Y share 467 exact dates; German as of 2026-11-25"
     },
     {
       "item": 9,
       "level": "info",
-      "detail": "German 10Y 3.43 on 2026-10-26; US 10Y 5 on 2026-10-26"
+      "detail": "German 10Y 3.3 on 2026-11-25; US 10Y 4.85 on 2026-11-25"
     },
     {
       "item": 11,
@@ -212,32 +217,32 @@
     {
       "item": 11,
       "level": "info",
-      "detail": "Japan -218 bp, yield 2.824 as of 2026-10-26 vs US 5 on 2026-10-26 [daily]"
+      "detail": "Japan -214 bp, yield 2.713 as of 2026-11-25 vs US 4.85 on 2026-11-25 [daily]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Germany -157 bp, yield 3.43 as of 2026-10-26 vs US 5 on 2026-10-26 [daily]"
+      "detail": "Germany -155 bp, yield 3.3 as of 2026-11-25 vs US 4.85 on 2026-11-25 [daily]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "France -85 bp, yield 4.44 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
+      "detail": "France -5 bp, yield 4.89 as of 2026-10-31 vs US 4.94 on 2026-10-30 [monthly, delayed]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Italy -93 bp, yield 4.362 as of 2026-09-30 vs US 5.29 on 2026-09-30 [monthly, delayed]"
+      "detail": "Italy -26 bp, yield 4.68 as of 2026-10-31 vs US 4.94 on 2026-10-30 [monthly, delayed]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Canada -117 bp, yield 3.83 as of 2026-10-23 vs US 5 on 2026-10-23 [daily]"
+      "detail": "Canada -124 bp, yield 3.67 as of 2026-11-24 vs US 4.91 on 2026-11-24 [daily]"
     },
     {
       "item": 11,
       "level": "info",
-      "detail": "Australia 15 bp, yield 5.277 as of 2026-10-21 vs US 5.13 on 2026-10-21 [delayed]"
+      "detail": "Australia 1 bp, yield 5.08 as of 2026-11-18 vs US 5.07 on 2026-11-18 [delayed]"
     },
     {
       "item": 11,
@@ -247,12 +252,12 @@
     {
       "item": 13,
       "level": "info",
-      "detail": "Real yield 2.66% on 2026-10-26 from US Treasury daily real yield curve, 10 YR"
+      "detail": "Real yield 2.73% on 2026-11-25 from US Treasury daily real yield curve, 10 YR"
     },
     {
       "item": 12,
       "level": "info",
-      "detail": "Fed funds futures are live. Anchor: NY Fed effective federal funds rate (EFFR) 3.88% on 2026-10-23"
+      "detail": "Fed funds futures are live. Anchor: NY Fed effective federal funds rate (EFFR) 3.88% on 2026-11-24"
     },
     {
       "item": 12,
@@ -262,7 +267,7 @@
     {
       "item": 16,
       "level": "info",
-      "detail": "decision dates inside the next 90 days: BoE 2026-11-05, BoE 2026-12-17, BoJ 2026-10-30, BoJ 2026-12-18, BoJ 2027-01-22, ECB 2026-10-29, ECB 2026-12-17, Fed 2026-10-28, Fed 2026-12-09"
+      "detail": "decision dates inside the next 90 days: BoE 2026-12-17, BoE 2027-02-04, BoJ 2026-12-18, BoJ 2027-01-22, ECB 2026-12-17, ECB 2027-02-04, Fed 2026-12-09, Fed 2027-01-27"
     }
   ]
 }
